@@ -53,10 +53,10 @@ export function Hero({
         <img
           src={IMAGES.heroBgWide}
           alt="Apprenants en atelier pratique à ADONAI-FORMATION Bénin"
-          className="w-full h-full object-cover object-center opacity-20"
+          className="w-full h-full object-cover object-center opacity-40"
         />
-        {/* Overlay bleu marine très sombre quasi-noir #12162A */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#12162A] via-[#12162A]/90 to-[#12162A]/80" />
+        {/* Overlay bleu marine dégradé, allégé pour laisser la photo respirer */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#12162A] via-[#12162A]/75 to-[#12162A]/55" />
       </div>
 
       {/* Motif géométrique corail discret dans un coin (triangles) */}
