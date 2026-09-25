@@ -109,7 +109,7 @@ export default function App() {
           <div>
             {/* Bandeau d'en-tête de page bleu marine quasi noir #12162A avec photo à faible opacité et triangles corail */}
             <div className="relative bg-[#12162A] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
-              <div className="absolute inset-0 opacity-20 pointer-events-none">
+              <div className="absolute inset-0 opacity-40 pointer-events-none">
                 <img
                   src={IMAGES.workshopCouture}
                   alt="Ambiance atelier ADONAI-FORMATION"
@@ -148,7 +148,7 @@ export default function App() {
           <div>
             {/* Bandeau d'en-tête bleu marine quasi noir #12162A avec photo et motif corail */}
             <div className="relative bg-[#12162A] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
-              <div className="absolute inset-0 opacity-15 pointer-events-none">
+              <div className="absolute inset-0 opacity-40 pointer-events-none">
                 <img
                   src={IMAGES.heroBrightStudents}
                   alt="Étudiants ADONAI-FORMATION"
@@ -186,7 +186,7 @@ export default function App() {
           <div>
             {/* Bandeau d'en-tête de page bleu marine quasi noir #12162A avec triangles corail */}
             <div className="relative bg-[#12162A] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
-              <div className="absolute inset-0 opacity-15 pointer-events-none">
+              <div className="absolute inset-0 opacity-40 pointer-events-none">
                 <img
                   src={IMAGES.centerPortoNovo}
                   alt="Campus ADONAI-FORMATION"
@@ -220,7 +220,7 @@ export default function App() {
         {currentPage === 'inscription' && (
           <div>
             <div className="relative bg-[#12162A] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
-              <div className="absolute inset-0 opacity-15 pointer-events-none">
+              <div className="absolute inset-0 opacity-40 pointer-events-none">
                 <img
                   src={IMAGES.trainerMentor}
                   alt="Apprenants et encadrement ADONAI-FORMATION"
