@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Big Shoulders Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --color-pitch-dark: #12162A;
+  --color-pitch-coral: #E85B3D;
+  --color-pitch-coral-hover: #D44A2D;
+  --color-pitch-navy: #26339E;
+  --color-pitch-lavender: #EEF0FA;
+  --color-pitch-yellow: #F5C64B;
+  --color-pitch-text: #14162B;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #EEF0FA;
+  color: #14162B;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Card hover and borders */
+.adonai-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 16px -2px rgba(18, 22, 42, 0.06);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.adonai-card:hover {
+  border-color: #E85B3D;
+  box-shadow: 0 12px 28px -6px rgba(232, 91, 61, 0.16);
+  transform: translateY(-2px);
+}
+
+/* Clean print styling for admission receipt */
+@media print {
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
