@@ -61,7 +61,7 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
       <div 
         className="absolute inset-0 opacity-[0.035] pointer-events-none z-0"
         style={{
-          backgroundImage: `radial-gradient(#0B2B1B 1px, transparent 1px), radial-gradient(#E5A910 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(#12162A 1px, transparent 1px), radial-gradient(#E85B3D 1px, transparent 1px)`,
           backgroundSize: '32px 32px',
           backgroundPosition: '0 0, 16px 16px'
         }}
@@ -73,10 +73,10 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-slate-200">
           <div className="max-w-3xl space-y-3">
-            <span className="text-xs uppercase tracking-widest font-bold text-[#124B30] bg-[#FEF8E8] border border-[#F7D479] px-3.5 py-1 rounded-full inline-block">
+            <span className="text-xs uppercase tracking-widest font-bold text-[#26339E] bg-[#EEF0FA] border border-[#26339E]/20 px-3.5 py-1 rounded-full inline-block">
               Catalogue Officiel · Rentrée 2026
             </span>
-            <h2 className="font-display font-black text-4xl sm:text-5xl text-[#0B2B1B] uppercase tracking-tight">
+            <h2 className="font-display font-black text-4xl sm:text-5xl text-[#12162A] uppercase tracking-tight">
               Nos 12 Filières de Formation
             </h2>
             <div className="space-y-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -97,7 +97,7 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Rechercher un métier..."
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 bg-white text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-[#E5A910] shadow-2xs"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 bg-white text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-[#E85B3D] shadow-2xs"
             />
           </div>
         </div>
@@ -111,8 +111,8 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                   selectedCategory === cat.id
-                    ? 'bg-[#124B30] text-white shadow-xs'
-                    : 'text-slate-600 hover:text-[#124B30] hover:bg-slate-50'
+                    ? 'bg-[#26339E] text-white shadow-xs'
+                    : 'text-slate-600 hover:text-[#26339E] hover:bg-slate-50'
                 }`}
               >
                 {cat.label}
@@ -121,7 +121,7 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
           </div>
 
           <div className="text-xs text-slate-500 font-medium">
-            Affichage de <span className="text-[#0B2B1B] font-bold">{filteredCourses.length}</span> filière(s)
+            Affichage de <span className="text-[#12162A] font-bold">{filteredCourses.length}</span> filière(s)
           </div>
         </div>
 
@@ -148,7 +148,7 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
 
                   {/* Badge officiel "100% PRATIQUE" */}
-                  <div className="absolute top-3.5 left-3.5 bg-[#124B30] text-[#E5A910] text-[10px] uppercase tracking-wider font-extrabold px-2.5 py-1 rounded-md shadow-xs border border-[#E5A910]/40">
+                  <div className="absolute top-3.5 left-3.5 bg-[#26339E] text-[#E85B3D] text-[10px] uppercase tracking-wider font-extrabold px-2.5 py-1 rounded-md shadow-xs border border-[#E85B3D]/40">
                     100% PRATIQUE
                   </div>
 
@@ -159,7 +159,7 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
 
                   {/* Nom & Icône sur la photo */}
                   <div className="absolute bottom-3.5 left-3.5 right-3.5 flex items-center gap-2.5 text-white">
-                    <div className="w-8 h-8 rounded-lg bg-[#E5A910] text-[#0B2B1B] flex items-center justify-center shrink-0 font-bold shadow-xs">
+                    <div className="w-8 h-8 rounded-lg bg-[#E85B3D] text-[#12162A] flex items-center justify-center shrink-0 font-bold shadow-xs">
                       <IconComponent className="w-4 h-4" />
                     </div>
                     <h3 className="font-display font-black text-2xl text-white tracking-tight leading-tight uppercase drop-shadow-md">
@@ -173,8 +173,8 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
                   <div className="space-y-3">
                     
                     {/* Durée en dessous du nom */}
-                    <div className="flex items-center gap-2 text-xs font-semibold text-[#124B30] bg-[#FEF8E8] border border-[#F7D479] px-3 py-1 rounded-md w-fit">
-                      <Clock className="w-3.5 h-3.5 text-[#E5A910]" />
+                    <div className="flex items-center gap-2 text-xs font-semibold text-[#26339E] bg-[#EEF0FA] border border-[#26339E]/20 px-3 py-1 rounded-md w-fit">
+                      <Clock className="w-3.5 h-3.5 text-[#E85B3D]" />
                       <span>Durée : <strong>{course.duration}</strong> (au choix)</span>
                     </div>
 
@@ -185,13 +185,13 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
 
                     {/* Compétences clés */}
                     <div className="pt-3 border-t border-slate-100">
-                      <p className="text-[11px] uppercase tracking-wider font-bold text-[#0B2B1B] mb-2">
+                      <p className="text-[11px] uppercase tracking-wider font-bold text-[#12162A] mb-2">
                         Compétences en atelier :
                       </p>
                       <ul className="space-y-1 text-xs text-slate-700">
                         {course.skills.slice(0, 3).map((skill, index) => (
                           <li key={index} className="flex items-start gap-2">
-                            <span className="text-[#E5A910] font-bold text-xs mt-0.5">✔</span>
+                            <span className="text-[#E85B3D] font-bold text-xs mt-0.5">✔</span>
                             <span>{skill}</span>
                           </li>
                         ))}
@@ -209,7 +209,7 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
                   <div className="pt-4 border-t border-slate-100 flex items-center gap-2">
                     <button
                       onClick={() => onSelectCourse(course)}
-                      className="flex-1 py-2.5 px-3 rounded-lg bg-[#E5A910] hover:bg-[#C98F04] text-[#0B2B1B] text-xs font-extrabold uppercase tracking-wider transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
+                      className="flex-1 py-2.5 px-3 rounded-lg bg-[#E85B3D] hover:bg-[#D44A2D] text-[#12162A] text-xs font-extrabold uppercase tracking-wider transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer"
                     >
                       <UserPlus className="w-4 h-4" />
                       <span>S'inscrire</span>
@@ -234,10 +234,10 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
         {/* Encadré d'orientation conseil sous la grille */}
         <div className="mt-14 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
-            <span className="text-xs uppercase tracking-wider font-bold text-[#124B30]">
+            <span className="text-xs uppercase tracking-wider font-bold text-[#26339E]">
               Orientation Professionnelle Gratuite
             </span>
-            <h3 className="font-display font-black text-2xl text-[#0B2B1B] uppercase">
+            <h3 className="font-display font-black text-2xl text-[#12162A] uppercase">
               Vous hésitez encore entre deux filières ?
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 max-w-xl">
@@ -250,9 +250,9 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
               href={`https://wa.me/${GENERAL_CONTACT.whatsappNumber}?text=Bonjour%2C%20je%20souhaite%20un%20conseil%20d'orientation%20pour%20choisir%20ma%20fili%C3%A8re%20%C3%A0%20ADONAI-FORMATION.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-lg bg-[#0B2B1B] hover:bg-[#124B30] text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-colors cursor-pointer"
+              className="px-6 py-3 rounded-lg bg-[#12162A] hover:bg-[#26339E] text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-colors cursor-pointer"
             >
-              <MessageCircle className="w-4 h-4 text-[#E5A910]" />
+              <MessageCircle className="w-4 h-4 text-[#E85B3D]" />
               <span>Contacter un conseiller</span>
             </a>
           </div>
