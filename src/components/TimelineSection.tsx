@@ -42,45 +42,45 @@ export function TimelineSection() {
   ];
 
   return (
-    <section id="timeline" className="py-20 sm:py-28 bg-white relative border-b border-[#10382B]/10">
+    <section id="timeline" className="py-20 sm:py-28 bg-white relative border-b border-[#12162A]/10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center space-y-3 mb-16">
-          <span className="text-xs uppercase tracking-[0.22em] font-bold text-[#9E7428]">
+          <span className="text-xs uppercase tracking-[0.22em] font-bold text-[#D44A2D]">
             Calendrier Académique
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#0B251C] tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#12162A] tracking-tight">
             Les Grandes Étapes de la Promotion 2026
           </h2>
-          <p className="text-base text-[#53625C] font-normal leading-relaxed">
+          <p className="text-base text-[#475569] font-normal leading-relaxed">
             De votre inscription jusqu'à votre insertion sur le marché de l'emploi, découvrez le rythme de votre cursus.
           </p>
         </div>
 
         {/* Editorial Timeline */}
-        <div className="relative border-l border-[#10382B]/15 ml-4 sm:ml-32 space-y-12">
+        <div className="relative border-l border-[#12162A]/15 ml-4 sm:ml-32 space-y-12">
           {events.map((evt, idx) => {
             const Icon = evt.icon;
             return (
               <div key={idx} className="relative pl-8 sm:pl-10">
                 {/* Node */}
-                <div className="absolute -left-3 top-1 w-6 h-6 rounded-full bg-[#0B251C] text-[#CFA049] flex items-center justify-center border-2 border-white shadow-xs">
+                <div className="absolute -left-3 top-1 w-6 h-6 rounded-full bg-[#12162A] text-[#F5C64B] flex items-center justify-center border-2 border-white shadow-xs">
                   <Icon className="w-3 h-3" />
                 </div>
 
                 {/* Date marker outside on desktop */}
                 <div className="sm:absolute sm:-left-36 sm:top-1 sm:w-28 sm:text-right">
-                  <span className="text-[11px] font-mono uppercase tracking-wider font-bold text-[#9E7428] block">
+                  <span className="text-[11px] font-mono uppercase tracking-wider font-bold text-[#D44A2D] block">
                     {evt.date}
                   </span>
                 </div>
 
                 <div className="lux-card rounded-2xl p-6 space-y-1.5">
-                  <h3 className="font-display font-bold text-lg text-[#0B251C]">
+                  <h3 className="font-display font-bold text-lg text-[#12162A]">
                     {evt.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#53625C] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
                     {evt.description}
                   </p>
                 </div>
