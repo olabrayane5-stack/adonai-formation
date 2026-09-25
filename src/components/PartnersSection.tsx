@@ -48,18 +48,18 @@ export function PartnersSection() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-[#FAF9F5] relative border-b border-[#10382B]/10">
+    <section className="py-20 sm:py-28 bg-[#EEF0FA] relative border-b border-[#12162A]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center space-y-3 mb-16">
-          <span className="text-xs uppercase tracking-[0.22em] font-bold text-[#9E7428]">
+          <span className="text-xs uppercase tracking-[0.22em] font-bold text-[#D44A2D]">
             Écosystème Professionnel & Insertion
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#0B251C] tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#12162A] tracking-tight">
             Nos Partenaires de Stage & de Recrutement
           </h2>
-          <p className="text-base text-[#53625C] font-normal leading-relaxed">
+          <p className="text-base text-[#475569] font-normal leading-relaxed">
             Les entreprises, officines et ateliers partenaires qui accueillent nos stagiaires et recrutent nos lauréats à la fin de leur cursus.
           </p>
         </div>
@@ -71,15 +71,15 @@ export function PartnersSection() {
               key={idx}
               className="lux-card rounded-2xl p-6 flex items-center gap-4 group"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#0B251C] text-[#CFA049] font-display font-bold text-sm flex items-center justify-center shrink-0 border border-[#B8892F]/30 shadow-xs">
+              <div className="w-12 h-12 rounded-xl bg-[#12162A] text-[#F5C64B] font-display font-bold text-sm flex items-center justify-center shrink-0 border border-[#E85B3D]/30 shadow-xs">
                 {p.code}
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="font-display font-bold text-sm text-[#0B251C] truncate">
+                <h3 className="font-display font-bold text-sm text-[#12162A] truncate">
                   {p.name}
                 </h3>
-                <p className="text-xs text-[#9E7428] font-medium">{p.category}</p>
-                <span className="text-[11px] text-[#53625C] mt-0.5 block">
+                <p className="text-xs text-[#D44A2D] font-medium">{p.category}</p>
+                <span className="text-[11px] text-[#475569] mt-0.5 block">
                   📍 {p.location}
                 </span>
               </div>
