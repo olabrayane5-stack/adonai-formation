@@ -31,30 +31,6 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-xs border-b border-slate-200">
-      {/* 3.1 Barre fine tout en haut (fond bleu marine quasi noir #12162A) */}
-      <div className="bg-[#12162A] text-white text-[11px] sm:text-xs py-1.5 px-4 font-medium border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
-          {/* Texte à gauche : rentrée + villes */}
-          <div className="flex items-center gap-2 truncate">
-            <span className="inline-block w-2 h-2 rounded-full bg-[#F5C64B] shrink-0 animate-pulse"></span>
-            <span className="font-semibold text-[#F5C64B]">Rentrée : 05 octobre 2026</span>
-            <span className="text-white/30 hidden sm:inline">|</span>
-            <span className="text-white/80 hidden sm:inline truncate">Porto-Novo · Cotonou · Parakou</span>
-          </div>
-
-          {/* Contact à droite : téléphone */}
-          <div className="flex items-center gap-2 shrink-0">
-            <Phone className="w-3 h-3 text-[#F5C64B]" />
-            <a 
-              href={`tel:${GENERAL_CONTACT.primaryPhone}`} 
-              className="hover:text-[#F5C64B] transition-colors font-medium text-white/90"
-            >
-              {GENERAL_CONTACT.primaryPhone}
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Ligne principale du header : logo + nom à gauche, téléphone + bouton "S'inscrire" + menu hamburger à droite */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
