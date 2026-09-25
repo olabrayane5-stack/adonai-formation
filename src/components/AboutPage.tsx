@@ -56,7 +56,7 @@ export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigat
       
       {/* 1. Bandeau d'en-tête bleu marine quasi noir #12162A avec triangles corail */}
       <section className="relative bg-[#12162A] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 opacity-15 pointer-events-none">
+        <div className="absolute inset-0 opacity-40 pointer-events-none">
           <img
             src={IMAGES.heroBrightStudents}
             alt="Apprenants ADONAI-FORMATION"
