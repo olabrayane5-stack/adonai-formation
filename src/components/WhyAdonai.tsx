@@ -35,10 +35,10 @@ export function WhyAdonai() {
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-3 mb-16 text-left">
-          <span className="text-xs uppercase tracking-widest font-bold text-[#124B30] bg-[#FEF8E8] border border-[#F7D479] px-3.5 py-1 rounded-full inline-block">
+          <span className="text-xs uppercase tracking-widest font-bold text-[#26339E] bg-[#EEF0FA] border border-[#26339E]/20 px-3.5 py-1 rounded-full inline-block">
             Pédagogie d'Excellence
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-5xl text-[#0B2B1B] uppercase tracking-tight">
+          <h2 className="font-display font-black text-4xl sm:text-5xl text-[#12162A] uppercase tracking-tight">
             Pourquoi choisir ADONAI-FORMATION ?
           </h2>
           <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
@@ -56,18 +56,18 @@ export function WhyAdonai() {
               return (
                 <div
                   key={index}
-                  className="adonai-card p-6 sm:p-7 rounded-2xl bg-slate-50/70 border border-slate-200 hover:border-[#124B30]/40 transition-all flex flex-col sm:flex-row items-start gap-5 group"
+                  className="adonai-card p-6 sm:p-7 rounded-2xl bg-slate-50/70 border border-slate-200 hover:border-[#26339E]/40 transition-all flex flex-col sm:flex-row items-start gap-5 group"
                 >
-                  <div className="w-13 h-13 rounded-2xl bg-[#FEF8E8] border border-[#F7D479] flex items-center justify-center text-[#124B30] shrink-0 group-hover:bg-[#124B30] group-hover:text-[#E5A910] transition-colors shadow-2xs">
+                  <div className="w-13 h-13 rounded-2xl bg-[#EEF0FA] border border-[#26339E]/20 flex items-center justify-center text-[#26339E] shrink-0 group-hover:bg-[#26339E] group-hover:text-[#E85B3D] transition-colors shadow-2xs">
                     <Icon className="w-6 h-6" />
                   </div>
 
                   <div className="space-y-1.5 flex-1">
                     <div className="flex flex-wrap items-center justify-between gap-2">
-                      <h3 className="font-display font-black text-2xl text-[#0B2B1B] uppercase tracking-tight">
+                      <h3 className="font-display font-black text-2xl text-[#12162A] uppercase tracking-tight">
                         {point.title}
                       </h3>
-                      <span className="text-[10px] uppercase tracking-wider font-extrabold text-[#124B30] bg-white border border-slate-200 px-2.5 py-0.5 rounded-full">
+                      <span className="text-[10px] uppercase tracking-wider font-extrabold text-[#26339E] bg-white border border-slate-200 px-2.5 py-0.5 rounded-full">
                         {point.badge}
                       </span>
                     </div>
@@ -91,19 +91,19 @@ export function WhyAdonai() {
               />
 
               {/* Overlay subtil avec dégradé */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B2B1B]/90 via-[#0B2B1B]/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#12162A]/90 via-[#12162A]/30 to-transparent" />
 
               {/* Badge flottant sur l'image */}
               <div className="absolute top-5 left-5 bg-white/95 backdrop-blur-md py-2 px-3.5 rounded-xl border border-slate-200 shadow-md flex items-center gap-2.5">
-                <span className="w-3 h-3 rounded-full bg-[#E5A910] animate-ping" />
-                <span className="text-xs font-bold text-[#0B2B1B]">100% Pratique en atelier</span>
+                <span className="w-3 h-3 rounded-full bg-[#E85B3D] animate-ping" />
+                <span className="text-xs font-bold text-[#12162A]">100% Pratique en atelier</span>
               </div>
 
               {/* Cartouche d'information en bas de l'image */}
-              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-white/40 shadow-xl space-y-2 text-[#0B2B1B]">
+              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-white/40 shadow-xl space-y-2 text-[#12162A]">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#124B30]" />
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-[#124B30]">
+                  <CheckCircle2 className="w-4 h-4 text-[#26339E]" />
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-[#26339E]">
                     Encadrement de terrain
                   </span>
                 </div>
