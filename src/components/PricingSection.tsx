@@ -68,12 +68,12 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
         ];
 
   return (
-    <section id="tarifs" className="py-20 sm:py-28 bg-[#F8FAF8] relative border-b border-slate-200 overflow-hidden">
+    <section id="tarifs" className="py-20 sm:py-28 bg-[#EEF0FA] relative border-b border-slate-200 overflow-hidden">
       {/* Motif graphique discret en arrière-plan (ruban diagonal or inspiré des affiches officielles ADONAI) */}
       <div 
         className="absolute inset-0 opacity-[0.04] pointer-events-none z-0"
         style={{
-          backgroundImage: `repeating-linear-gradient(45deg, #E5A910 0, #E5A910 2px, transparent 0, transparent 24px)`
+          backgroundImage: `repeating-linear-gradient(45deg, #E85B3D 0, #E85B3D 2px, transparent 0, transparent 24px)`
         }}
         aria-hidden="true"
       />
@@ -82,10 +82,10 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <span className="text-xs uppercase tracking-widest font-extrabold text-[#124B30] bg-[#FEF8E8] border border-[#F7D479] px-3.5 py-1 rounded-full inline-block">
+          <span className="text-xs uppercase tracking-widest font-extrabold text-[#26339E] bg-[#EEF0FA] border border-[#26339E]/20 px-3.5 py-1 rounded-full inline-block">
             Investissement & Formules
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-5xl text-[#0B2B1B] uppercase tracking-tight">
+          <h2 className="font-display font-black text-4xl sm:text-5xl text-[#12162A] uppercase tracking-tight">
             Tarifs de Formation & Programme Bourses
           </h2>
           {/* Phrase d'introduction expliquant la logique des tarifs */}
@@ -100,15 +100,15 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
           {/* Carte 1 : Inscription */}
           <div className="adonai-card rounded-2xl p-8 flex flex-col justify-between bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all">
             <div>
-              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#124B30] bg-slate-100 px-2.5 py-1 rounded">
+              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#26339E] bg-slate-100 px-2.5 py-1 rounded">
                 Élément 1
               </span>
-              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#0B2B1B] mt-3 uppercase leading-tight">
+              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#12162A] mt-3 uppercase leading-tight">
                 Inscription
               </h3>
               
               <div className="mt-4 flex items-baseline gap-1">
-                <span className="font-display font-black text-4xl sm:text-5xl text-[#0B2B1B] tabular-nums">
+                <span className="font-display font-black text-4xl sm:text-5xl text-[#12162A] tabular-nums">
                   15 000
                 </span>
                 <span className="text-xs font-bold text-slate-500 uppercase">FCFA</span>
@@ -121,15 +121,15 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
 
               <ul className="mt-6 space-y-2.5 text-xs text-slate-600">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#124B30] shrink-0 font-bold" />
+                  <Check className="w-4 h-4 text-[#26339E] shrink-0 font-bold" />
                   <span>Ouverture & validation de votre dossier</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#124B30] shrink-0 font-bold" />
+                  <Check className="w-4 h-4 text-[#26339E] shrink-0 font-bold" />
                   <span>Livret d'apprentissage & carte d'apprenant</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#124B30] shrink-0 font-bold" />
+                  <Check className="w-4 h-4 text-[#26339E] shrink-0 font-bold" />
                   <span>Assurance atelier obligatoire</span>
                 </li>
               </ul>
@@ -141,42 +141,42 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
           </div>
 
           {/* Carte 2 : Formation 12 mois */}
-          <div className="adonai-card rounded-2xl p-8 flex flex-col justify-between relative bg-white border-2 border-[#124B30] shadow-md hover:shadow-xl transition-all">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#124B30] text-[#E5A910] text-[10px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full shadow-xs">
+          <div className="adonai-card rounded-2xl p-8 flex flex-col justify-between relative bg-white border-2 border-[#26339E] shadow-md hover:shadow-xl transition-all">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#26339E] text-[#E85B3D] text-[10px] uppercase tracking-wider font-extrabold px-3 py-1 rounded-full shadow-xs">
               Formule Recommandée
             </div>
 
             <div>
-              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#124B30] bg-[#FEF8E8] border border-[#F7D479] px-2.5 py-1 rounded">
+              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#26339E] bg-[#EEF0FA] border border-[#26339E]/20 px-2.5 py-1 rounded">
                 Élément 2
               </span>
-              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#0B2B1B] mt-3 uppercase leading-tight">
+              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#12162A] mt-3 uppercase leading-tight">
                 Formation 12 mois
               </h3>
 
               <div className="mt-4 flex items-baseline gap-1">
-                <span className="font-display font-black text-4xl sm:text-5xl text-[#124B30] tabular-nums">
+                <span className="font-display font-black text-4xl sm:text-5xl text-[#26339E] tabular-nums">
                   200 000
                 </span>
                 <span className="text-xs font-bold text-slate-500 uppercase">FCFA</span>
               </div>
 
               {/* Détail exact */}
-              <div className="mt-4 p-3.5 rounded-xl bg-[#FEF8E8] border border-[#F7D479] text-xs text-[#0B2B1B] leading-relaxed font-medium">
+              <div className="mt-4 p-3.5 rounded-xl bg-[#EEF0FA] border border-[#26339E]/20 text-xs text-[#12162A] leading-relaxed font-medium">
                 Formation intensive sur un métier ciblé, avec suivi pratique continu et matériel fourni en atelier.
               </div>
 
               <ul className="mt-6 space-y-2.5 text-xs text-slate-600">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#124B30] shrink-0 font-bold" />
+                  <Check className="w-4 h-4 text-[#26339E] shrink-0 font-bold" />
                   <span>1 an de pratique intensive quotidienne</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#124B30] shrink-0 font-bold" />
+                  <Check className="w-4 h-4 text-[#26339E] shrink-0 font-bold" />
                   <span>Possibilité de régler en 3 tranches</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#124B30] shrink-0 font-bold" />
+                  <Check className="w-4 h-4 text-[#26339E] shrink-0 font-bold" />
                   <span>Attestation officielle de fin de cursus</span>
                 </li>
               </ul>
@@ -185,7 +185,7 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
             <div className="mt-8 pt-4 border-t border-slate-100">
               <button
                 onClick={() => onSelectDuration('12 mois')}
-                className="w-full py-3 rounded-xl bg-[#124B30] hover:bg-[#0B2B1B] text-white font-extrabold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                className="w-full py-3 rounded-xl bg-[#26339E] hover:bg-[#12162A] text-white font-extrabold text-xs uppercase tracking-wider transition-colors cursor-pointer"
               >
                 Choisir le cursus 12 mois
               </button>
@@ -195,15 +195,15 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
           {/* Carte 3 : Formation 24 mois */}
           <div className="adonai-card rounded-2xl p-8 flex flex-col justify-between bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all">
             <div>
-              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#124B30] bg-slate-100 px-2.5 py-1 rounded">
+              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#26339E] bg-slate-100 px-2.5 py-1 rounded">
                 Élément 3
               </span>
-              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#0B2B1B] mt-3 uppercase leading-tight">
+              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#12162A] mt-3 uppercase leading-tight">
                 Formation 24 mois
               </h3>
 
               <div className="mt-4 flex items-baseline gap-1">
-                <span className="font-display font-black text-4xl sm:text-5xl text-[#0B2B1B] tabular-nums">
+                <span className="font-display font-black text-4xl sm:text-5xl text-[#12162A] tabular-nums">
                   350 000
                 </span>
                 <span className="text-xs font-bold text-slate-500 uppercase">FCFA</span>
@@ -216,15 +216,15 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
 
               <ul className="mt-6 space-y-2.5 text-xs text-slate-600">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#124B30] shrink-0 font-bold" />
+                  <Check className="w-4 h-4 text-[#26339E] shrink-0 font-bold" />
                   <span>2 ans de spécialisation approfondie</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#124B30] shrink-0 font-bold" />
+                  <Check className="w-4 h-4 text-[#26339E] shrink-0 font-bold" />
                   <span>Échelonnement sur 2 ans possible</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-[#124B30] shrink-0 font-bold" />
+                  <Check className="w-4 h-4 text-[#26339E] shrink-0 font-bold" />
                   <span>Préparation aux examens d'État CQP</span>
                 </li>
               </ul>
@@ -233,7 +233,7 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
             <div className="mt-8 pt-4 border-t border-slate-100">
               <button
                 onClick={() => onSelectDuration('24 mois')}
-                className="w-full py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#0B2B1B] font-extrabold text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                className="w-full py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#12162A] font-extrabold text-xs uppercase tracking-wider transition-colors cursor-pointer"
               >
                 Choisir le cursus 24 mois
               </button>
@@ -243,24 +243,24 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
         </div>
 
         {/* 3.5 Sous les 3 cartes, sur toute la largeur : encadré fond or clair, disposé en ligne */}
-        <div className="w-full rounded-2xl bg-[#FEF8E8] border-2 border-[#F7D479] p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+        <div className="w-full rounded-2xl bg-[#EEF0FA] border-2 border-[#26339E]/20 p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
           {/* Ruban or subtil en coin */}
           <div 
-            className="absolute -right-12 -top-12 w-32 h-32 opacity-15 rotate-45 pointer-events-none bg-[#E5A910]" 
+            className="absolute -right-12 -top-12 w-32 h-32 opacity-15 rotate-45 pointer-events-none bg-[#E85B3D]" 
             aria-hidden="true" 
           />
 
           {/* Icône à gauche et texte développé à droite, disposé en ligne */}
           <div className="flex items-start gap-5 text-left">
-            <div className="w-14 h-14 rounded-2xl bg-[#E5A910] text-[#0B2B1B] flex items-center justify-center shrink-0 shadow-xs mt-1">
+            <div className="w-14 h-14 rounded-2xl bg-[#E85B3D] text-[#12162A] flex items-center justify-center shrink-0 shadow-xs mt-1">
               <Gift className="w-7 h-7" />
             </div>
 
             <div className="space-y-1.5 max-w-3xl">
-              <div className="inline-flex items-center gap-2 bg-[#124B30] text-[#E5A910] text-[10px] uppercase tracking-wider font-extrabold px-2.5 py-0.5 rounded">
+              <div className="inline-flex items-center gap-2 bg-[#26339E] text-[#E85B3D] text-[10px] uppercase tracking-wider font-extrabold px-2.5 py-0.5 rounded">
                 Programme Spécial Rentrée 2026
               </div>
-              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#0B2B1B] uppercase leading-tight">
+              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#12162A] uppercase leading-tight">
                 1500 bourses disponibles
               </h3>
               <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
@@ -273,9 +273,9 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
           <div className="shrink-0 w-full md:w-auto">
             <button
               onClick={onApplyForScholarship}
-              className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0B2B1B] hover:bg-[#124B30] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm transition-all cursor-pointer"
+              className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#12162A] hover:bg-[#26339E] text-white font-extrabold text-xs uppercase tracking-wider shadow-sm transition-all cursor-pointer"
             >
-              <UserPlus className="w-4 h-4 text-[#E5A910]" />
+              <UserPlus className="w-4 h-4 text-[#E85B3D]" />
               <span>Demander ma bourse</span>
             </button>
           </div>
@@ -286,9 +286,9 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
         <div className="mt-8 text-center">
           <button
             onClick={() => setShowSimulator(!showSimulator)}
-            className="inline-flex items-center gap-2 text-xs font-semibold text-[#124B30] hover:text-[#0B2B1B] underline cursor-pointer"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-[#26339E] hover:text-[#12162A] underline cursor-pointer"
           >
-            <Calculator className="w-4 h-4 text-[#E5A910]" />
+            <Calculator className="w-4 h-4 text-[#E85B3D]" />
             <span>{showSimulator ? 'Masquer le simulateur' : 'Afficher le simulateur de tranches de paiement'}</span>
           </button>
         </div>
@@ -296,7 +296,7 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
         {/* Simulateur interactif déroulant */}
         {showSimulator && (
           <div className="mt-6 bg-white rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto border border-slate-200 shadow-md">
-            <h4 className="font-display font-black text-2xl text-[#0B2B1B] uppercase mb-2">
+            <h4 className="font-display font-black text-2xl text-[#12162A] uppercase mb-2">
               Simulateur d'échelonnement des paiements
             </h4>
             <p className="text-xs text-slate-500 mb-6">
@@ -314,7 +314,7 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
                     onClick={() => setSimDuration('12')}
                     className={`py-2 px-3 text-xs font-bold rounded-lg border transition-all cursor-pointer ${
                       simDuration === '12'
-                        ? 'bg-[#124B30] text-white border-[#124B30]'
+                        ? 'bg-[#26339E] text-white border-[#26339E]'
                         : 'bg-white text-slate-700 border-slate-200'
                     }`}
                   >
@@ -325,7 +325,7 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
                     onClick={() => setSimDuration('24')}
                     className={`py-2 px-3 text-xs font-bold rounded-lg border transition-all cursor-pointer ${
                       simDuration === '24'
-                        ? 'bg-[#124B30] text-white border-[#124B30]'
+                        ? 'bg-[#26339E] text-white border-[#26339E]'
                         : 'bg-white text-slate-700 border-slate-200'
                     }`}
                   >
@@ -343,18 +343,18 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
                   onClick={() => setSimScholarship(!simScholarship)}
                   className={`w-full py-2.5 px-4 text-xs font-bold rounded-lg border transition-all flex items-center justify-between cursor-pointer ${
                     simScholarship
-                      ? 'bg-[#FEF8E8] text-[#0B2B1B] border-[#F7D479]'
+                      ? 'bg-[#EEF0FA] text-[#12162A] border-[#26339E]/20'
                       : 'bg-white text-slate-700 border-slate-200'
                   }`}
                 >
                   <span>Bourse 1500 places (21 000 FCFA)</span>
-                  <span className="font-extrabold text-[#124B30]">{simScholarship ? 'Sélectionné ✓' : 'Non retenu'}</span>
+                  <span className="font-extrabold text-[#26339E]">{simScholarship ? 'Sélectionné ✓' : 'Non retenu'}</span>
                 </button>
               </div>
 
               {/* Tableau des tranches */}
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
-                <div className="flex justify-between font-bold text-sm text-[#0B2B1B] pb-2 border-b border-slate-200">
+                <div className="flex justify-between font-bold text-sm text-[#12162A] pb-2 border-b border-slate-200">
                   <span>Coût total estimé :</span>
                   <span className="tabular-nums">{total.toLocaleString('fr-FR')} FCFA</span>
                 </div>
@@ -372,10 +372,10 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
         {/* 4.4 FAQ EN ACCORDÉON INTERACTIF ANIMÉ */}
         <div className="mt-20 pt-16 border-t border-slate-200 max-w-4xl mx-auto">
           <div className="text-center space-y-3 mb-12">
-            <span className="text-xs uppercase tracking-widest font-extrabold text-[#124B30] bg-[#FEF8E8] border border-[#F7D479] px-3.5 py-1 rounded-full inline-block">
+            <span className="text-xs uppercase tracking-widest font-extrabold text-[#26339E] bg-[#EEF0FA] border border-[#26339E]/20 px-3.5 py-1 rounded-full inline-block">
               Questions Fréquentes
             </span>
-            <h3 className="font-display font-black text-3xl sm:text-4xl text-[#0B2B1B] uppercase tracking-tight">
+            <h3 className="font-display font-black text-3xl sm:text-4xl text-[#12162A] uppercase tracking-tight">
               Tout Savoir sur les Tarifs & Inscriptions
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto font-normal">
@@ -393,13 +393,13 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
                 >
                   <button
                     onClick={() => toggleFaq(index)}
-                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-[#0B2B1B] hover:text-[#124B30] transition-colors cursor-pointer"
+                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-[#12162A] hover:text-[#26339E] transition-colors cursor-pointer"
                   >
                     <span className="text-sm sm:text-base font-display font-extrabold uppercase tracking-tight leading-snug">
                       {item.question}
                     </span>
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 bg-[#124B30] text-[#E5A910]' : 'bg-slate-100 text-slate-600'
+                      isOpen ? 'rotate-180 bg-[#26339E] text-[#E85B3D]' : 'bg-slate-100 text-slate-600'
                     }`}>
                       <ChevronDown className="w-4 h-4" />
                     </div>
@@ -409,7 +409,7 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
                     <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 space-y-2">
                       <p>{item.answer}</p>
                       {item.note && (
-                        <p className="text-[11px] text-[#124B30] font-semibold italic bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                        <p className="text-[11px] text-[#26339E] font-semibold italic bg-slate-50 p-2.5 rounded-lg border border-slate-200">
                           {item.note}
                         </p>
                       )}
