@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Phone, UserPlus } from 'lucide-react';
+import { Menu, X, UserPlus } from 'lucide-react';
 import { GENERAL_CONTACT } from '../data/centersData';
 import { IMAGES } from '../assets/images';
 
@@ -79,13 +79,6 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
 
           {/* Droite : Téléphone + Bouton "S'inscrire" (corail PitchLab) + Menu hamburger */}
           <div className="flex items-center gap-3 sm:gap-4">
-            <a
-              href={`tel:${GENERAL_CONTACT.primaryPhone}`}
-              className="hidden xl:flex items-center gap-2 text-xs font-semibold text-[#14162B] hover:text-[#E85B3D] transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#26339E]" />
-              <span>01 66 73 06 67</span>
-            </a>
 
             {/* Bouton S'inscrire en corail plein PitchLab */}
             <button
