@@ -42,18 +42,18 @@ export function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-white relative border-b border-[#10382B]/10">
+    <section id="faq" className="py-20 sm:py-28 bg-white relative border-b border-[#12162A]/10">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center space-y-3 mb-16">
-          <span className="text-xs uppercase tracking-[0.22em] font-bold text-[#9E7428]">
+          <span className="text-xs uppercase tracking-[0.22em] font-bold text-[#D44A2D]">
             Réponses aux Questions
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#0B251C] tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#12162A] tracking-tight">
             Foire Aux Questions
           </h2>
-          <p className="text-base text-[#53625C] font-normal leading-relaxed">
+          <p className="text-base text-[#475569] font-normal leading-relaxed">
             Tout ce qu'il faut savoir sur les conditions d'accès, les bourses d'études et le déroulement des cours en atelier.
           </p>
         </div>
@@ -70,20 +70,20 @@ export function FaqSection() {
                 <button
                   type="button"
                   onClick={() => toggle(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-[#0B251C] hover:text-[#9E7428] transition-colors cursor-pointer"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-[#12162A] hover:text-[#D44A2D] transition-colors cursor-pointer"
                 >
                   <span className="text-base sm:text-lg font-display tracking-tight leading-snug">
                     {item.question}
                   </span>
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                    isOpen ? 'rotate-180 bg-[#0B251C] text-[#CFA049]' : 'bg-[#FAF9F5] text-[#53625C]'
+                    isOpen ? 'rotate-180 bg-[#12162A] text-[#F5C64B]' : 'bg-[#EEF0FA] text-[#475569]'
                   }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[#53625C] leading-relaxed border-t border-[#10382B]/8">
+                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[#475569] leading-relaxed border-t border-[#12162A]/8">
                     <p>{item.answer}</p>
                   </div>
                 )}
@@ -92,9 +92,9 @@ export function FaqSection() {
           })}
         </div>
 
-        <div className="mt-12 text-center text-xs text-[#53625C]">
+        <div className="mt-12 text-center text-xs text-[#475569]">
           Une question spécifique non abordée ? Contactez notre standard au{' '}
-          <a href={`tel:${GENERAL_CONTACT.primaryPhone}`} className="font-bold text-[#0B251C] underline hover:text-[#9E7428]">
+          <a href={`tel:${GENERAL_CONTACT.primaryPhone}`} className="font-bold text-[#12162A] underline hover:text-[#D44A2D]">
             {GENERAL_CONTACT.primaryPhone}
           </a>
         </div>
