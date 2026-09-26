@@ -241,7 +241,7 @@ export function CoursesSection({ onSelectCourse, onOpenModal }: CoursesSectionPr
               Vous hésitez encore entre deux filières ?
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 max-w-xl">
-              Nos maîtres d'ateliers et conseillers vous accueillent à Porto-Novo, Cotonou et Parakou pour tester votre affinité et vous orienter.
+              Nos maîtres d'ateliers et conseillers vous accueillent à Porto-Novo, Cotonou, Calavi et Parakou pour tester votre affinité et vous orienter.
             </p>
           </div>
 
