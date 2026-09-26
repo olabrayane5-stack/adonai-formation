@@ -31,7 +31,7 @@ const PRICING_FAQ: FaqItem[] = [
   {
     question: "Quelle est la politique de remboursement ou d'annulation ?",
     answer: "Les frais de dossier d'inscription (15 000 FCFA) sont engagés dès l'enregistrement administratif et ne sont pas remboursables. En cas de désistement justifié avant le démarrage effectif des cours du 05 octobre 2026, les tranches de scolarité déjà versées peuvent faire l'objet d'un report pour la session suivante ou d'un remboursement partiel sur décision de la direction.",
-    note: "<!-- À COMPLÉTER : conditions formelles de remboursement après le démarrage des cours -->"
+    note: "Pour toute annulation après le démarrage des cours, contactez le secrétariat de votre centre : les conditions sont étudiées au cas par cas."
   }
 ];
 
