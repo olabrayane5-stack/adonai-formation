@@ -7,23 +7,23 @@ interface CtaBannerProps {
 
 export function CtaBanner({ onRegisterClick }: CtaBannerProps) {
   return (
-    <section className="relative bg-gradient-to-br from-[#12162A] to-[#12162A] text-[#EEF0FA] py-24 sm:py-28 overflow-hidden border-t border-[#E85B3D]/20">
+    <section className="relative bg-gradient-to-br from-[#1B4D2E] to-[#1B4D2E] text-[#F1F7F2] py-24 sm:py-28 overflow-hidden border-t border-[#F5B800]/20">
       <div 
         className="absolute inset-0 opacity-5 pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(#F5C64B 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(#F5B800 1px, transparent 1px)',
           backgroundSize: '24px 24px'
         }}
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
-        <span className="text-xs uppercase tracking-[0.25em] font-bold text-[#F5C64B]">
+        <span className="text-xs uppercase tracking-[0.25em] font-bold text-[#F5B800]">
           Rejoignez l'Élite Artisanale & Technique
         </span>
 
         <h2 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight">
           L'Avenir Appartient à Ceux <br />
-          <span className="font-serif italic font-normal text-[#F5C64B]">
+          <span className="font-serif italic font-normal text-[#F5B800]">
             Qui Savent Faire.
           </span>
         </h2>
@@ -36,7 +36,7 @@ export function CtaBanner({ onRegisterClick }: CtaBannerProps) {
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={onRegisterClick}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#E85B3D] hover:bg-[#D44A2D] text-white font-bold text-xs uppercase tracking-wider rounded-full shadow-lg transition-all cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#F5B800] hover:bg-[#F5B800] text-white font-bold text-xs uppercase tracking-wider rounded-full shadow-lg transition-all cursor-pointer"
           >
             <span>Candidater maintenant</span>
             <ArrowUpRight className="w-4 h-4 text-white" />
@@ -50,7 +50,7 @@ export function CtaBanner({ onRegisterClick }: CtaBannerProps) {
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 text-xs font-bold uppercase tracking-wider rounded-full transition-all cursor-pointer"
           >
-            <MessageSquare className="w-4 h-4 text-[#F5C64B]" />
+            <MessageSquare className="w-4 h-4 text-[#F5B800]" />
             <span>Échanger sur WhatsApp</span>
           </a>
         </div>
