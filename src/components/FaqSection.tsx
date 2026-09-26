@@ -13,8 +13,8 @@ const FAQ_DATA: FaqItem[] = [
     answer: "Les formations d'ADONAI-FORMATION sont ouvertes à tous les profils : jeunes déscolarisés, titulaires du CEP, BEPC, BAC ou diplômés universitaires en reconversion. Aucun diplôme préalable n'est obligatoire. Notre enseignement individualisé en atelier s'adapte à votre rythme d'apprentissage."
   },
   {
-    question: "Comment bénéficier de l'une des 1500 bourses d'études à 21 000 FCFA ?",
-    answer: "Il vous suffit de cocher l'option 'Je sollicite la bourse' sur le formulaire d'inscription en ligne ou au secrétariat. Les bourses sont octroyées par ordre de validation des dossiers dans nos 3 campus (Porto-Novo, Cotonou et Parakou). La participation financière est fixée à 21 000 FCFA au lieu du plein tarif."
+    question: "Comment bénéficier de l'une des 1500 bourses d'études à 150 000 FCFA ?",
+    answer: "Il vous suffit de cocher l'option 'Je sollicite la bourse' sur le formulaire d'inscription en ligne ou au secrétariat. Les bourses sont octroyées par ordre de validation des dossiers dans nos 4 campus (Porto-Novo, Cotonou, Calavi et Parakou). La participation financière est fixée à 150 000 FCFA au lieu du plein tarif."
   },
   {
     question: "Quelle est la date officielle de la rentrée des classes ?",
