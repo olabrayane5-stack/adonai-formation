@@ -48,15 +48,15 @@ export function PartnersSection() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 bg-[#EEF0FA] relative border-b border-[#12162A]/10">
+    <section className="py-20 sm:py-28 bg-[#F1F7F2] relative border-b border-[#1B4D2E]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center space-y-3 mb-16">
-          <span className="text-xs uppercase tracking-[0.22em] font-bold text-[#D44A2D]">
+          <span className="text-xs uppercase tracking-[0.22em] font-bold text-[#1B4D2E]">
             Écosystème Professionnel & Insertion
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#12162A] tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#1B4D2E] tracking-tight">
             Nos Partenaires de Stage & de Recrutement
           </h2>
           <p className="text-base text-[#475569] font-normal leading-relaxed">
@@ -71,14 +71,14 @@ export function PartnersSection() {
               key={idx}
               className="lux-card rounded-2xl p-6 flex items-center gap-4 group"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#12162A] text-[#F5C64B] font-display font-bold text-sm flex items-center justify-center shrink-0 border border-[#E85B3D]/30 shadow-xs">
+              <div className="w-12 h-12 rounded-xl bg-[#1B4D2E] text-[#F5B800] font-display font-bold text-sm flex items-center justify-center shrink-0 border border-[#2E7D32]/30 shadow-xs">
                 {p.code}
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="font-display font-bold text-sm text-[#12162A] truncate">
+                <h3 className="font-display font-bold text-sm text-[#1B4D2E] truncate">
                   {p.name}
                 </h3>
-                <p className="text-xs text-[#D44A2D] font-medium">{p.category}</p>
+                <p className="text-xs text-[#1B4D2E] font-medium">{p.category}</p>
                 <span className="text-[11px] text-[#475569] mt-0.5 block">
                   📍 {p.location}
                 </span>
