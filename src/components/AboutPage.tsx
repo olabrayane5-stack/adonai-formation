@@ -1,20 +1,14 @@
 import { 
   CheckCircle2, 
-  Award, 
   Target, 
-  Eye, 
-  MapPin, 
-  Phone, 
   ShieldCheck,
   UserPlus,
   ArrowRight,
   Wrench,
   Users,
-  Compass,
   Building2
 } from 'lucide-react';
 import { IMAGES } from '../assets/images';
-import { CENTERS_DATA, GENERAL_CONTACT } from '../data/centersData';
 import { AnimatedCounter } from './AnimatedCounter';
 
 interface AboutPageProps {
@@ -78,7 +72,7 @@ export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigat
             À Propos d'<span className="text-[#F5B800]">ADONAI-FORMATION</span>
           </h1>
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-white/85 font-normal leading-relaxed">
-            Centre de Formation Professionnelle et d'Apprentissage des Métiers présent à <strong>Porto-Novo</strong>, <strong>Cotonou</strong> et <strong>Parakou</strong>.
+            Centre de Formation Professionnelle et d'Apprentissage des Métiers présent à <strong>Porto-Novo</strong>, <strong>Cotonou</strong>, <strong>Calavi</strong> et <strong>Parakou</strong>.
           </p>
         </div>
       </section>
