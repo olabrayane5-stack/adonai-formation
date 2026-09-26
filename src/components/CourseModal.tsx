@@ -48,7 +48,7 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-[#12162A]/10 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-[#1B4D2E]/10 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         
         {/* Banner with Course Atelier Photography */}
         <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-stone-100">
@@ -57,7 +57,7 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
             alt={course.name}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#12162A] via-[#12162A]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D2E] via-[#1B4D2E]/50 to-transparent" />
 
           {/* Close button */}
           <button
@@ -70,11 +70,11 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
 
           {/* Title and metadata on image */}
           <div className="absolute bottom-5 left-6 right-6 text-white space-y-1">
-            <div className="text-[10px] uppercase tracking-[0.2em] text-[#F5C64B] font-bold">
+            <div className="text-[10px] uppercase tracking-[0.2em] text-[#F5B800] font-bold">
               {course.categoryLabel} · Formation d'Atelier
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center text-[#F5C64B] border border-white/20">
+              <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center text-[#F5B800] border border-white/20">
                 <IconComponent className="w-5 h-5" />
               </div>
               <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
@@ -85,23 +85,23 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 sm:p-8 space-y-6 text-[#12162A] max-h-[60vh] overflow-y-auto">
+        <div className="p-6 sm:p-8 space-y-6 text-[#1B4D2E] max-h-[60vh] overflow-y-auto">
           {/* Quick specs */}
           <div className="flex flex-wrap items-center gap-3 text-xs">
-            <span className="flex items-center gap-1.5 px-3 py-1 bg-[#EEF0FA] text-[#12162A] rounded-full font-semibold border border-[#12162A]/10">
-              <Clock className="w-3.5 h-3.5 text-[#E85B3D]" />
+            <span className="flex items-center gap-1.5 px-3 py-1 bg-[#F1F7F2] text-[#1B4D2E] rounded-full font-semibold border border-[#1B4D2E]/10">
+              <Clock className="w-3.5 h-3.5 text-[#2E7D32]" />
               Durée : 12 ou 24 mois
             </span>
-            <span className="px-3 py-1 bg-[#EEF0FA] text-[#D44A2D] rounded-full font-semibold border border-[#E85B3D]/30">
+            <span className="px-3 py-1 bg-[#F1F7F2] text-[#1B4D2E] rounded-full font-semibold border border-[#2E7D32]/30">
               Rentrée Officielle : 05 Octobre 2026
             </span>
-            <span className="px-3 py-1 bg-[#12162A] text-white rounded-full font-semibold">
+            <span className="px-3 py-1 bg-[#1B4D2E] text-white rounded-full font-semibold">
               Bourse éligible (21 000 FCFA)
             </span>
           </div>
 
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#D44A2D] mb-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#1B4D2E] mb-2">
               Présentation du Métier
             </h4>
             <p className="text-sm text-[#475569] leading-relaxed">
@@ -111,14 +111,14 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
 
           {/* Skills */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#12162A] mb-3 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#12162A]" />
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#1B4D2E] mb-3 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-[#1B4D2E]" />
               Compétences Techniques Développées
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {course.skills.map((skill, idx) => (
-                <div key={idx} className="flex items-start gap-2 bg-[#EEF0FA] p-3 rounded-xl border border-[#12162A]/8 text-xs text-[#12162A]">
-                  <Check className="w-3.5 h-3.5 text-[#E85B3D] mt-0.5 shrink-0" />
+                <div key={idx} className="flex items-start gap-2 bg-[#F1F7F2] p-3 rounded-xl border border-[#1B4D2E]/8 text-xs text-[#1B4D2E]">
+                  <Check className="w-3.5 h-3.5 text-[#2E7D32] mt-0.5 shrink-0" />
                   <span>{skill}</span>
                 </div>
               ))}
@@ -127,14 +127,14 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
 
           {/* Careers */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#12162A] mb-3 flex items-center gap-2">
-              <Briefcase className="w-4 h-4 text-[#E85B3D]" />
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#1B4D2E] mb-3 flex items-center gap-2">
+              <Briefcase className="w-4 h-4 text-[#2E7D32]" />
               Débouchés & Opportunités Professionnelles
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {course.careers.map((career, idx) => (
-                <div key={idx} className="flex items-center gap-2 bg-[#EEF0FA] p-3 rounded-xl border border-[#12162A]/8 text-xs font-medium text-[#12162A]">
-                  <span className="text-[#E85B3D] font-bold">✦</span>
+                <div key={idx} className="flex items-center gap-2 bg-[#F1F7F2] p-3 rounded-xl border border-[#1B4D2E]/8 text-xs font-medium text-[#1B4D2E]">
+                  <span className="text-[#2E7D32] font-bold">✦</span>
                   <span>{career}</span>
                 </div>
               ))}
@@ -142,9 +142,9 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
           </div>
 
           {/* Tools & Equipment */}
-          <div className="bg-[#EEF0FA] p-5 rounded-2xl border border-[#12162A]/8">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#D44A2D] mb-2 flex items-center gap-2">
-              <Wrench className="w-3.5 h-3.5 text-[#12162A]" />
+          <div className="bg-[#F1F7F2] p-5 rounded-2xl border border-[#1B4D2E]/8">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#1B4D2E] mb-2 flex items-center gap-2">
+              <Wrench className="w-3.5 h-3.5 text-[#1B4D2E]" />
               Matériel & Équipements Réels en Atelier
             </h4>
             <p className="text-xs text-[#475569] leading-relaxed">
@@ -154,7 +154,7 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
         </div>
 
         {/* Modal Footer */}
-        <div className="p-6 bg-[#EEF0FA] border-t border-[#12162A]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="p-6 bg-[#F1F7F2] border-t border-[#1B4D2E]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-xs text-[#475569] text-center sm:text-left">
             <span>Inscription : <strong>15 000 FCFA</strong></span> · 
             <span> Formation : <strong>200k (12m)</strong> / <strong>350k (24m)</strong></span>
@@ -163,7 +163,7 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
           <div className="flex items-center gap-3 w-full sm:w-auto">
             <button
               onClick={onClose}
-              className="flex-1 sm:flex-none px-5 py-2.5 text-xs font-semibold text-[#475569] hover:text-[#12162A] rounded-full border border-[#12162A]/15 hover:bg-white transition-colors cursor-pointer"
+              className="flex-1 sm:flex-none px-5 py-2.5 text-xs font-semibold text-[#475569] hover:text-[#1B4D2E] rounded-full border border-[#1B4D2E]/15 hover:bg-white transition-colors cursor-pointer"
             >
               Fermer
             </button>
@@ -172,10 +172,10 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
                 onSelectCourse(course);
                 onClose();
               }}
-              className="flex-1 sm:flex-none px-6 py-2.5 bg-[#12162A] hover:bg-[#12162A] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer"
+              className="flex-1 sm:flex-none px-6 py-2.5 bg-[#1B4D2E] hover:bg-[#153D24] text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer"
             >
               <span>Choisir cette filière</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-[#F5C64B]" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#F5B800]" />
             </button>
           </div>
         </div>
