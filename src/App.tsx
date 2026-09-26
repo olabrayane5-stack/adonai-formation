@@ -104,7 +104,7 @@ export default function App() {
           />
         )}
 
-        {/* 4.3 PAGE FORMATIONS : Grille des 12 filières avec bandeau photo, filtre interactif & modale */}
+        {/* 4.3 PAGE FORMATIONS : Grille des 20 filières avec bandeau photo, filtre interactif & modale */}
         {currentPage === 'filieres' && (
           <div>
             {/* Bandeau d'en-tête de page bleu marine quasi noir #1B4D2E avec photo à faible opacité et triangles corail */}
