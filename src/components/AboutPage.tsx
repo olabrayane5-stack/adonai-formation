@@ -113,7 +113,7 @@ export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigat
                 onClick={onNavigateToCourses}
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border-2 border-[#2E7D32] text-[#2E7D32] hover:bg-[#2E7D32] hover:text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
               >
-                <span>Découvrir les 12 filières</span>
+                <span>Découvrir les 20 filières</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button
@@ -232,7 +232,7 @@ export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigat
             
             <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
               <div className="font-display font-black text-4xl sm:text-6xl text-[#F5B800]">
-                <AnimatedCounter end={12} />
+                <AnimatedCounter end={20} />
               </div>
               <p className="text-xs uppercase tracking-wider font-extrabold text-white">
                 Filières Professionnelles
@@ -242,12 +242,12 @@ export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigat
 
             <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
               <div className="font-display font-black text-4xl sm:text-6xl text-white">
-                <AnimatedCounter end={3} />
+                <AnimatedCounter end={4} />
               </div>
               <p className="text-xs uppercase tracking-wider font-extrabold text-white">
                 Centres Déployés
               </p>
-              <p className="text-[11px] text-white/70">Porto-Novo, Cotonou et Parakou</p>
+              <p className="text-[11px] text-white/70">Porto-Novo, Cotonou, Calavi et Parakou</p>
             </div>
 
             <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
@@ -257,7 +257,7 @@ export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigat
               <p className="text-xs uppercase tracking-wider font-extrabold text-white">
                 Bourses Accordées
               </p>
-              <p className="text-[11px] text-white/70">Frais réduits à 21 000 FCFA</p>
+              <p className="text-[11px] text-white/70">Frais réduits à 150 000 FCFA</p>
             </div>
 
             <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
@@ -282,7 +282,7 @@ export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigat
               Présence Nationale
             </span>
             <h3 className="font-display font-black text-3xl sm:text-4xl text-[#2E7D32] uppercase tracking-tight leading-tight">
-              Des Ateliers Spacieux à <span className="text-[#2E7D32]">Porto-Novo, Cotonou et Parakou</span>
+              Des Ateliers Spacieux à <span className="text-[#2E7D32]">Porto-Novo, Cotonou, Calavi et Parakou</span>
             </h3>
             <p className="text-sm text-slate-700 leading-relaxed font-normal">
               Où que vous soyez au Bénin, ADONAI-FORMATION met à votre disposition des locaux accueillants, un matériel de pointe et une équipe pédagogique disponible pour vous former dans les meilleures conditions.
@@ -295,7 +295,7 @@ export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigat
               className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-extrabold text-xs uppercase tracking-wider shadow-md transition-all cursor-pointer"
             >
               <Building2 className="w-4 h-4 text-white" />
-              <span>Découvrir nos 3 centres</span>
+              <span>Découvrir nos 4 centres</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
