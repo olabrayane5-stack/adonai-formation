@@ -76,7 +76,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#EEF0FA] text-[#14162B] font-sans antialiased selection:bg-[#E85B3D] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#F1F7F2] text-[#1B4D2E] font-sans antialiased selection:bg-[#F5B800] selection:text-[#1B4D2E]">
       {/* Header Sticky avec navigation entre les pages */}
       <Header 
         currentPage={currentPage}
@@ -107,8 +107,8 @@ export default function App() {
         {/* 4.3 PAGE FORMATIONS : Grille des 12 filières avec bandeau photo, filtre interactif & modale */}
         {currentPage === 'filieres' && (
           <div>
-            {/* Bandeau d'en-tête de page bleu marine quasi noir #12162A avec photo à faible opacité et triangles corail */}
-            <div className="relative bg-[#12162A] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
+            {/* Bandeau d'en-tête de page bleu marine quasi noir #1B4D2E avec photo à faible opacité et triangles corail */}
+            <div className="relative bg-[#1B4D2E] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
               <div className="absolute inset-0 opacity-40 pointer-events-none">
                 <img
                   src={IMAGES.workshopCouture}
@@ -117,17 +117,17 @@ export default function App() {
                 />
               </div>
               {/* Motif géométrique corail discret dans un coin (triangles) */}
-              <svg className="absolute -top-6 -right-6 w-36 h-36 opacity-25 pointer-events-none text-[#E85B3D]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+              <svg className="absolute -top-6 -right-6 w-36 h-36 opacity-25 pointer-events-none text-[#F5B800]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
                 <polygon points="100,0 60,0 100,40" />
                 <polygon points="100,50 40,0 20,0 100,80" />
                 <polygon points="100,90 10,0 0,0 100,100" />
               </svg>
               <div className="max-w-5xl mx-auto relative z-10 text-center space-y-3">
-                <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5C64B] bg-white/10 px-4 py-1.5 rounded-full inline-block border border-white/15 backdrop-blur-sm">
+                <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5B800] bg-white/10 px-4 py-1.5 rounded-full inline-block border border-white/15 backdrop-blur-sm">
                   Catalogue Officiel Rentrée 2026
                 </span>
                 <h1 className="text-4xl sm:text-6xl font-black font-display text-white uppercase tracking-tight leading-tight">
-                  Nos 12 Filières <span className="text-[#E85B3D]">d'Atelier</span>
+                  Nos 12 Filières <span className="text-[#F5B800]">d'Atelier</span>
                 </h1>
                 <p className="mt-3 text-white/85 max-w-2xl mx-auto text-sm sm:text-base font-normal leading-relaxed">
                   Découvrez nos formations pratiques en conditions réelles d'atelier. Choisissez votre métier d'avenir et devenez un expert reconnu.
@@ -146,8 +146,8 @@ export default function App() {
         {/* 4.4 PAGE TARIFS : Grille tarifaire, Bourses, Simulateur & FAQ en accordéon animé */}
         {currentPage === 'tarifs' && (
           <div>
-            {/* Bandeau d'en-tête bleu marine quasi noir #12162A avec photo et motif corail */}
-            <div className="relative bg-[#12162A] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
+            {/* Bandeau d'en-tête bleu marine quasi noir #1B4D2E avec photo et motif corail */}
+            <div className="relative bg-[#1B4D2E] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
               <div className="absolute inset-0 opacity-40 pointer-events-none">
                 <img
                   src={IMAGES.heroBrightStudents}
@@ -156,17 +156,17 @@ export default function App() {
                 />
               </div>
               {/* Motif géométrique corail discret dans un coin (triangles) */}
-              <svg className="absolute -top-6 -right-6 w-36 h-36 opacity-25 pointer-events-none text-[#E85B3D]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+              <svg className="absolute -top-6 -right-6 w-36 h-36 opacity-25 pointer-events-none text-[#F5B800]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
                 <polygon points="100,0 60,0 100,40" />
                 <polygon points="100,50 40,0 20,0 100,80" />
                 <polygon points="100,90 10,0 0,0 100,100" />
               </svg>
               <div className="max-w-5xl mx-auto relative z-10 text-center space-y-3">
-                <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5C64B] bg-white/10 px-4 py-1.5 rounded-full inline-block border border-white/15 backdrop-blur-sm">
+                <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5B800] bg-white/10 px-4 py-1.5 rounded-full inline-block border border-white/15 backdrop-blur-sm">
                   Transparence & Égalité des Chances
                 </span>
                 <h1 className="text-4xl sm:text-6xl font-black font-display text-white uppercase tracking-tight leading-tight">
-                  Tarifs & Programme de <span className="text-[#E85B3D]">1500 Bourses</span>
+                  Tarifs & Programme de <span className="text-[#F5B800]">1500 Bourses</span>
                 </h1>
                 <p className="mt-3 text-white/85 max-w-2xl mx-auto text-sm sm:text-base font-normal leading-relaxed">
                   Investissez sereinement dans votre avenir grâce à des tarifs justes et un échelonnement souple des paiements.
@@ -184,8 +184,8 @@ export default function App() {
         {/* 4.5 PAGE CENTRES : 3 sous-sections complètes, photos de fond & carte Maps */}
         {currentPage === 'centres' && (
           <div>
-            {/* Bandeau d'en-tête de page bleu marine quasi noir #12162A avec triangles corail */}
-            <div className="relative bg-[#12162A] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
+            {/* Bandeau d'en-tête de page bleu marine quasi noir #1B4D2E avec triangles corail */}
+            <div className="relative bg-[#1B4D2E] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
               <div className="absolute inset-0 opacity-40 pointer-events-none">
                 <img
                   src={IMAGES.centerPortoNovo}
@@ -194,17 +194,17 @@ export default function App() {
                 />
               </div>
               {/* Motif géométrique corail discret dans un coin (triangles) */}
-              <svg className="absolute -top-6 -right-6 w-36 h-36 opacity-25 pointer-events-none text-[#E85B3D]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+              <svg className="absolute -top-6 -right-6 w-36 h-36 opacity-25 pointer-events-none text-[#F5B800]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
                 <polygon points="100,0 60,0 100,40" />
                 <polygon points="100,50 40,0 20,0 100,80" />
                 <polygon points="100,90 10,0 0,0 100,100" />
               </svg>
               <div className="max-w-5xl mx-auto relative z-10 text-center space-y-3">
-                <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5C64B] bg-white/10 px-4 py-1.5 rounded-full inline-block border border-white/15 backdrop-blur-sm">
+                <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5B800] bg-white/10 px-4 py-1.5 rounded-full inline-block border border-white/15 backdrop-blur-sm">
                   Infrastructures Pédagogiques
                 </span>
                 <h1 className="text-4xl sm:text-6xl font-black font-display text-white uppercase tracking-tight leading-tight">
-                  Nos 3 Campus au <span className="text-[#E85B3D]">Bénin</span>
+                  Nos 3 Campus au <span className="text-[#F5B800]">Bénin</span>
                 </h1>
                 <p className="mt-3 text-white/85 max-w-2xl mx-auto text-sm sm:text-base font-normal leading-relaxed">
                   Des ateliers spacieux et modernes à <strong>Porto-Novo</strong> (siège historique), <strong>Cotonou</strong> et <strong>Parakou</strong>.
@@ -219,7 +219,7 @@ export default function App() {
         {/* 4.6 PAGE CONTACT / INSCRIPTION : Explication 4 étapes & formulaire complet */}
         {currentPage === 'inscription' && (
           <div>
-            <div className="relative bg-[#12162A] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
+            <div className="relative bg-[#1B4D2E] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
               <div className="absolute inset-0 opacity-40 pointer-events-none">
                 <img
                   src={IMAGES.trainerMentor}
@@ -228,17 +228,17 @@ export default function App() {
                 />
               </div>
               {/* Motif géométrique corail discret dans un coin (triangles) */}
-              <svg className="absolute -top-6 -right-6 w-36 h-36 opacity-25 pointer-events-none text-[#E85B3D]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+              <svg className="absolute -top-6 -right-6 w-36 h-36 opacity-25 pointer-events-none text-[#F5B800]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
                 <polygon points="100,0 60,0 100,40" />
                 <polygon points="100,50 40,0 20,0 100,80" />
                 <polygon points="100,90 10,0 0,0 100,100" />
               </svg>
               <div className="max-w-5xl mx-auto relative z-10 text-center space-y-3">
-                <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5C64B] bg-white/10 px-4 py-1.5 rounded-full inline-block border border-white/15 backdrop-blur-sm">
+                <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5B800] bg-white/10 px-4 py-1.5 rounded-full inline-block border border-white/15 backdrop-blur-sm">
                   Session Officielle 2026-2027
                 </span>
                 <h1 className="text-4xl sm:text-6xl font-black font-display text-white uppercase tracking-tight leading-tight">
-                  Candidature & <span className="text-[#E85B3D]">Pré-Inscription</span>
+                  Candidature & <span className="text-[#F5B800]">Pré-Inscription</span>
                 </h1>
                 <p className="mt-3 text-white/85 max-w-2xl mx-auto text-sm sm:text-base font-normal leading-relaxed">
                   Remplissez votre dossier en ligne pour réserver votre poste en atelier dès la rentrée du 05 octobre 2026.
