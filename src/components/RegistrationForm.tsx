@@ -106,7 +106,7 @@ Je vous adresse ma demande d'inscription pour la Rentrée du 05 Octobre 2026 :
 • Filière souhaitée : ${newApp.filiere}
 • Centre : ${newApp.center}
 • Durée : ${newApp.duration}
-• Bourse d'études (21 000 FCFA) : ${newApp.applyScholarship ? 'OUI (Je demande la bourse)' : 'Non (Plein tarif)'}
+• Bourse d'études (150 000 FCFA) : ${newApp.applyScholarship ? 'OUI (Je demande la bourse)' : 'Non (Plein tarif)'}
 • Référence dossier : ${newApp.id}
 
 Merci de m'indiquer la confirmation de mon inscription et le créneau pour déposer mes photos et mon acte de naissance.`;
@@ -243,7 +243,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                   <strong className="text-slate-900">{submittedApp.duration}</strong>
                 </div>
                 <div className="flex justify-between py-1">
-                  <span className="text-slate-500">Bourse 21 000 FCFA :</span>
+                  <span className="text-slate-500">Bourse 150 000 FCFA :</span>
                   <strong className="text-[#1B4D2E]">
                     {submittedApp.applyScholarship ? 'Oui (Bourse sollicitée)' : 'Non (Plein tarif)'}
                   </strong>
@@ -366,6 +366,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                     >
                       <option value="Porto-Novo">Porto-Novo (Kandévié, carrefour Yaya gendarme)</option>
                       <option value="Cotonou">Cotonou</option>
+                      <option value="Calavi">Calavi</option>
                       <option value="Parakou">Parakou</option>
                     </select>
                   </div>
@@ -433,7 +434,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                       Je souhaite bénéficier d'une bourse d'études (1500 places disponibles)
                     </strong>
                     <span className="text-slate-600 block mt-0.5">
-                      Participation réduite à <strong>21 000 FCFA</strong> au lieu du plein tarif pour la rentrée 2026.
+                      Participation réduite à <strong>150 000 FCFA</strong> au lieu du plein tarif pour la rentrée 2026.
                     </span>
                   </label>
                 </div>
