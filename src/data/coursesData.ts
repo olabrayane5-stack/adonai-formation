@@ -1,11 +1,12 @@
 import { IMAGES } from '../assets/images';
 
-export type CourseCategory = 
-  | 'mode-artisanat' 
-  | 'batiment-technique' 
-  | 'informatique-digital' 
-  | 'sante' 
-  | 'evenementiel-hotellerie';
+export type CourseCategory =
+  | 'mode-artisanat'
+  | 'batiment-technique'
+  | 'sante-pharmacie'
+  | 'beaute-image'
+  | 'hotellerie-restauration'
+  | 'digital-bureautique';
 
 export interface Filiere {
   id: string;
@@ -24,11 +25,12 @@ export interface Filiere {
 }
 
 export const FILIERES_DATA: Filiere[] = [
+  // ---------- 1. Mode & Artisanat créatif ----------
   {
     id: 'haute-couture',
     name: 'Haute couture',
     category: 'mode-artisanat',
-    categoryLabel: 'Mode & Artisanat',
+    categoryLabel: 'Mode & Artisanat créatif',
     duration: '12 ou 24 mois',
     imageUrl: IMAGES.hauteCouture,
     description: 'Conception et confection de vêtements sur mesure, de la prise de mesure à la finition, avec les techniques de couture professionnelle.',
@@ -53,7 +55,7 @@ export const FILIERES_DATA: Filiere[] = [
     id: 'stylisme-modelisme',
     name: 'Stylisme-Modélisme',
     category: 'mode-artisanat',
-    categoryLabel: 'Mode & Artisanat',
+    categoryLabel: 'Mode & Artisanat créatif',
     duration: '12 ou 24 mois',
     imageUrl: IMAGES.stylismeModelisme,
     description: 'Création de modèles, dessin de mode et construction de patrons pour donner vie à ses propres collections.',
@@ -73,6 +75,56 @@ export const FILIERES_DATA: Filiere[] = [
     equipment: ['Tables de dessin', 'Mannequins réglables', 'Logiciels de moodboard', 'Atelier d\'essayage'],
     iconName: 'Sparkles',
   },
+  {
+    id: 'decoration-evenementielle',
+    name: 'Décoration événementielle',
+    category: 'mode-artisanat',
+    categoryLabel: 'Mode & Artisanat créatif',
+    duration: '12 ou 24 mois',
+    imageUrl: IMAGES.decorationEvenementielle,
+    description: 'Conception et réalisation de décors pour mariages, anniversaires et événements professionnels.',
+    longDescription: 'Créez des ambiances inoubliables pour les cérémonies et événements d\'envergure. Maîtrisez le drapage de plafonds et scènes, les structures de ballons organiques, les centres de table floraux et l\'éclairage d\'ambiance.',
+    skills: [
+      'Scénographie et harmonie des couleurs',
+      'Techniques de drapage professionnel et arches florales',
+      'Conception 3D/plans d\'implantation de réceptions',
+      'Gestion budgétaire et négociation fournisseurs'
+    ],
+    careers: [
+      'Décorateur événementiel professionnel',
+      'Wedding planner / Organisateur de réceptions',
+      'Scénographe d\'espaces commerciaux',
+      'Prestataire en mobilier événementiel'
+    ],
+    equipment: ['Structures aluminium et backdrops', 'Matériel de drapé ignifugé', 'Projecteurs LED d\'ambiance', 'Accessoires de banquet'],
+    iconName: 'Palette',
+  },
+  {
+    id: 'serigraphie',
+    name: 'Sérigraphie',
+    category: 'mode-artisanat',
+    categoryLabel: 'Mode & Artisanat créatif',
+    duration: '12 ou 24 mois',
+    imageUrl: IMAGES.heroBrightStudents,
+    description: 'Impression de motifs et de logos sur textile et supports rigides, du calque à la finition en série.',
+    longDescription: 'Formation pratique aux techniques d\'impression sur t-shirts, pagnes et supports publicitaires. Les apprenants réalisent leurs propres écrans, dosent les encres et maîtrisent l\'impression en petite et moyenne série pour les marques, événements et associations locales.',
+    skills: [
+      'Préparation d\'écrans et insolation de motifs',
+      'Impression textile monochrome et multicouleur',
+      'Dosage et mélange des encres sérigraphiques',
+      'Finition, séchage et contrôle qualité en série'
+    ],
+    careers: [
+      'Sérigraphe indépendant',
+      'Technicien d\'atelier d\'impression textile',
+      'Responsable production pour marque de vêtements',
+      'Prestataire impression événementielle'
+    ],
+    equipment: ['Cadres et écrans de sérigraphie', 'Table d\'impression manuelle', 'Insoleuse', 'Sécheuse textile'],
+    iconName: 'Palette',
+  },
+
+  // ---------- 2. Bâtiment & Technique ----------
   {
     id: 'electricite-batiment',
     name: 'Électricité bâtiment',
@@ -148,83 +200,36 @@ export const FILIERES_DATA: Filiere[] = [
     featured: true,
   },
   {
-    id: 'genie-informatique',
-    name: 'Génie informatique',
-    category: 'informatique-digital',
-    categoryLabel: 'Informatique & Digital',
+    id: 'maintenance-gsm',
+    name: 'Maintenance GSM',
+    category: 'batiment-technique',
+    categoryLabel: 'Bâtiment & Technique',
     duration: '12 ou 24 mois',
-    imageUrl: IMAGES.genieInformatique,
-    description: 'Maintenance informatique, réseau et dépannage matériel/logiciel.',
-    longDescription: 'Un cursus complet pour maîtriser les outils informatiques d\'entreprise. Dépannage PC et serveurs, configuration de switchs et routeurs Wi-Fi, sécurité de base, bureautique avancée et maintenance préventive.',
+    imageUrl: IMAGES.trainerMentor,
+    description: 'Diagnostic et réparation de smartphones : écrans, batteries, cartes mères et logiciels.',
+    longDescription: 'Un métier accessible et très demandé grâce à la multiplication des téléphones mobiles. Les apprenants dessoudent, remplacent et réparent les composants électroniques, flashent les systèmes et déblocent les appareils dans le respect des règles du métier.',
     skills: [
-      'Assemblage, diagnostic et dépannage matériel PC/Laptops',
-      'Configuration réseau LAN/WLAN, adressage IP et câblage RJ45',
-      'Installation d\'OS Windows / Linux et gestion de parcs',
-      'Bureautique avancée et sauvegarde de données'
+      'Diagnostic de pannes matérielles et logicielles',
+      'Micro-soudure et remplacement de composants',
+      'Changement d\'écrans, batteries et connecteurs',
+      'Flashage, déblocage et mise à jour de systèmes mobiles'
     ],
     careers: [
-      'Technicien support et maintenance informatique',
-      'Administrateur réseau junior',
-      'Responsable parc informatique en PME',
-      'Dépanneur informatique à son propre compte'
+      'Technicien réparateur de téléphones',
+      'Gérant d\'atelier de maintenance GSM',
+      'Technicien SAV pour boutique de téléphonie',
+      'Réparateur itinérant / à domicile'
     ],
-    equipment: ['Laboratoire PC avec composants interchangeables', 'Baies de brassage et switchs administrables', 'Testeurs de câbles réseau', 'Stations de clonage SSD'],
-    iconName: 'Cpu',
-    featured: true,
+    equipment: ['Stations de micro-soudure', 'Loupes binoculaires', 'Kits d\'ouverture et outillage de précision', 'Logiciels de diagnostic mobile'],
+    iconName: 'Smartphone',
   },
-  {
-    id: 'decoration-evenementielle',
-    name: 'Décoration événementielle',
-    category: 'evenementiel-hotellerie',
-    categoryLabel: 'Événementiel & Hôtellerie',
-    duration: '12 ou 24 mois',
-    imageUrl: IMAGES.decorationEvenementielle,
-    description: 'Conception et réalisation de décors pour mariages, anniversaires et événements professionnels.',
-    longDescription: 'Créez des ambiances inoubliables pour les cérémonies et événements d\'envergure. Maîtrisez le drapage de plafonds et scènes, les structures de ballons organiques, les centres de table floraux et l\'éclairage d\'ambiance.',
-    skills: [
-      'Scénographie et harmonie des couleurs',
-      'Techniques de drapage professionnel et arches florales',
-      'Conception 3D/plans d\'implantation de réceptions',
-      'Gestion budgétaire et négociation fournisseurs'
-    ],
-    careers: [
-      'Décorateur événementiel professionnel',
-      'Wedding planner / Organisateur de réceptions',
-      'Scénographe d\'espaces commerciaux',
-      'Prestataire en mobilier événementiel'
-    ],
-    equipment: ['Structures aluminium et backdrops', 'Matériel de drapé ignifugé', 'Projecteurs LED d\'ambiance', 'Accessoires de banquet'],
-    iconName: 'Palette',
-  },
-  {
-    id: 'hotellerie-restauration',
-    name: 'Hôtellerie-Restauration',
-    category: 'evenementiel-hotellerie',
-    categoryLabel: 'Événementiel & Hôtellerie',
-    duration: '12 ou 24 mois',
-    imageUrl: IMAGES.hotellerieRestauration,
-    description: 'Compétences en service, cuisine et accueil pour travailler dans l\'hôtellerie et la restauration.',
-    longDescription: 'Le secteur touristique et gastronomique au Bénin recrute des profils rigoureux et souriants. Formation axée sur la pratique en cuisine d\'application, les techniques de cuisson, les règles d\'hygiène HACCP, et l\'accueil des clients VIP.',
-    skills: [
-      'Techniques culinaires africaines et internationales',
-      'Service au guéridon, dressage de tables et bar',
-      'Normes d\'hygiène alimentaire et conservation',
-      'Gestion des réservations et relation client'
-    ],
-    careers: [
-      'Chef cuisinier en restaurant ou hôtel',
-      'Maître d\'hôtel / Responsable de salle',
-      'Traiteur pour réceptions privées',
-      'Gérant de complexe hôtelier ou bar lounge'
-    ],
-    equipment: ['Cuisine pédagogique équipée', 'Fourneaux professionnels', 'Vaisselle d\'arts de la table', 'Bar d\'entraînement mixologie'],
-    iconName: 'UtensilsCrossed',
-  },
+
+  // ---------- 3. Santé & Pharmacie ----------
   {
     id: 'delegation-medicale',
     name: 'Délégation médicale',
-    category: 'sante',
-    categoryLabel: 'Santé',
+    category: 'sante-pharmacie',
+    categoryLabel: 'Santé & Pharmacie',
     duration: '12 ou 24 mois',
     imageUrl: IMAGES.delegationMedicale,
     description: 'Techniques de prospection et de promotion des produits pharmaceutiques auprès des professionnels de santé.',
@@ -246,10 +251,10 @@ export const FILIERES_DATA: Filiere[] = [
     featured: true,
   },
   {
-    id: 'vente-en-pharmacie',
-    name: 'Vente en pharmacie',
-    category: 'sante',
-    categoryLabel: 'Santé',
+    id: 'auxiliaire-pharmacie',
+    name: 'Auxiliaire de pharmacie',
+    category: 'sante-pharmacie',
+    categoryLabel: 'Santé & Pharmacie',
     duration: '12 ou 24 mois',
     imageUrl: IMAGES.ventePharmacie,
     description: 'Gestion d\'une officine, conseil client et connaissance des produits pharmaceutiques de base.',
@@ -273,8 +278,8 @@ export const FILIERES_DATA: Filiere[] = [
   {
     id: 'secretariat-medical',
     name: 'Secrétariat médical',
-    category: 'sante',
-    categoryLabel: 'Santé',
+    category: 'sante-pharmacie',
+    categoryLabel: 'Santé & Pharmacie',
     duration: '12 ou 24 mois',
     imageUrl: IMAGES.secretariatMedical,
     description: 'Accueil des patients, gestion des dossiers médicaux et outils bureautiques adaptés au secteur de la santé.',
@@ -294,11 +299,186 @@ export const FILIERES_DATA: Filiere[] = [
     equipment: ['Postes bureautiques avec logiciels médicaux', 'Casques de transcription audio', 'Dossiers de simulation de patients'],
     iconName: 'ClipboardPlus',
   },
+
+  // ---------- 4. Beauté & Image ----------
+  {
+    id: 'tresse-coiffure-perruque',
+    name: 'Tresse-coiffure-perruque',
+    category: 'beaute-image',
+    categoryLabel: 'Beauté & Image',
+    duration: '12 ou 24 mois',
+    imageUrl: IMAGES.heroSunnyStudents,
+    description: 'Techniques de tressage, coiffure afro et pose de perruques pour salon ou activité à domicile.',
+    longDescription: 'Formation pratique sur mannequins puis sur clientèle réelle, couvrant les techniques traditionnelles et modernes de coiffure afro. Les apprenants maîtrisent le tressage, le tissage, la pose et l\'entretien de perruques ainsi que le conseil capillaire.',
+    skills: [
+      'Techniques de tressage traditionnelles et modernes',
+      'Pose, coupe et entretien de perruques et tissages',
+      'Soins et traitements capillaires adaptés aux cheveux afro',
+      'Accueil et conseil client en salon'
+    ],
+    careers: [
+      'Coiffeuse / Coiffeur professionnel(le)',
+      'Spécialiste tresse et pose de perruques',
+      'Gérante de salon de coiffure',
+      'Coiffeuse à domicile indépendante'
+    ],
+    equipment: ['Postes de coiffure équipés', 'Mannequins d\'entraînement', 'Sèche-cheveux et fers professionnels', 'Gamme de produits capillaires'],
+    iconName: 'Scissors',
+  },
+  {
+    id: 'makeup-nouage-foulards',
+    name: 'Make-up & nouage de foulards',
+    category: 'beaute-image',
+    categoryLabel: 'Beauté & Image',
+    duration: '12 ou 24 mois',
+    imageUrl: IMAGES.trainerMentor,
+    description: 'Maquillage professionnel événementiel et techniques de nouage de foulards et turbans assortis.',
+    longDescription: 'Une formation complète pour sublimer les visages lors de mariages, cérémonies et séances photo. Les apprenants maîtrisent les techniques de maquillage adaptées aux peaux et carnations locales, ainsi que le nouage artistique de foulards et turbans.',
+    skills: [
+      'Techniques de maquillage jour, soirée et mariée',
+      'Harmonisation des teintes pour carnations variées',
+      'Nouage artistique de foulards, turbans et gèles',
+      'Préparation de peau et pose de faux-cils'
+    ],
+    careers: [
+      'Maquilleuse professionnelle événementielle',
+      'Spécialiste nouage de foulards pour cérémonies',
+      'Consultante image et beauté',
+      'Prestataire mariage indépendante'
+    ],
+    equipment: ['Palettes et pinceaux professionnels', 'Éclairage de maquillage type loge', 'Collection de foulards et tissus d\'entraînement'],
+    iconName: 'Sparkles',
+  },
+  {
+    id: 'esthetique-massage',
+    name: 'Esthétique & massage',
+    category: 'beaute-image',
+    categoryLabel: 'Beauté & Image',
+    duration: '12 ou 24 mois',
+    imageUrl: IMAGES.heroBrightStudents,
+    description: 'Soins du visage et du corps, techniques de massage bien-être et hygiène en institut de beauté.',
+    longDescription: 'Formation aux techniques de soins esthétiques et de massage pratiquées en institut ou spa. Les apprenants réalisent des soins du visage, épilations, manucure-pédicure et massages relaxants dans le respect strict des règles d\'hygiène.',
+    skills: [
+      'Soins du visage et techniques d\'épilation',
+      'Manucure, pédicure et pose d\'ongles',
+      'Techniques de massage relaxant et bien-être',
+      'Hygiène, protocole et accueil en institut'
+    ],
+    careers: [
+      'Esthéticienne en institut ou spa',
+      'Praticienne masseuse bien-être',
+      'Gérante d\'institut de beauté',
+      'Prestataire esthétique à domicile'
+    ],
+    equipment: ['Tables de soin et de massage', 'Cabine esthétique équipée', 'Appareils de soin du visage', 'Gamme de produits cosmétiques'],
+    iconName: 'Sparkles',
+  },
+
+  // ---------- 5. Hôtellerie & Restauration ----------
+  {
+    id: 'hotellerie-restauration',
+    name: 'Hôtellerie-Restauration',
+    category: 'hotellerie-restauration',
+    categoryLabel: 'Hôtellerie & Restauration',
+    duration: '12 ou 24 mois',
+    imageUrl: IMAGES.hotellerieRestauration,
+    description: 'Compétences en service, cuisine et accueil pour travailler dans l\'hôtellerie et la restauration.',
+    longDescription: 'Le secteur touristique et gastronomique au Bénin recrute des profils rigoureux et souriants. Formation axée sur la pratique en cuisine d\'application, les techniques de cuisson, les règles d\'hygiène HACCP, et l\'accueil des clients VIP.',
+    skills: [
+      'Techniques culinaires africaines et internationales',
+      'Service au guéridon, dressage de tables et bar',
+      'Normes d\'hygiène alimentaire et conservation',
+      'Gestion des réservations et relation client'
+    ],
+    careers: [
+      'Chef cuisinier en restaurant ou hôtel',
+      'Maître d\'hôtel / Responsable de salle',
+      'Traiteur pour réceptions privées',
+      'Gérant de complexe hôtelier ou bar lounge'
+    ],
+    equipment: ['Cuisine pédagogique équipée', 'Fourneaux professionnels', 'Vaisselle d\'arts de la table', 'Bar d\'entraînement mixologie'],
+    iconName: 'UtensilsCrossed',
+  },
+  {
+    id: 'patisserie-cuisine',
+    name: 'Pâtisserie & cuisine',
+    category: 'hotellerie-restauration',
+    categoryLabel: 'Hôtellerie & Restauration',
+    duration: '12 ou 24 mois',
+    imageUrl: IMAGES.trainerMentor,
+    description: 'Techniques de pâtisserie, boulangerie et cuisine d\'application pour se lancer dans la restauration.',
+    longDescription: 'Une formation gourmande et exigeante, du fournil à la vitrine. Les apprenants réalisent gâteaux, viennoiseries et desserts de cérémonie, tout en se perfectionnant sur les bases de la cuisine chaude et froide.',
+    skills: [
+      'Techniques de base en pâtisserie et boulangerie',
+      'Réalisation de gâteaux de cérémonie et pièces montées',
+      'Cuisine chaude et froide, dressage d\'assiettes',
+      'Hygiène alimentaire et gestion des coûts matière'
+    ],
+    careers: [
+      'Pâtissier(ère) en boulangerie ou hôtel',
+      'Gérant(e) de pâtisserie / traiteur',
+      'Chef de partie pâtisserie en restauration',
+      'Prestataire gâteaux de cérémonie indépendant(e)'
+    ],
+    equipment: ['Fournil et four pâtissier professionnel', 'Batteurs et plans de travail réfrigérés', 'Matériel de décoration pâtissière'],
+    iconName: 'UtensilsCrossed',
+  },
+
+  // ---------- 6. Digital & Bureautique ----------
+  {
+    id: 'genie-informatique',
+    name: 'Génie informatique',
+    category: 'digital-bureautique',
+    categoryLabel: 'Digital & Bureautique',
+    duration: '12 ou 24 mois',
+    imageUrl: IMAGES.genieInformatique,
+    description: 'Maintenance informatique, réseau et dépannage matériel/logiciel.',
+    longDescription: 'Un cursus complet pour maîtriser les outils informatiques d\'entreprise. Dépannage PC et serveurs, configuration de switchs et routeurs Wi-Fi, sécurité de base, bureautique avancée et maintenance préventive.',
+    skills: [
+      'Assemblage, diagnostic et dépannage matériel PC/Laptops',
+      'Configuration réseau LAN/WLAN, adressage IP et câblage RJ45',
+      'Installation d\'OS Windows / Linux et gestion de parcs',
+      'Bureautique avancée et sauvegarde de données'
+    ],
+    careers: [
+      'Technicien support et maintenance informatique',
+      'Administrateur réseau junior',
+      'Responsable parc informatique en PME',
+      'Dépanneur informatique à son propre compte'
+    ],
+    equipment: ['Laboratoire PC avec composants interchangeables', 'Baies de brassage et switchs administrables', 'Testeurs de câbles réseau', 'Stations de clonage SSD'],
+    iconName: 'Cpu',
+    featured: true,
+  },
+  {
+    id: 'secretariat-informatique',
+    name: 'Secrétariat-informatique',
+    category: 'digital-bureautique',
+    categoryLabel: 'Digital & Bureautique',
+    duration: '12 ou 24 mois',
+    imageUrl: IMAGES.itDigital,
+    description: 'Bureautique professionnelle, gestion administrative et outils numériques pour le secrétariat d\'entreprise.',
+    longDescription: 'Formation complète aux outils bureautiques (Word, Excel, PowerPoint) et à la gestion administrative moderne. Les apprenants maîtrisent la rédaction professionnelle, la gestion d\'agendas partagés, le classement numérique et l\'accueil en entreprise.',
+    skills: [
+      'Maîtrise avancée de Word, Excel et PowerPoint',
+      'Rédaction de courriers et comptes rendus professionnels',
+      'Gestion d\'agendas, classement et archivage numérique',
+      'Accueil physique, téléphonique et relation client'
+    ],
+    careers: [
+      'Secrétaire de direction',
+      'Assistant(e) administratif(ve) en entreprise',
+      'Agent d\'accueil et de gestion administrative',
+      'Assistant(e) polyvalent(e) freelance'
+    ],
+    equipment: ['Postes bureautiques connectés', 'Suite Microsoft Office', 'Imprimantes et scanners professionnels'],
+    iconName: 'ClipboardPlus',
+  },
   {
     id: 'marketing-digital',
     name: 'Marketing digital',
-    category: 'informatique-digital',
-    categoryLabel: 'Informatique & Digital',
+    category: 'digital-bureautique',
+    categoryLabel: 'Digital & Bureautique',
     duration: '12 ou 24 mois',
     imageUrl: IMAGES.marketingDigital,
     description: 'Création et gestion de campagnes sur les réseaux sociaux, conception de contenu et présence en ligne.',
@@ -318,14 +498,39 @@ export const FILIERES_DATA: Filiere[] = [
     equipment: ['Stations de travail connectées haut débit', 'Kits smartphone pour captation vidéo', 'Lumières ring-light et micros cravate'],
     iconName: 'Megaphone',
     featured: true,
-  }
+  },
+  {
+    id: 'graphisme-designer',
+    name: 'Graphisme designer',
+    category: 'digital-bureautique',
+    categoryLabel: 'Digital & Bureautique',
+    duration: '12 ou 24 mois',
+    imageUrl: IMAGES.heroBrightStudents,
+    description: 'Conception graphique, identité visuelle et mise en page pour supports print et digitaux.',
+    longDescription: 'Une formation pour transformer des idées en visuels percutants. Les apprenants maîtrisent les logiciels de création (Photoshop, Illustrator, Canva), les principes de mise en page, la création de logos et d\'identités visuelles pour les entreprises locales.',
+    skills: [
+      'Création de logos et identités visuelles',
+      'Mise en page print (flyers, affiches, cartes de visite)',
+      'Maîtrise de Photoshop, Illustrator et Canva',
+      'Préparation de fichiers pour l\'impression et le web'
+    ],
+    careers: [
+      'Graphiste freelance',
+      'Designer en agence de communication',
+      'Infographiste pour imprimerie',
+      'Responsable identité visuelle en entreprise'
+    ],
+    equipment: ['Postes graphiques haute performance', 'Tablettes graphiques', 'Suite Adobe Creative Cloud', 'Imprimante couleur de contrôle'],
+    iconName: 'Palette',
+  },
 ];
 
 export const CATEGORIES = [
-  { id: 'all', label: 'Toutes les filières (12)' },
-  { id: 'mode-artisanat', label: 'Mode & Artisanat' },
+  { id: 'all', label: 'Toutes les filières (20)' },
+  { id: 'mode-artisanat', label: 'Mode & Artisanat créatif' },
   { id: 'batiment-technique', label: 'Bâtiment & Technique' },
-  { id: 'informatique-digital', label: 'Informatique & Digital' },
-  { id: 'sante', label: 'Santé' },
-  { id: 'evenementiel-hotellerie', label: 'Événementiel & Hôtellerie' },
+  { id: 'sante-pharmacie', label: 'Santé & Pharmacie' },
+  { id: 'beaute-image', label: 'Beauté & Image' },
+  { id: 'hotellerie-restauration', label: 'Hôtellerie & Restauration' },
+  { id: 'digital-bureautique', label: 'Digital & Bureautique' },
 ];
