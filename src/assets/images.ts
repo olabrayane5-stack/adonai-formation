@@ -20,6 +20,7 @@ import hotellerieCuisine from './images/hotellerie_cuisine_1790288858758.jpg';
 import medicalPharmacyTraining from './images/medical_pharmacy_training_1790287762594.jpg';
 import secretariatMed from './images/secretariat_med_1790288906793.jpg';
 import marketingDigital from './images/marketing_digital_1790288894884.jpg';
+import directorJonasChankouin from './images/director_jonas_chankouin.jpg';
 
 export const IMAGES = {
   heroSunnyStudents,
@@ -48,4 +49,5 @@ export const IMAGES = {
   ventePharmacie: medicalPharmacyTraining,
   secretariatMedical: secretariatMed,
   marketingDigital,
+  directorJonasChankouin,
 };
