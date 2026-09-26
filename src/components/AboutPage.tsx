@@ -1,5 +1,5 @@
 import { 
-  CheckCircle2, 
+  CheckCircle2,
   Target, 
   ShieldCheck,
   UserPlus,
