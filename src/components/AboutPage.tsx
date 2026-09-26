@@ -1,31 +1,216 @@
-import { ArrowRight, UserPlus, Sparkles, ShieldCheck, Gift, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
-import { Hero } from './Hero';
-import { AnimatedCounter } from './AnimatedCounter';
-import { FILIERES_DATA, Filiere } from '../data/coursesData';
+import { 
+  CheckCircle2, 
+  Award, 
+  Target, 
+  Eye, 
+  MapPin, 
+  Phone, 
+  ShieldCheck,
+  UserPlus,
+  ArrowRight,
+  Wrench,
+  Users,
+  Compass,
+  Building2
+} from 'lucide-react';
 import { IMAGES } from '../assets/images';
-import { AppPage } from './Header';
+import { CENTERS_DATA, GENERAL_CONTACT } from '../data/centersData';
+import { AnimatedCounter } from './AnimatedCounter';
 
-interface HomePageProps {
-  onNavigate: (page: AppPage) => void;
-  onSelectCourseModal: (course: Filiere) => void;
+interface AboutPageProps {
+  onNavigateToCourses: () => void;
+  onNavigateToRegister: () => void;
+  onNavigateToCenters: () => void;
 }
 
-export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
-  // 4 filières phares pour le teaser
-  const featuredCourses = FILIERES_DATA.filter((c) => c.featured).slice(0, 4);
+export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigateToCenters }: AboutPageProps) {
+  const pedagogiePoints = [
+    {
+      title: '100% pratique',
+      description: "Chaque filière s'apprend d'abord sur le terrain : dès les premières semaines, les apprenants manipulent le matériel réel du métier plutôt que de rester sur de la théorie. L'objectif est de développer le geste sûr et l'efficacité d'un technicien prêt pour le marché du travail.",
+      icon: Wrench,
+      badge: 'Pratique dès la semaine 1'
+    },
+    {
+      title: 'Formateurs qualifiés',
+      description: "Chaque groupe est encadré par un professionnel expérimenté qui suit personnellement la progression de chaque apprenant. Ce tutorat direct permet de corriger immédiatement les postures de travail, d'inculquer la rigueur professionnelle et de transmettre les secrets du métier.",
+      icon: Users,
+      badge: 'Mentorat en exercice'
+    },
+    {
+      title: 'Insertion professionnelle',
+      description: "L'accompagnement se poursuit après la formation : conseils pour démarrer une activité indépendante, appui à l'élaboration de devis, mise en relation avec des employeurs ou des partenaires locaux du secteur pour faciliter le recrutement immédiat.",
+      icon: Target,
+      badge: 'Soutien post-formation'
+    },
+    {
+      title: 'Attestation reconnue',
+      description: "Une attestation officielle délivrée en fin de parcours valorisant les compétences acquises. Pour les cursus approfondis de 24 mois, les apprenants sont préparés au Certificat de Qualification Professionnelle (CQP) de l'État béninois, garantissant une crédibilité maximale auprès des clients.",
+      icon: ShieldCheck,
+      badge: 'Attestation & CQP d\'État'
+    }
+  ];
 
   return (
-    <div className="space-y-0">
-      {/* 1. Hero plein écran avec photo/collage d'apprenants + dégradé vert foncé en overlay */}
-      <Hero
-        onRegisterClick={() => onNavigate('inscription')}
-        onExploreCoursesClick={() => onNavigate('filieres')}
-        onScholarshipClick={() => onNavigate('tarifs')}
-        onCentersClick={() => onNavigate('centres')}
-      />
+    <div className="min-h-screen bg-[#F1F7F2] text-[#1B4D2E]">
+      
+      {/* 1. Bandeau d'en-tête bleu marine quasi noir #1B4D2E avec triangles corail */}
+      <section className="relative bg-[#1B4D2E] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
+        <div className="absolute inset-0 opacity-40 pointer-events-none">
+          <img
+            src={IMAGES.heroBrightStudents}
+            alt="Apprenants ADONAI-FORMATION"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        {/* Motif triangles corail discret */}
+        <svg className="absolute -top-6 -right-6 w-36 h-36 opacity-25 pointer-events-none text-[#F5B800]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+          <polygon points="100,0 60,0 100,40" />
+          <polygon points="100,50 40,0 20,0 100,80" />
+          <polygon points="100,90 10,0 0,0 100,100" />
+        </svg>
 
-      {/* 2. Bandeau chiffres clés en fond bleu marine quasi noir #1B4D2E */}
-      <section className="bg-[#1B4D2E] text-white py-10 border-y border-white/10 relative overflow-hidden">
+        <div className="max-w-5xl mx-auto relative z-10 text-center space-y-4">
+          <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5B800] bg-white/10 px-4 py-1.5 rounded-full inline-block border border-white/15 backdrop-blur-sm">
+            Histoire & Engagement Pédagogique
+          </span>
+          <h1 className="font-display font-black text-4xl sm:text-6xl text-white uppercase tracking-tight leading-tight">
+            À Propos d'<span className="text-[#F5B800]">ADONAI-FORMATION</span>
+          </h1>
+          <p className="max-w-3xl mx-auto text-base sm:text-lg text-white/85 font-normal leading-relaxed">
+            Centre de Formation Professionnelle et d'Apprentissage des Métiers présent à <strong>Porto-Novo</strong>, <strong>Cotonou</strong> et <strong>Parakou</strong>.
+          </p>
+        </div>
+      </section>
+
+      {/* 2. Notre mission : 2 colonnes (texte / photo), développée en profondeur */}
+      <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          {/* Colonne Gauche : Notre mission développée */}
+          <div className="lg:col-span-7 space-y-6">
+            <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-white border border-[#2E7D32]/20 px-3.5 py-1 rounded-full inline-block">
+              Notre Mission
+            </span>
+            <h2 className="font-display font-black text-3xl sm:text-5xl text-[#2E7D32] uppercase tracking-tight leading-tight">
+              Donner à Chaque Béninois un Métier <span className="text-[#2E7D32]">d'Avenir</span> et l'Autonomie Financière
+            </h2>
+            
+            <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed font-normal">
+              <p>
+                ADONAI-FORMATION a été fondé pour apporter une réponse concrète au chômage et au sous-emploi des jeunes en République du Bénin. Face aux cursus purement théoriques qui éloignent les apprenants des réalités du terrain, notre centre a fait le choix audacieux d’une pédagogie orientée à 100% vers la pratique et la maîtrise technique immédiate.
+              </p>
+              <p>
+                Le centre s’adresse aussi bien aux jeunes scolarisés ou déscolarisés, aux titulaires de diplômes d'État (CEP, BEPC, BAC) cherchant une qualification opérationnelle, qu'aux diplômés universitaires et adultes souhaitant une reconversion rapide dans des filières manuelles ou digitales à fort potentiel.
+              </p>
+              <p>
+                Notre vision de la formation professionnelle repose sur l'excellence du savoir-faire béninois et africain : bâtir des artisans dignes de confiance, des techniciens rigoureux et des entrepreneurs capables de faire prospérer leurs propres ateliers dans tout le pays.
+              </p>
+            </div>
+
+            <div className="pt-2 flex flex-wrap gap-4">
+              <button
+                onClick={onNavigateToCourses}
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border-2 border-[#2E7D32] text-[#2E7D32] hover:bg-[#2E7D32] hover:text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+              >
+                <span>Découvrir les 12 filières</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <button
+                onClick={onNavigateToRegister}
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] text-xs font-extrabold uppercase tracking-wider transition-colors cursor-pointer shadow-md"
+              >
+                <UserPlus className="w-4 h-4" />
+                <span>S'inscrire pour 2026</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Colonne Droite : Photo réelle d'atelier */}
+          <div className="lg:col-span-5">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
+              <img 
+                src={IMAGES.heroBrightStudents} 
+                alt="Apprenants dans les ateliers d'apprentissage ADONAI-FORMATION Bénin" 
+                className="w-full h-[520px] object-cover group-hover:scale-103 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D2E]/90 via-[#1B4D2E]/30 to-transparent" />
+              
+              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-white/40 shadow-xl space-y-2 text-[#1B4D2E]">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#2E7D32]" />
+                  <span className="text-xs font-black uppercase tracking-wider text-[#2E7D32]">
+                    Pédagogie de terrain
+                  </span>
+                </div>
+                <p className="text-xs font-medium text-slate-700 leading-relaxed">
+                  « Devenez expert dans le domaine qui vous passionne » · Matériel professionnel et postes individuels de travail.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 3. Notre approche pédagogique — 4 points développés en version longue avec cartes numérotées */}
+      <section className="bg-white py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-y border-slate-200">
+        <div className="max-w-7xl mx-auto">
+          
+          <div className="max-w-3xl space-y-3 mb-16 text-left">
+            <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-[#F1F7F2] border border-[#2E7D32]/20 px-3.5 py-1 rounded-full inline-block">
+              Notre Approche Pédagogique
+            </span>
+            <h2 className="font-display font-black text-3xl sm:text-5xl text-[#2E7D32] uppercase tracking-tight">
+              Les 4 Piliers Fondateurs <span className="text-[#2E7D32]">d'ADONAI-FORMATION</span>
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
+              Une méthode pédagogique structurée pour transformer un débutant motivé en un professionnel accompli et autonome.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {pedagogiePoints.map((point, index) => {
+              const Icon = point.icon;
+              return (
+                <div
+                  key={index}
+                  className="adonai-card p-8 rounded-3xl bg-white border border-slate-200 hover:border-[#2E7D32] transition-all space-y-4 relative"
+                >
+                  <div className="flex items-center justify-between">
+                    {/* Icône dans un carré coloré sur fond lavande clair */}
+                    <div className="w-14 h-14 rounded-2xl bg-[#F1F7F2] text-[#2E7D32] flex items-center justify-center shadow-2xs border border-[#2E7D32]/10">
+                      <Icon className="w-7 h-7" />
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#2E7D32] bg-[#F1F7F2] px-3 py-1 rounded-full">
+                        {point.badge}
+                      </span>
+                      {/* Petit numéro discret (01, 02...) en haut à droite comme PitchLab */}
+                      <span className="font-mono text-sm font-bold text-slate-300">
+                        0{index + 1}
+                      </span>
+                    </div>
+                  </div>
+
+                  <h3 className="font-display font-black text-3xl text-[#1B4D2E] uppercase tracking-tight">
+                    {point.title}
+                  </h3>
+
+                  <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                    {point.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 4. Chiffres clés développés en fond bleu marine quasi noir #1B4D2E */}
+      <section className="bg-[#1B4D2E] text-white py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10 relative overflow-hidden">
         {/* Motif triangles corail discret */}
         <svg className="absolute -top-6 -right-6 w-32 h-32 opacity-20 pointer-events-none text-[#F5B800]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
           <polygon points="100,0 60,0 100,40" />
@@ -33,263 +218,85 @@ export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
           <polygon points="100,90 10,0 0,0 100,100" />
         </svg>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-white/15">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+            <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5B800]">
+              Indicateurs Clés
+            </span>
+            <h3 className="font-display font-black text-3xl sm:text-4xl uppercase tracking-tight text-white">
+              L'Impact <span className="text-[#F5B800]">d'ADONAI-FORMATION</span>
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             
-            <div className="pt-3 md:pt-0 px-2 space-y-1">
-              <div className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-[#F5B800] leading-none">
+            <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
+              <div className="font-display font-black text-4xl sm:text-6xl text-[#F5B800]">
                 <AnimatedCounter end={12} />
               </div>
-              <p className="text-xs uppercase tracking-wider font-extrabold text-white/90">
-                Filières Techniques
+              <p className="text-xs uppercase tracking-wider font-extrabold text-white">
+                Filières Professionnelles
               </p>
-              <p className="text-[11px] text-white/60">100% Pratique en atelier</p>
+              <p className="text-[11px] text-white/70">Couture, BTP, Numérique, Santé, Hôtellerie</p>
             </div>
 
-            <div className="pt-3 md:pt-0 px-2 space-y-1">
-              <div className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-none">
+            <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
+              <div className="font-display font-black text-4xl sm:text-6xl text-white">
                 <AnimatedCounter end={3} />
               </div>
-              <p className="text-xs uppercase tracking-wider font-extrabold text-white/90">
-                Centres au Bénin
+              <p className="text-xs uppercase tracking-wider font-extrabold text-white">
+                Centres Déployés
               </p>
-              <p className="text-[11px] text-white/60">Porto-Novo · Cotonou · Parakou</p>
+              <p className="text-[11px] text-white/70">Porto-Novo, Cotonou et Parakou</p>
             </div>
 
-            <div className="pt-3 md:pt-0 px-2 space-y-1">
-              <div className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-[#F5B800] leading-none">
+            <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
+              <div className="font-display font-black text-4xl sm:text-6xl text-[#F5B800]">
                 <AnimatedCounter end={1500} />
               </div>
-              <p className="text-xs uppercase tracking-wider font-extrabold text-white/90">
-                Bourses Disponibles
+              <p className="text-xs uppercase tracking-wider font-extrabold text-white">
+                Bourses Accordées
               </p>
-              <p className="text-[11px] text-white/60">À 21 000 FCFA seulement</p>
+              <p className="text-[11px] text-white/70">Frais réduits à 21 000 FCFA</p>
             </div>
 
-            <div className="pt-3 md:pt-0 px-2 space-y-1">
-              <div className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#F5B800] leading-none pt-1">
-                05 Oct. 2026
+            <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 space-y-1">
+              <div className="font-display font-black text-4xl sm:text-6xl text-[#F5B800]">
+                100%
               </div>
-              <p className="text-xs uppercase tracking-wider font-extrabold text-white/90">
-                Rentrée Officielle
+              <p className="text-xs uppercase tracking-wider font-extrabold text-white">
+                Pratique en Atelier
               </p>
-              <p className="text-[11px] text-white/60">Inscriptions en cours</p>
+              <p className="text-[11px] text-white/70">Matériel professionnel en conditions réelles</p>
             </div>
 
           </div>
         </div>
       </section>
 
-      {/* 3. Teaser Formations : Fond lavande très pâle #F1F7F2, cartes blanches #FFFFFF avec petit numéro discret */}
-      <section className="py-16 sm:py-24 bg-[#F1F7F2] border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-            <div className="space-y-2">
-              <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-white border border-[#2E7D32]/20 px-3 py-1 rounded-full inline-block">
-                Aperçu du Catalogue
-              </span>
-              <h2 className="font-display font-black text-3xl sm:text-5xl text-[#2E7D32] uppercase tracking-tight">
-                Nos Formations <span className="text-[#2E7D32]">Pratiques</span>
-              </h2>
-              <p className="text-sm text-slate-600 max-w-xl font-normal leading-relaxed">
-                Découvrez nos métiers phares formés sur équipements réels avec insertion professionnelle garantie.
-              </p>
-            </div>
+      {/* 5. Nos centres en un mot (courte transition + lien vers la page Centres) */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="space-y-3 text-left max-w-3xl">
+            <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-[#F1F7F2] border border-[#2E7D32]/20 px-3.5 py-1 rounded-full inline-block">
+              Présence Nationale
+            </span>
+            <h3 className="font-display font-black text-3xl sm:text-4xl text-[#2E7D32] uppercase tracking-tight leading-tight">
+              Des Ateliers Spacieux à <span className="text-[#2E7D32]">Porto-Novo, Cotonou et Parakou</span>
+            </h3>
+            <p className="text-sm text-slate-700 leading-relaxed font-normal">
+              Où que vous soyez au Bénin, ADONAI-FORMATION met à votre disposition des locaux accueillants, un matériel de pointe et une équipe pédagogique disponible pour vous former dans les meilleures conditions.
+            </p>
+          </div>
 
+          <div className="shrink-0 w-full md:w-auto">
             <button
-              onClick={() => onNavigate('filieres')}
-              className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-[#2E7D32] hover:text-[#1B4D2E] transition-colors group cursor-pointer self-start md:self-auto"
+              onClick={onNavigateToCenters}
+              className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-extrabold text-xs uppercase tracking-wider shadow-md transition-all cursor-pointer"
             >
-              <span>Voir les 12 filières</span>
-              <ArrowRight className="w-4 h-4 text-[#2E7D32] group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
-
-          {/* Grille 4 colonnes courtes */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredCourses.map((course, idx) => (
-              <div
-                key={course.id}
-                className="adonai-card rounded-2xl overflow-hidden flex flex-col justify-between group bg-white border border-slate-200 relative"
-              >
-                <div className="relative h-44 w-full overflow-hidden bg-slate-900">
-                  <img
-                    src={course.imageUrl}
-                    alt={course.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D2E]/90 via-[#1B4D2E]/20 to-transparent" />
-                  
-                  {/* Petit numéro discret (01, 02...) en haut à droite comme PitchLab */}
-                  <span className="absolute top-2.5 right-2.5 font-mono text-[11px] font-bold text-white/80 bg-[#1B4D2E]/60 px-2 py-0.5 rounded backdrop-blur-xs">
-                    0{idx + 1}
-                  </span>
-
-                  <span className="absolute top-2.5 left-2.5 bg-[#1B4D2E] text-[#F5B800] text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded shadow-xs">
-                    100% Pratique
-                  </span>
-                  <span className="absolute bottom-2.5 left-3 text-xs text-white/90 font-medium">
-                    {course.categoryLabel}
-                  </span>
-                </div>
-
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
-                  <div className="space-y-1.5">
-                    <h3 className="font-display font-black text-2xl text-[#1B4D2E] group-hover:text-[#2E7D32] transition-colors uppercase tracking-tight leading-tight">
-                      {course.name}
-                    </h3>
-                    <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed font-normal">
-                      {course.description}
-                    </p>
-                  </div>
-
-                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-[11px] font-bold text-slate-500">
-                      {course.duration}
-                    </span>
-                    <button
-                      onClick={() => onSelectCourseModal(course)}
-                      className="text-xs font-bold text-[#2E7D32] hover:text-[#1B4D2E] transition-colors cursor-pointer"
-                    >
-                      Détails →
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <button
-              onClick={() => onNavigate('filieres')}
-              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg transition-all cursor-pointer"
-            >
-              <span>Accéder au catalogue complet des 12 filières</span>
-              <ArrowRight className="w-4 h-4 text-white" />
-            </button>
-          </div>
-
-        </div>
-      </section>
-
-      {/* 4. Teaser À propos : Fond blanc #FFFFFF, titre bleu marine avec mot-clé en corail */}
-      <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            
-            {/* Colonne Gauche : Teaser textuel */}
-            <div className="lg:col-span-7 space-y-5">
-              <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-[#F1F7F2] border border-[#2E7D32]/20 px-3.5 py-1 rounded-full inline-block">
-                Qui Sommes-Nous
-              </span>
-              <h2 className="font-display font-black text-3xl sm:text-5xl text-[#2E7D32] uppercase tracking-tight leading-tight">
-                Former les Maîtres et Techniciens <span className="text-[#2E7D32]">d'Avenir</span> au Bénin
-              </h2>
-              <div className="space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-                <p>
-                  <strong>ADONAI-FORMATION</strong> est né de la volonté de révolutionner l’apprentissage professionnel en plaçant la pratique concrète et le matériel réel au centre de chaque journée de formation.
-                </p>
-                <p>
-                  Implanté à <strong>Porto-Novo</strong>, <strong>Cotonou</strong> et <strong>Parakou</strong>, notre centre transmet des compétences immédiatement monétisables grâce à des formateurs qualifiés et un accompagnement vers l'emploi ou la création d'atelier.
-                </p>
-              </div>
-
-              <div className="pt-2">
-                <button
-                  onClick={() => onNavigate('a-propos')}
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border-2 border-[#2E7D32] text-[#2E7D32] hover:bg-[#2E7D32] hover:text-white font-extrabold text-xs uppercase tracking-wider transition-colors cursor-pointer"
-                >
-                  <span>En savoir plus sur notre mission</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-
-            {/* Colonne Droite : Image réelle */}
-            <div className="lg:col-span-5">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-900 group">
-                <img
-                  src={IMAGES.trainerMentor}
-                  alt="Encadrement de terrain à ADONAI-FORMATION"
-                  className="w-full h-80 sm:h-96 object-cover group-hover:scale-103 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D2E]/80 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-slate-200 text-[#1B4D2E] shadow-md flex items-center gap-3">
-                  <ShieldCheck className="w-5 h-5 text-[#2E7D32] shrink-0" />
-                  <p className="text-xs font-bold leading-snug">
-                    Encadrement personnalisé par des professionnels en activité.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Teaser Tarifs : fond bleu marine très sombre #1B4D2E avec triangles corail */}
-      <section className="py-16 sm:py-20 bg-[#1B4D2E] text-white border-b border-white/10 relative overflow-hidden">
-        {/* Motif géométrique corail discret (triangles) */}
-        <svg className="absolute -top-8 -right-8 w-40 h-40 opacity-20 pointer-events-none text-[#F5B800]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-          <polygon points="100,0 60,0 100,40" />
-          <polygon points="100,50 40,0 20,0 100,80" />
-          <polygon points="100,90 10,0 0,0 100,100" />
-        </svg>
-
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm text-xs font-semibold text-[#F5B800] uppercase tracking-wider">
-            <Gift className="w-4 h-4 text-[#F5B800]" />
-            <span>Transparence & Soutien Financier</span>
-          </div>
-
-          <h2 className="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white leading-tight">
-            Des Formations d'Excellence <br />
-            <span className="text-[#F5B800]">Accessibles à Tous les Budgets</span>
-          </h2>
-
-          <p className="text-base sm:text-xl font-medium text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Formations certifiantes à partir de <strong>200 000 FCFA</strong>, avec un programme exceptionnel de <strong>1500 bourses</strong> d'études accordées à <strong>21 000 FCFA</strong>.
-          </p>
-
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
-            <button
-              onClick={() => onNavigate('tarifs')}
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-extrabold text-xs uppercase tracking-wider shadow-lg transition-all cursor-pointer"
-            >
-              <span>Voir la grille des tarifs & bourses</span>
+              <Building2 className="w-4 h-4 text-white" />
+              <span>Découvrir nos 3 centres</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
-            <button
-              onClick={() => onNavigate('centres')}
-              className="inline-flex items-center gap-2 px-6 py-4 rounded-xl border border-white/40 hover:bg-white/10 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
-            >
-              <MapPin className="w-4 h-4 text-[#F5B800]" />
-              <span>Voir les 3 centres</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Bandeau CTA final : fond lavande très pâle #F1F7F2 avec bouton corail */}
-      <section className="py-14 sm:py-18 bg-[#F1F7F2] border-b border-slate-200 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-white px-3.5 py-1 rounded-full border border-[#2E7D32]/20 inline-block">
-            Prochaine Session Officielle
-          </span>
-          <h2 className="font-display font-black text-3xl sm:text-4xl text-[#2E7D32] uppercase tracking-tight">
-            Rentrée du 05 Octobre 2026 · <span className="text-[#2E7D32]">Inscriptions Ouvertes</span>
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-700 max-w-xl mx-auto font-normal leading-relaxed">
-            Ne laissez pas passer votre chance de maîtriser un métier porteur. Réservez votre place dès aujourd'hui en atelier à Porto-Novo, Cotonou ou Parakou.
-          </p>
-          <div className="pt-2">
-            <button
-              onClick={() => onNavigate('inscription')}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-extrabold text-xs uppercase tracking-wider shadow-lg transition-all cursor-pointer"
-            >
-              <UserPlus className="w-4 h-4 text-white" />
-              <span>S'inscrire maintenant en ligne</span>
             </button>
           </div>
         </div>
