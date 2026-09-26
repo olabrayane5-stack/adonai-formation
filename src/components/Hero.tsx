@@ -115,7 +115,7 @@ export function Hero({
 
             {/* Sous-titre */}
             <p className="text-base sm:text-xl font-medium text-white/90 leading-relaxed max-w-2xl">
-              <strong>ADONAI-FORMATION</strong> : Centre de Formation Professionnelle et d'Apprentissage des Métiers à Porto-Novo, Cotonou et Parakou.
+              <strong>ADONAI-FORMATION</strong> : Centre de Formation Professionnelle et d'Apprentissage des Métiers à Porto-Novo, Cotonou, Calavi et Parakou.
             </p>
 
             {/* Citation courte avec accent corail */}
@@ -125,7 +125,7 @@ export function Hero({
 
             {/* Phrase complémentaire */}
             <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-2xl">
-              12 filières techniques d'avenir, 100% pratique en atelier, encadrement par des professionnels qualifiés.
+              20 filières techniques d'avenir, 100% pratique en atelier, encadrement par des professionnels qualifiés.
             </p>
 
             {/* Deux boutons côte à côte : CTA principal en corail plein, secondaire en contour */}
@@ -142,7 +142,7 @@ export function Hero({
                 onClick={onExploreCoursesClick}
                 className="flex items-center justify-center gap-2 px-7 py-4 rounded-xl border-2 border-white/80 hover:bg-white/15 text-white font-bold text-sm transition-all cursor-pointer backdrop-blur-xs"
               >
-                <span>Voir les 12 filières</span>
+                <span>Voir les 20 filières</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -155,7 +155,7 @@ export function Hero({
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
-                <span>1500 bourses à 21 000 FCFA</span>
+                <span>1500 bourses à 150 000 FCFA</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
@@ -188,7 +188,7 @@ export function Hero({
                 </div>
                 <div className="flex justify-between py-1 border-b border-white/10">
                   <span className="text-white/70">Campus d'accueil :</span>
-                  <strong className="text-white font-bold">Porto-Novo · Cotonou · Parakou</strong>
+                  <strong className="text-white font-bold">Porto-Novo · Cotonou · Calavi · Parakou</strong>
                 </div>
                 <div className="flex justify-between py-1 border-b border-white/10">
                   <span className="text-white/70">Programme d'aide :</span>
