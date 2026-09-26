@@ -38,7 +38,7 @@ export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
             
             <div className="pt-3 md:pt-0 px-2 space-y-1">
               <div className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-[#F5B800] leading-none">
-                <AnimatedCounter end={12} />
+                <AnimatedCounter end={20} />
               </div>
               <p className="text-xs uppercase tracking-wider font-extrabold text-white/90">
                 Filières Techniques
@@ -48,12 +48,12 @@ export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
 
             <div className="pt-3 md:pt-0 px-2 space-y-1">
               <div className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-none">
-                <AnimatedCounter end={3} />
+                <AnimatedCounter end={4} />
               </div>
               <p className="text-xs uppercase tracking-wider font-extrabold text-white/90">
                 Centres au Bénin
               </p>
-              <p className="text-[11px] text-white/60">Porto-Novo · Cotonou · Parakou</p>
+              <p className="text-[11px] text-white/60">Porto-Novo · Cotonou · Calavi · Parakou</p>
             </div>
 
             <div className="pt-3 md:pt-0 px-2 space-y-1">
@@ -63,7 +63,7 @@ export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
               <p className="text-xs uppercase tracking-wider font-extrabold text-white/90">
                 Bourses Disponibles
               </p>
-              <p className="text-[11px] text-white/60">À 21 000 FCFA seulement</p>
+              <p className="text-[11px] text-white/60">À 150 000 FCFA seulement</p>
             </div>
 
             <div className="pt-3 md:pt-0 px-2 space-y-1">
@@ -101,7 +101,7 @@ export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
               onClick={() => onNavigate('filieres')}
               className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-[#2E7D32] hover:text-[#1B4D2E] transition-colors group cursor-pointer self-start md:self-auto"
             >
-              <span>Voir les 12 filières</span>
+              <span>Voir les 20 filières</span>
               <ArrowRight className="w-4 h-4 text-[#2E7D32] group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -165,7 +165,7 @@ export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
               onClick={() => onNavigate('filieres')}
               className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg transition-all cursor-pointer"
             >
-              <span>Accéder au catalogue complet des 12 filières</span>
+              <span>Accéder au catalogue complet des 20 filières</span>
               <ArrowRight className="w-4 h-4 text-white" />
             </button>
           </div>
@@ -249,7 +249,7 @@ export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
           </h2>
 
           <p className="text-base sm:text-xl font-medium text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Formations certifiantes à partir de <strong>200 000 FCFA</strong>, avec un programme exceptionnel de <strong>1500 bourses</strong> d'études accordées à <strong>21 000 FCFA</strong>.
+            Formations certifiantes à partir de <strong>200 000 FCFA</strong>, avec un programme exceptionnel de <strong>1500 bourses</strong> d'études accordées à <strong>150 000 FCFA</strong>.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
@@ -265,7 +265,7 @@ export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
               className="inline-flex items-center gap-2 px-6 py-4 rounded-xl border border-white/40 hover:bg-white/10 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer"
             >
               <MapPin className="w-4 h-4 text-[#F5B800]" />
-              <span>Voir les 3 centres</span>
+              <span>Voir les 4 centres</span>
             </button>
           </div>
         </div>
