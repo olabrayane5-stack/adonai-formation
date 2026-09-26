@@ -24,8 +24,8 @@ const PRICING_FAQ: FaqItem[] = [
     note: "Le petit outillage individuel et consommables personnels restent à la charge de l'apprenant."
   },
   {
-    question: "Comment fonctionne la bourse de 21 000 FCFA et qui peut en bénéficier ?",
-    answer: "Le centre met à disposition 1500 bourses d'études pour la rentrée 2026. Cette aide exceptionnelle ramène le coût de formation à 21 000 FCFA au lieu de 200 000 FCFA. Les places étant limitées sur nos 3 centres (Porto-Novo, Cotonou, Parakou), l'attribution se fait selon l'ordre de réception et de validation des candidatures complètes.",
+    question: "Comment fonctionne la bourse de 150 000 FCFA et qui peut en bénéficier ?",
+    answer: "Le centre met à disposition 1500 bourses d'études pour la rentrée 2026. Cette aide exceptionnelle ramène le coût de formation à 150 000 FCFA au lieu de 200 000 FCFA. Les places étant limitées sur nos 4 centres (Porto-Novo, Cotonou, Calavi, Parakou), l'attribution se fait selon l'ordre de réception et de validation des candidatures complètes.",
     note: "Cochez 'Je sollicite la bourse' sur le formulaire d'inscription en ligne."
   },
   {
@@ -47,12 +47,12 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
 
   // Calculations for simulator
   const inscription = 15000;
-  const tuition = simScholarship ? 21000 : simDuration === '12' ? 200000 : 350000;
+  const tuition = simScholarship ? 150000 : simDuration === '12' ? 200000 : 350000;
   const total = inscription + tuition;
   const installments = simScholarship 
     ? [
         { label: 'À l\'inscription (Frais de dossier)', amount: 15000 },
-        { label: 'Participation Bourse Rentrée 2026', amount: 21000 }
+        { label: 'Participation Bourse Rentrée 2026', amount: 150000 }
       ]
     : simDuration === '12'
       ? [
@@ -264,7 +264,7 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
                 1500 bourses disponibles
               </h3>
               <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
-                Le centre propose un programme de bourses permettant de participer à la formation pour seulement <strong>21 000 FCFA</strong> au lieu du tarif plein. Les places sont limitées et attribuées lors de l'inscription ; il est conseillé de candidater tôt.
+                Le centre propose un programme de bourses permettant de participer à la formation pour seulement <strong>150 000 FCFA</strong> au lieu du tarif plein. Les places sont limitées et attribuées lors de l'inscription ; il est conseillé de candidater tôt.
               </p>
             </div>
           </div>
@@ -347,7 +347,7 @@ export function PricingSection({ onApplyForScholarship, onSelectDuration }: Pric
                       : 'bg-white text-slate-700 border-slate-200'
                   }`}
                 >
-                  <span>Bourse 1500 places (21 000 FCFA)</span>
+                  <span>Bourse 1500 places (150 000 FCFA)</span>
                   <span className="font-extrabold text-[#2E7D32]">{simScholarship ? 'Sélectionné ✓' : 'Non retenu'}</span>
                 </button>
               </div>
