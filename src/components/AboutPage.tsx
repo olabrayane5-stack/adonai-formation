@@ -98,7 +98,10 @@ export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigat
                 Le centre s’adresse aussi bien aux jeunes scolarisés ou déscolarisés, aux titulaires de diplômes d'État (CEP, BEPC, BAC) cherchant une qualification opérationnelle, qu'aux diplômés universitaires et adultes souhaitant une reconversion rapide dans des filières manuelles ou digitales à fort potentiel.
               </p>
               <p>
-                Notre vision de la formation professionnelle repose sur l'excellence du savoir-faire béninois et africain : bâtir des artisans dignes de confiance, des techniciens rigoureux et des entrepreneurs capables de faire prospérer leurs propres ateliers dans tout le pays.
+                Notre vision est de contribuer à l'émergence d'une jeunesse compétente, autonome, entreprenante et responsable. ADONAI-FORMATION souhaite devenir progressivement un espace de référence pour l'apprentissage pratique des métiers et la formation professionnelle — avec l'ambition, à terme, d'accueillir des apprenants venus de différentes régions du Bénin, puis d'autres pays.
+              </p>
+              <p>
+                Notre objectif général : renforcer les capacités d'ADONAI-FORMATION afin d'améliorer l'accès des jeunes à une formation professionnelle pratique, accessible et adaptée aux besoins du monde professionnel.
               </p>
             </div>
 
@@ -144,6 +147,47 @@ export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigat
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* 2bis. Bandeau Slogan officiel */}
+      <section className="bg-[#1B4D2E] py-10 px-4 sm:px-6 lg:px-8 border-b border-white/10">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="font-display font-black text-xl sm:text-3xl text-white uppercase tracking-tight leading-snug">
+            « Former, accompagner, orienter, insérer, entreprendre — <span className="text-[#F5B800]">zéro chômage à tous</span> »
+          </p>
+          <p className="text-xs sm:text-sm text-white/60 mt-2 uppercase tracking-widest font-bold">
+            Slogan officiel ADONAI-FORMATION Bénin
+          </p>
+        </div>
+      </section>
+
+      {/* 2ter. Mot du Directeur — photo ronde + citation encadrée, fond gris clair */}
+      <section className="bg-slate-100 py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 sm:p-12 flex flex-col sm:flex-row items-center sm:items-start gap-8">
+            {/* Photo ronde du directeur */}
+            <div className="shrink-0 w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-[#F1F7F2] shadow-md bg-slate-200 overflow-hidden">
+              <img
+                src={IMAGES.directorJonasChankouin}
+                alt="Jonas A. Sohè CHANKOUIN, Directeur d'ADONAI-FORMATION"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+
+            <div className="text-center sm:text-left space-y-3">
+              <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-[#F1F7F2] border border-[#2E7D32]/20 px-3.5 py-1 rounded-full inline-block">
+                Le Mot du Directeur
+              </span>
+              <p className="text-sm sm:text-base text-slate-700 italic leading-relaxed">
+                « Depuis sa création, ADONAI-FORMATION porte une conviction simple : chaque jeune béninois mérite d'apprendre un métier qui lui permette de vivre dignement de son travail. Ici, nous ne formons pas seulement des mains habiles — nous accompagnons des femmes et des hommes debout, autonomes et responsables, prêts à entreprendre et à faire vivre leur savoir-faire. Je vous invite à rejoindre cette aventure et à faire de votre passion un métier. »
+              </p>
+              <div className="pt-1">
+                <p className="font-bold text-[#1B4D2E] text-sm">Jonas A. Sohè CHANKOUIN</p>
+                <p className="text-xs text-slate-500 uppercase tracking-wider">Directeur d'ADONAI-FORMATION</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
