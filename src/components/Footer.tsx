@@ -41,7 +41,7 @@ export function Footer({ onNavigate }: FooterProps) {
                   ADONAI<span className="text-[#F5B800] ml-1">FORMATION</span>
                 </span>
                 <span className="text-[10px] tracking-wider uppercase text-white/70 font-semibold block mt-0.5">
-                  Porto-Novo · Cotonou · Parakou
+                  Porto-Novo · Cotonou · Calavi · Parakou
                 </span>
               </div>
             </div>
@@ -86,7 +86,7 @@ export function Footer({ onNavigate }: FooterProps) {
                   onClick={() => handleLink('filieres')}
                   className="hover:text-[#F5B800] transition-colors cursor-pointer text-left"
                 >
-                  Formations (12 filières)
+                  Formations (20 filières)
                 </button>
               </li>
               <li>
@@ -102,7 +102,7 @@ export function Footer({ onNavigate }: FooterProps) {
                   onClick={() => handleLink('centres')}
                   className="hover:text-[#F5B800] transition-colors cursor-pointer text-left"
                 >
-                  Centres (Porto-Novo, Cotonou, Parakou)
+                  Centres (Porto-Novo, Cotonou, Calavi, Parakou)
                 </button>
               </li>
               <li>
