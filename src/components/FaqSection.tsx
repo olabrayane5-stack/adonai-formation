@@ -42,15 +42,15 @@ export function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-white relative border-b border-[#12162A]/10">
+    <section id="faq" className="py-20 sm:py-28 bg-white relative border-b border-[#1B4D2E]/10">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center space-y-3 mb-16">
-          <span className="text-xs uppercase tracking-[0.22em] font-bold text-[#D44A2D]">
+          <span className="text-xs uppercase tracking-[0.22em] font-bold text-[#1B4D2E]">
             Réponses aux Questions
           </span>
-          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#12162A] tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-5xl text-[#1B4D2E] tracking-tight">
             Foire Aux Questions
           </h2>
           <p className="text-base text-[#475569] font-normal leading-relaxed">
@@ -70,20 +70,20 @@ export function FaqSection() {
                 <button
                   type="button"
                   onClick={() => toggle(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-[#12162A] hover:text-[#D44A2D] transition-colors cursor-pointer"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-[#1B4D2E] hover:text-[#1B4D2E] transition-colors cursor-pointer"
                 >
                   <span className="text-base sm:text-lg font-display tracking-tight leading-snug">
                     {item.question}
                   </span>
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                    isOpen ? 'rotate-180 bg-[#12162A] text-[#F5C64B]' : 'bg-[#EEF0FA] text-[#475569]'
+                    isOpen ? 'rotate-180 bg-[#1B4D2E] text-[#F5B800]' : 'bg-[#F1F7F2] text-[#475569]'
                   }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[#475569] leading-relaxed border-t border-[#12162A]/8">
+                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[#475569] leading-relaxed border-t border-[#1B4D2E]/8">
                     <p>{item.answer}</p>
                   </div>
                 )}
@@ -94,7 +94,7 @@ export function FaqSection() {
 
         <div className="mt-12 text-center text-xs text-[#475569]">
           Une question spécifique non abordée ? Contactez notre standard au{' '}
-          <a href={`tel:${GENERAL_CONTACT.primaryPhone}`} className="font-bold text-[#12162A] underline hover:text-[#D44A2D]">
+          <a href={`tel:${GENERAL_CONTACT.primaryPhone}`} className="font-bold text-[#1B4D2E] underline hover:text-[#1B4D2E]">
             {GENERAL_CONTACT.primaryPhone}
           </a>
         </div>
