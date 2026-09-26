@@ -14,15 +14,15 @@ const CENTER_IMAGES: Record<string, string> = {
 
 export function CentersSection({ onSelectCenter }: CentersSectionProps) {
   return (
-    <section id="centres" className="py-20 sm:py-28 bg-[#EEF0FA] relative border-b border-slate-200 overflow-hidden">
+    <section id="centres" className="py-20 sm:py-28 bg-[#F1F7F2] relative border-b border-slate-200 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl space-y-3 mb-14 text-left">
-          <span className="text-xs uppercase tracking-widest font-extrabold text-[#26339E] bg-[#EEF0FA] border border-[#26339E]/20 px-3.5 py-1 rounded-full inline-block">
+          <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-[#F1F7F2] border border-[#2E7D32]/20 px-3.5 py-1 rounded-full inline-block">
             Implantation Territoriale au Bénin
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-5xl text-[#12162A] uppercase tracking-tight">
+          <h2 className="font-display font-black text-4xl sm:text-5xl text-[#1B4D2E] uppercase tracking-tight">
             Nos 3 Centres de Formation
           </h2>
           <p className="text-sm sm:text-base text-slate-700 font-normal leading-relaxed">
@@ -34,7 +34,7 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-16">
           
           {/* CARTE 1 : PORTO-NOVO */}
-          <div className="adonai-card rounded-3xl overflow-hidden flex flex-col justify-between relative bg-white border-2 border-[#26339E] shadow-md hover:shadow-xl transition-all group">
+          <div className="adonai-card rounded-3xl overflow-hidden flex flex-col justify-between relative bg-white border-2 border-[#2E7D32] shadow-md hover:shadow-xl transition-all group">
             {/* Photo de fond du centre avec overlay semi-transparent */}
             <div className="relative h-52 w-full overflow-hidden bg-slate-900">
               <img
@@ -42,9 +42,9 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
                 alt="Centre principal ADONAI-FORMATION à Porto-Novo Kandévié"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#12162A] via-[#12162A]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D2E] via-[#1B4D2E]/60 to-transparent" />
               
-              <div className="absolute top-3.5 left-3.5 bg-[#26339E] text-[#E85B3D] text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-[#E85B3D]/40 shadow-xs">
+              <div className="absolute top-3.5 left-3.5 bg-[#1B4D2E] text-[#F5B800] text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full border border-[#F5B800]/40 shadow-xs">
                 Centre Principal (Siège)
               </div>
 
@@ -52,7 +52,7 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
                 <h3 className="font-display font-black text-3xl uppercase tracking-tight leading-none text-white">
                   Porto-Novo
                 </h3>
-                <p className="text-xs text-[#E85B3D] font-semibold mt-0.5">
+                <p className="text-xs text-[#2E7D32] font-semibold mt-0.5">
                   Centre historique & Ateliers centraux
                 </p>
               </div>
@@ -63,9 +63,9 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
               <div className="space-y-3.5">
                 {/* Adresse */}
                 <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-800 flex items-start gap-2.5">
-                  <MapPin className="w-4 h-4 text-[#E85B3D] shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[#2E7D32] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-[#12162A]">Kandévié, carrefour Yaya gendarme</span>
+                    <span className="font-bold text-[#1B4D2E]">Kandévié, carrefour Yaya gendarme</span>
                     <span className="block text-[11px] text-slate-500">Von Sans Blague, accès facile</span>
                   </div>
                 </div>
@@ -78,15 +78,15 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
                   
                   {/* Filières disponibles sur place */}
                   <div className="pt-1">
-                    <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#26339E] block mb-1.5">
+                    <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#2E7D32] block mb-1.5">
                       Filières disponibles sur place :
                     </span>
                     <div className="flex flex-wrap gap-1.5 text-[11px]">
-                      <span className="bg-[#EEF0FA] text-[#12162A] px-2 py-0.5 rounded border border-[#26339E]/20">Haute couture</span>
-                      <span className="bg-[#EEF0FA] text-[#12162A] px-2 py-0.5 rounded border border-[#26339E]/20">Électricité</span>
-                      <span className="bg-[#EEF0FA] text-[#12162A] px-2 py-0.5 rounded border border-[#26339E]/20">Plomberie</span>
-                      <span className="bg-[#EEF0FA] text-[#12162A] px-2 py-0.5 rounded border border-[#26339E]/20">Froid</span>
-                      <span className="bg-[#EEF0FA] text-[#12162A] px-2 py-0.5 rounded border border-[#26339E]/20">Santé & Info</span>
+                      <span className="bg-[#F1F7F2] text-[#1B4D2E] px-2 py-0.5 rounded border border-[#2E7D32]/20">Haute couture</span>
+                      <span className="bg-[#F1F7F2] text-[#1B4D2E] px-2 py-0.5 rounded border border-[#2E7D32]/20">Électricité</span>
+                      <span className="bg-[#F1F7F2] text-[#1B4D2E] px-2 py-0.5 rounded border border-[#2E7D32]/20">Plomberie</span>
+                      <span className="bg-[#F1F7F2] text-[#1B4D2E] px-2 py-0.5 rounded border border-[#2E7D32]/20">Froid</span>
+                      <span className="bg-[#F1F7F2] text-[#1B4D2E] px-2 py-0.5 rounded border border-[#2E7D32]/20">Santé & Info</span>
                     </div>
                   </div>
 
@@ -102,11 +102,11 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
 
                 <div className="pt-3 border-t border-slate-100 space-y-2 text-xs text-slate-600">
                   <div className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 text-[#26339E] shrink-0" />
-                    <span>Ligne directe : <strong className="text-[#12162A]">01 66 73 06 67</strong></span>
+                    <Phone className="w-3.5 h-3.5 text-[#2E7D32] shrink-0" />
+                    <span>Ligne directe : <strong className="text-[#1B4D2E]">01 66 73 06 67</strong></span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Clock className="w-3.5 h-3.5 text-[#26339E] shrink-0" />
+                    <Clock className="w-3.5 h-3.5 text-[#2E7D32] shrink-0" />
                     <span>Accueil 6j/7 pour les inscriptions</span>
                   </div>
                 </div>
@@ -115,14 +115,14 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
               <div className="pt-4 border-t border-slate-100 flex flex-col gap-2">
                 <button
                   onClick={() => onSelectCenter('Porto-Novo')}
-                  className="w-full py-2.5 px-4 rounded-xl bg-[#12162A] hover:bg-[#26339E] text-white text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full py-2.5 px-4 rounded-xl bg-[#1B4D2E] hover:bg-[#2E7D32] text-white text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <span>S'inscrire à Porto-Novo</span>
-                  <ArrowRight className="w-4 h-4 text-[#E85B3D]" />
+                  <ArrowRight className="w-4 h-4 text-[#F5B800]" />
                 </button>
                 <a
                   href={`tel:0166730667`}
-                  className="w-full py-2 text-center text-xs font-semibold text-[#26339E] hover:underline"
+                  className="w-full py-2 text-center text-xs font-semibold text-[#2E7D32] hover:underline"
                 >
                   Appeler le secrétariat
                 </a>
@@ -139,9 +139,9 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
                 alt="Centre ADONAI-FORMATION de Cotonou"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#12162A] via-[#12162A]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D2E] via-[#1B4D2E]/60 to-transparent" />
 
-              <div className="absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-sm text-[#12162A] text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
+              <div className="absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-sm text-[#1B4D2E] text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
                 Antenne Économique
               </div>
 
@@ -149,7 +149,7 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
                 <h3 className="font-display font-black text-3xl uppercase tracking-tight leading-none text-white">
                   Cotonou
                 </h3>
-                <p className="text-xs text-[#E85B3D] font-semibold mt-0.5">
+                <p className="text-xs text-[#2E7D32] font-semibold mt-0.5">
                   Pôle Numérique, Santé & Services
                 </p>
               </div>
@@ -160,9 +160,9 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
               <div className="space-y-3.5">
                 {/* Adresse */}
                 <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-800 flex items-start gap-2.5">
-                  <MapPin className="w-4 h-4 text-[#E85B3D] shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[#2E7D32] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-[#12162A]">Cotonou Métropole</span>
+                    <span className="font-bold text-[#1B4D2E]">Cotonou Métropole</span>
                     <span className="block text-[11px] text-slate-500">Zone urbaine centrale & transport aisé</span>
                   </div>
                 </div>
@@ -175,7 +175,7 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
                   
                   {/* Filières disponibles sur place */}
                   <div className="pt-1">
-                    <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#26339E] block mb-1.5">
+                    <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#2E7D32] block mb-1.5">
                       Filières disponibles sur place :
                     </span>
                     <div className="flex flex-wrap gap-1.5 text-[11px]">
@@ -199,11 +199,11 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
 
                 <div className="pt-3 border-t border-slate-100 space-y-2 text-xs text-slate-600">
                   <div className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 text-[#26339E] shrink-0" />
-                    <span>Ligne directe : <strong className="text-[#12162A]">01 66 48 58 67</strong></span>
+                    <Phone className="w-3.5 h-3.5 text-[#2E7D32] shrink-0" />
+                    <span>Ligne directe : <strong className="text-[#1B4D2E]">01 66 48 58 67</strong></span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Clock className="w-3.5 h-3.5 text-[#26339E] shrink-0" />
+                    <Clock className="w-3.5 h-3.5 text-[#2E7D32] shrink-0" />
                     <span>Accueil & renseignements du lundi au samedi</span>
                   </div>
                 </div>
@@ -212,14 +212,14 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
               <div className="pt-4 border-t border-slate-100 flex flex-col gap-2">
                 <button
                   onClick={() => onSelectCenter('Cotonou')}
-                  className="w-full py-2.5 px-4 rounded-xl border border-slate-300 hover:bg-slate-100 text-[#12162A] text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full py-2.5 px-4 rounded-xl border border-slate-300 hover:bg-slate-100 text-[#1B4D2E] text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <span>S'inscrire à Cotonou</span>
-                  <ArrowRight className="w-4 h-4 text-[#26339E]" />
+                  <ArrowRight className="w-4 h-4 text-[#2E7D32]" />
                 </button>
                 <a
                   href={`tel:0166485867`}
-                  className="w-full py-2 text-center text-xs font-semibold text-[#26339E] hover:underline"
+                  className="w-full py-2 text-center text-xs font-semibold text-[#2E7D32] hover:underline"
                 >
                   Appeler le secrétariat
                 </a>
@@ -236,9 +236,9 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
                 alt="Centre ADONAI-FORMATION de Parakou"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#12162A] via-[#12162A]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B4D2E] via-[#1B4D2E]/60 to-transparent" />
 
-              <div className="absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-sm text-[#12162A] text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
+              <div className="absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-sm text-[#1B4D2E] text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
                 Antenne Septentrion
               </div>
 
@@ -246,7 +246,7 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
                 <h3 className="font-display font-black text-3xl uppercase tracking-tight leading-none text-white">
                   Parakou
                 </h3>
-                <p className="text-xs text-[#E85B3D] font-semibold mt-0.5">
+                <p className="text-xs text-[#2E7D32] font-semibold mt-0.5">
                   Grand Pôle Nord-Bénin
                 </p>
               </div>
@@ -257,9 +257,9 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
               <div className="space-y-3.5">
                 {/* Adresse */}
                 <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-800 flex items-start gap-2.5">
-                  <MapPin className="w-4 h-4 text-[#E85B3D] shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[#2E7D32] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold text-[#12162A]">Parakou Grand Nord</span>
+                    <span className="font-bold text-[#1B4D2E]">Parakou Grand Nord</span>
                     <span className="block text-[11px] text-slate-500">Centre-ville accessible & carrefours clés</span>
                   </div>
                 </div>
@@ -272,7 +272,7 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
                   
                   {/* Filières disponibles sur place */}
                   <div className="pt-1">
-                    <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#26339E] block mb-1.5">
+                    <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#2E7D32] block mb-1.5">
                       Filières disponibles sur place :
                     </span>
                     <div className="flex flex-wrap gap-1.5 text-[11px]">
@@ -296,11 +296,11 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
 
                 <div className="pt-3 border-t border-slate-100 space-y-2 text-xs text-slate-600">
                   <div className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 text-[#26339E] shrink-0" />
-                    <span>Ligne directe : <strong className="text-[#12162A]">01 53 51 95 43</strong></span>
+                    <Phone className="w-3.5 h-3.5 text-[#2E7D32] shrink-0" />
+                    <span>Ligne directe : <strong className="text-[#1B4D2E]">01 53 51 95 43</strong></span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Clock className="w-3.5 h-3.5 text-[#26339E] shrink-0" />
+                    <Clock className="w-3.5 h-3.5 text-[#2E7D32] shrink-0" />
                     <span>Permanence et inscriptions ouvertes</span>
                   </div>
                 </div>
@@ -309,14 +309,14 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
               <div className="pt-4 border-t border-slate-100 flex flex-col gap-2">
                 <button
                   onClick={() => onSelectCenter('Parakou')}
-                  className="w-full py-2.5 px-4 rounded-xl border border-slate-300 hover:bg-slate-100 text-[#12162A] text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full py-2.5 px-4 rounded-xl border border-slate-300 hover:bg-slate-100 text-[#1B4D2E] text-xs font-bold uppercase tracking-wider transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <span>S'inscrire à Parakou</span>
-                  <ArrowRight className="w-4 h-4 text-[#26339E]" />
+                  <ArrowRight className="w-4 h-4 text-[#2E7D32]" />
                 </button>
                 <a
                   href={`tel:0153519543`}
-                  className="w-full py-2 text-center text-xs font-semibold text-[#26339E] hover:underline"
+                  className="w-full py-2 text-center text-xs font-semibold text-[#2E7D32] hover:underline"
                 >
                   Appeler le secrétariat
                 </a>
@@ -330,10 +330,10 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
         <div className="rounded-3xl bg-white border border-slate-200 p-8 sm:p-10 shadow-sm space-y-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="space-y-1">
-              <span className="text-xs uppercase tracking-widest font-extrabold text-[#26339E] bg-[#EEF0FA] border border-[#26339E]/20 px-3.5 py-1 rounded-full inline-block">
+              <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-[#F1F7F2] border border-[#2E7D32]/20 px-3.5 py-1 rounded-full inline-block">
                 Localisation du Siège Principal
               </span>
-              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#12162A] uppercase tracking-tight">
+              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#1B4D2E] uppercase tracking-tight">
                 Plan d'Accès · Campus de Porto-Novo Kandévié
               </h3>
               <p className="text-xs sm:text-sm text-slate-600">
@@ -345,9 +345,9 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
               href="https://maps.google.com/?q=Porto-Novo+Kandevie+Benin"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#12162A] font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer self-start md:self-auto border border-slate-300"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#1B4D2E] font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer self-start md:self-auto border border-slate-300"
             >
-              <Navigation className="w-4 h-4 text-[#26339E]" />
+              <Navigation className="w-4 h-4 text-[#2E7D32]" />
               <span>Itinéraire Google Maps</span>
               <ExternalLink className="w-3.5 h-3.5 text-slate-500" />
             </a>
@@ -374,14 +374,14 @@ export function CentersSection({ onSelectCenter }: CentersSectionProps) {
         <div className="mt-14 p-5 rounded-2xl bg-white border border-slate-200 text-center text-xs text-slate-600 space-y-1">
           <p>
             Infoline générale nationale ADONAI-FORMATION :{' '}
-            <a href={`tel:${GENERAL_CONTACT.primaryPhone}`} className="font-bold text-[#12162A] underline hover:text-[#26339E]">
+            <a href={`tel:${GENERAL_CONTACT.primaryPhone}`} className="font-bold text-[#1B4D2E] underline hover:text-[#2E7D32]">
               {GENERAL_CONTACT.primaryPhone}
             </a>
             {' '}· Numéros secondaires : 01 66 48 58 67 / 01 53 51 95 43
           </p>
           <p className="text-slate-500">
             Email officiel :{' '}
-            <a href={`mailto:${GENERAL_CONTACT.email}`} className="font-bold text-[#12162A] underline hover:text-[#26339E]">
+            <a href={`mailto:${GENERAL_CONTACT.email}`} className="font-bold text-[#1B4D2E] underline hover:text-[#2E7D32]">
               {GENERAL_CONTACT.email}
             </a>
           </p>
