@@ -12,13 +12,13 @@ export function TimelineSection() {
     {
       date: 'Jusqu\'au 04 Octobre 2026',
       title: 'Inscriptions & Attribution des 1500 Bourses',
-      description: 'Dépôt des dossiers de candidature en ligne ou au secrétariat. Réservation prioritaire des bourses à 21 000 FCFA.',
+      description: 'Dépôt des dossiers de candidature en ligne ou au secrétariat. Réservation prioritaire des bourses à 150 000 FCFA.',
       icon: CheckCircle2,
     },
     {
       date: '05 Octobre 2026',
       title: 'Grande Rentrée Solennelle d\'Atelier',
-      description: 'Accueil des promotions sur nos 3 campus (Porto-Novo, Cotonou, Parakou), remise des livrets et attribution des postes de travail.',
+      description: 'Accueil des promotions sur nos 4 campus (Porto-Novo, Cotonou, Calavi, Parakou), remise des livrets et attribution des postes de travail.',
       icon: Flag,
     },
     {
