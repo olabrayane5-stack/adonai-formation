@@ -122,7 +122,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
   };
 
   return (
-    <section id="inscription" className="py-20 sm:py-28 bg-gradient-to-br from-[#12162A] via-[#12162A] to-[#26339E] text-white relative border-b border-white/10 overflow-hidden">
+    <section id="inscription" className="py-20 sm:py-28 bg-gradient-to-br from-[#1B4D2E] via-[#1B4D2E] to-[#2E7D32] text-white relative border-b border-white/10 overflow-hidden">
       {/* Motif discret en arrière-plan (léger quadrillage technique en transparence) */}
       <div 
         className="absolute inset-0 opacity-[0.045] pointer-events-none z-0"
@@ -137,7 +137,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-12">
-          <span className="text-xs uppercase tracking-widest font-extrabold text-[#E85B3D] bg-white/10 border border-white/15 px-3.5 py-1 rounded-full inline-block">
+          <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5B800] bg-white/10 border border-white/15 px-3.5 py-1 rounded-full inline-block">
             Inscriptions Rentrée 2026
           </span>
           <h2 className="font-display font-black text-4xl sm:text-5xl text-white uppercase tracking-tight">
@@ -153,7 +153,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             
             <div className="bg-white/10 border border-white/15 backdrop-blur-sm rounded-2xl p-5 relative">
-              <span className="w-7 h-7 rounded-full bg-[#E85B3D] text-[#12162A] font-display font-black text-sm flex items-center justify-center mb-3">
+              <span className="w-7 h-7 rounded-full bg-[#F5B800] text-[#1B4D2E] font-display font-black text-sm flex items-center justify-center mb-3">
                 1
               </span>
               <h4 className="font-display font-black text-lg text-white uppercase leading-tight mb-1">
@@ -165,7 +165,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
             </div>
 
             <div className="bg-white/10 border border-white/15 backdrop-blur-sm rounded-2xl p-5 relative">
-              <span className="w-7 h-7 rounded-full bg-[#E85B3D] text-[#12162A] font-display font-black text-sm flex items-center justify-center mb-3">
+              <span className="w-7 h-7 rounded-full bg-[#F5B800] text-[#1B4D2E] font-display font-black text-sm flex items-center justify-center mb-3">
                 2
               </span>
               <h4 className="font-display font-black text-lg text-white uppercase leading-tight mb-1">
@@ -177,7 +177,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
             </div>
 
             <div className="bg-white/10 border border-white/15 backdrop-blur-sm rounded-2xl p-5 relative">
-              <span className="w-7 h-7 rounded-full bg-[#E85B3D] text-[#12162A] font-display font-black text-sm flex items-center justify-center mb-3">
+              <span className="w-7 h-7 rounded-full bg-[#F5B800] text-[#1B4D2E] font-display font-black text-sm flex items-center justify-center mb-3">
                 3
               </span>
               <h4 className="font-display font-black text-lg text-white uppercase leading-tight mb-1">
@@ -189,7 +189,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
             </div>
 
             <div className="bg-white/10 border border-white/15 backdrop-blur-sm rounded-2xl p-5 relative">
-              <span className="w-7 h-7 rounded-full bg-[#E85B3D] text-[#12162A] font-display font-black text-sm flex items-center justify-center mb-3">
+              <span className="w-7 h-7 rounded-full bg-[#F5B800] text-[#1B4D2E] font-display font-black text-sm flex items-center justify-center mb-3">
                 4
               </span>
               <h4 className="font-display font-black text-lg text-white uppercase leading-tight mb-1">
@@ -232,7 +232,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                 </div>
                 <div className="flex justify-between py-1">
                   <span className="text-slate-500">Filière :</span>
-                  <strong className="text-[#26339E]">{submittedApp.filiere}</strong>
+                  <strong className="text-[#2E7D32]">{submittedApp.filiere}</strong>
                 </div>
                 <div className="flex justify-between py-1">
                   <span className="text-slate-500">Centre :</span>
@@ -244,7 +244,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                 </div>
                 <div className="flex justify-between py-1">
                   <span className="text-slate-500">Bourse 21 000 FCFA :</span>
-                  <strong className="text-[#D44A2D]">
+                  <strong className="text-[#1B4D2E]">
                     {submittedApp.applyScholarship ? 'Oui (Bourse sollicitée)' : 'Non (Plein tarif)'}
                   </strong>
                 </div>
@@ -287,7 +287,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                     href={`https://wa.me/${GENERAL_CONTACT.whatsappNumber}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-5 py-2.5 rounded-lg bg-[#E85B3D] hover:bg-[#D44A2D] text-[#12162A] text-xs font-extrabold uppercase tracking-wider cursor-pointer"
+                    className="px-5 py-2.5 rounded-lg bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] text-xs font-extrabold uppercase tracking-wider cursor-pointer"
                   >
                     Ouvrir WhatsApp
                   </a>
@@ -311,7 +311,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder="Ex: Romaric DOSSOU"
-                      className={`w-full px-4 py-3 text-xs sm:text-sm bg-slate-50 border rounded-xl focus:outline-none focus:border-[#E85B3D] ${
+                      className={`w-full px-4 py-3 text-xs sm:text-sm bg-slate-50 border rounded-xl focus:outline-none focus:border-[#2E7D32] ${
                         errors.fullName ? 'border-red-500' : 'border-slate-300'
                       }`}
                     />
@@ -328,7 +328,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       placeholder="Ex: 01 66 73 06 67"
-                      className={`w-full px-4 py-3 text-xs sm:text-sm bg-slate-50 border rounded-xl focus:outline-none focus:border-[#E85B3D] ${
+                      className={`w-full px-4 py-3 text-xs sm:text-sm bg-slate-50 border rounded-xl focus:outline-none focus:border-[#2E7D32] ${
                         errors.phone ? 'border-red-500' : 'border-slate-300'
                       }`}
                     />
@@ -345,7 +345,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                     <select
                       value={filiere}
                       onChange={(e) => setFiliere(e.target.value)}
-                      className="w-full px-4 py-3 text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:border-[#E85B3D]"
+                      className="w-full px-4 py-3 text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:border-[#2E7D32]"
                     >
                       {FILIERES_DATA.map((f) => (
                         <option key={f.id} value={f.name}>
@@ -362,7 +362,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                     <select
                       value={center}
                       onChange={(e) => setCenter(e.target.value)}
-                      className="w-full px-4 py-3 text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:border-[#E85B3D]"
+                      className="w-full px-4 py-3 text-xs sm:text-sm bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:border-[#2E7D32]"
                     >
                       <option value="Porto-Novo">Porto-Novo (Kandévié, carrefour Yaya gendarme)</option>
                       <option value="Cotonou">Cotonou</option>
@@ -380,7 +380,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                     <label
                       className={`p-3.5 rounded-xl border-2 flex items-center gap-3 cursor-pointer transition-all ${
                         duration === '12 mois'
-                          ? 'border-[#26339E] bg-[#EEF0FA] text-[#12162A]'
+                          ? 'border-[#2E7D32] bg-[#F1F7F2] text-[#1B4D2E]'
                           : 'border-slate-200 hover:border-slate-300'
                       }`}
                     >
@@ -389,7 +389,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                         name="duration"
                         checked={duration === '12 mois'}
                         onChange={() => setDuration('12 mois')}
-                        className="w-4 h-4 text-[#26339E] focus:ring-[#26339E]"
+                        className="w-4 h-4 text-[#2E7D32] focus:ring-[#2E7D32]"
                       />
                       <div>
                         <div className="font-bold text-xs sm:text-sm">12 mois — 200 000 FCFA</div>
@@ -400,7 +400,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                     <label
                       className={`p-3.5 rounded-xl border-2 flex items-center gap-3 cursor-pointer transition-all ${
                         duration === '24 mois'
-                          ? 'border-[#26339E] bg-[#EEF0FA] text-[#12162A]'
+                          ? 'border-[#2E7D32] bg-[#F1F7F2] text-[#1B4D2E]'
                           : 'border-slate-200 hover:border-slate-300'
                       }`}
                     >
@@ -409,7 +409,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                         name="duration"
                         checked={duration === '24 mois'}
                         onChange={() => setDuration('24 mois')}
-                        className="w-4 h-4 text-[#26339E] focus:ring-[#26339E]"
+                        className="w-4 h-4 text-[#2E7D32] focus:ring-[#2E7D32]"
                       />
                       <div>
                         <div className="font-bold text-xs sm:text-sm">24 mois — 350 000 FCFA</div>
@@ -420,13 +420,13 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                 </div>
 
                 {/* Option bourse d'études 1500 places */}
-                <div className="p-3.5 rounded-xl bg-[#EEF0FA] border border-[#26339E]/20 flex items-start gap-3">
+                <div className="p-3.5 rounded-xl bg-[#F1F7F2] border border-[#2E7D32]/20 flex items-start gap-3">
                   <input
                     type="checkbox"
                     id="scholarshipCheckbox"
                     checked={applyScholarship}
                     onChange={(e) => setApplyScholarship(e.target.checked)}
-                    className="w-4 h-4 mt-0.5 rounded text-[#E85B3D] focus:ring-[#E85B3D] cursor-pointer"
+                    className="w-4 h-4 mt-0.5 rounded text-[#2E7D32] focus:ring-[#2E7D32] cursor-pointer"
                   />
                   <label htmlFor="scholarshipCheckbox" className="text-xs text-slate-800 cursor-pointer">
                     <strong className="block font-bold text-slate-900">
@@ -442,7 +442,7 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full py-4 px-6 rounded-xl bg-[#E85B3D] hover:bg-[#D44A2D] text-[#12162A] font-extrabold text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg transition-all cursor-pointer"
+                    className="w-full py-4 px-6 rounded-xl bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-extrabold text-sm uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg transition-all cursor-pointer"
                   >
                     <Send className="w-5 h-5" />
                     <span>Envoyer ma demande</span>
@@ -462,11 +462,11 @@ Merci de m'indiquer la confirmation de mon inscription et le créneau pour dépo
           <p>Besoin d'aide immédiate pour remplir ce formulaire ?</p>
           <p className="font-semibold text-white">
             Appelez le secrétariat au{' '}
-            <a href={`tel:${GENERAL_CONTACT.primaryPhone}`} className="text-[#E85B3D] underline">
+            <a href={`tel:${GENERAL_CONTACT.primaryPhone}`} className="text-[#F5B800] underline">
               {GENERAL_CONTACT.primaryPhone}
             </a>
             {' '}ou au{' '}
-            <a href="tel:0166485867" className="text-[#E85B3D] underline">
+            <a href="tel:0166485867" className="text-[#F5B800] underline">
               01 66 48 58 67
             </a>
           </p>
