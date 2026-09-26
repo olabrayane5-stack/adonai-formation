@@ -40,7 +40,7 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
             onClick={() => handleNav('accueil')}
             className="flex items-center gap-3 text-left focus:outline-none group cursor-pointer shrink-0"
           >
-            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#E85B3D]/30 shadow-sm shrink-0 bg-white p-0.5 group-hover:border-[#E85B3D] transition-colors">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#2E7D32]/30 shadow-sm shrink-0 bg-white p-0.5 group-hover:border-[#2E7D32] transition-colors">
               <img
                 src={IMAGES.schoolLogo}
                 alt="Logo ADONAI-FORMATION"
@@ -48,8 +48,8 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
               />
             </div>
             <div>
-              <div className="font-display font-black text-2xl sm:text-3xl tracking-tight text-[#12162A] group-hover:text-[#26339E] transition-colors leading-none uppercase">
-                ADONAI<span className="text-[#E85B3D] ml-1">FORMATION</span>
+              <div className="font-display font-black text-2xl sm:text-3xl tracking-tight text-[#1B4D2E] group-hover:text-[#2E7D32] transition-colors leading-none uppercase">
+                ADONAI<span className="text-[#2E7D32] ml-1">FORMATION</span>
               </div>
               <p className="text-[10px] tracking-wider uppercase text-slate-500 font-semibold mt-0.5">
                 Centre de Formation & Métiers
@@ -58,20 +58,20 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
           </button>
 
           {/* Centre : Liens de navigation (Desktop) */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-[#14162B]">
+          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-[#1B4D2E]">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => handleNav(link.id)}
                 className={`py-1 transition-all cursor-pointer relative ${
                   currentPage === link.id
-                    ? 'text-[#E85B3D] font-extrabold'
-                    : 'text-[#14162B]/80 hover:text-[#E85B3D]'
+                    ? 'text-[#2E7D32] font-extrabold'
+                    : 'text-[#1B4D2E]/80 hover:text-[#2E7D32]'
                 }`}
               >
                 {link.label}
                 {currentPage === link.id && (
-                  <span className="absolute -bottom-1.5 left-0 right-0 h-[2.5px] bg-[#E85B3D] rounded-full"></span>
+                  <span className="absolute -bottom-1.5 left-0 right-0 h-[2.5px] bg-[#2E7D32] rounded-full"></span>
                 )}
               </button>
             ))}
@@ -86,7 +86,7 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
                 handleNav('inscription');
                 onOpenRegister();
               }}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#E85B3D] hover:bg-[#D44A2D] text-white font-bold text-xs sm:text-sm tracking-wide shadow-sm hover:shadow-md transition-all cursor-pointer"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-bold text-xs sm:text-sm tracking-wide shadow-sm hover:shadow-md transition-all cursor-pointer"
             >
               <UserPlus className="w-4 h-4" />
               <span>S'inscrire</span>
@@ -116,8 +116,8 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
                 onClick={() => handleNav(link.id)}
                 className={`text-left px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors cursor-pointer ${
                   currentPage === link.id
-                    ? 'bg-[#12162A] text-white font-bold'
-                    : 'text-[#14162B] hover:bg-slate-100'
+                    ? 'bg-[#1B4D2E] text-white font-bold'
+                    : 'text-[#1B4D2E] hover:bg-slate-100'
                 }`}
               >
                 {link.label}
@@ -129,14 +129,14 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
                 handleNav('inscription');
                 onOpenRegister();
               }}
-              className="w-full text-center py-3 rounded-lg bg-[#E85B3D] hover:bg-[#D44A2D] text-white font-bold text-xs uppercase tracking-wider shadow-sm mt-3"
+              className="w-full text-center py-3 rounded-lg bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-bold text-xs uppercase tracking-wider shadow-sm mt-3"
             >
               S'inscrire en ligne (Rentrée 2026)
             </button>
           </div>
 
           <div className="pt-3 border-t border-slate-200 text-xs text-slate-500 space-y-1">
-            <p className="font-semibold text-[#12162A]">Porto-Novo · Cotonou · Parakou</p>
+            <p className="font-semibold text-[#1B4D2E]">Porto-Novo · Cotonou · Parakou</p>
             <p>Hotline : {GENERAL_CONTACT.primaryPhone}</p>
           </div>
         </div>
