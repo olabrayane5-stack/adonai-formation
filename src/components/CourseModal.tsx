@@ -96,7 +96,7 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
               Rentrée Officielle : 05 Octobre 2026
             </span>
             <span className="px-3 py-1 bg-[#1B4D2E] text-white rounded-full font-semibold">
-              Bourse éligible (21 000 FCFA)
+              Bourse éligible (150 000 FCFA)
             </span>
           </div>
 
