@@ -9,7 +9,7 @@ import {
   RotateCcw
 } from 'lucide-react';
 import { FILIERES_DATA } from '../data/coursesData';
-import { GENERAL_CONTACT, CENTERS_DATA } from '../data/centersData';
+import { GENERAL_CONTACT } from '../data/centersData';
 
 interface RegistrationFormProps {
   initialFiliere?: string;
