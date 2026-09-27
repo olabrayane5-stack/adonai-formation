@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, UserPlus, Clock, CheckCircle2, Building2, Gift } from 'lucide-react';
+import { ArrowRight, UserPlus, Clock, Gift } from 'lucide-react';
 import { IMAGES } from '../assets/images';
 
 interface HeroProps {
@@ -153,7 +153,7 @@ export function Hero({
         </div>
 
         {/* Contenu principal rotatif : colonne unique centrée, un seul point focal */}
-        <div key={activeSlide} className="hero-slide-enter max-w-3xl mx-auto text-center space-y-6 my-auto">
+        <div key={activeSlide} className="hero-slide-enter max-w-4xl mx-auto text-center space-y-6 my-auto">
 
           {/* Badge calendrier/date : jaune doux #F5B800 */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm text-xs font-semibold text-[#F5B800] uppercase tracking-wider">
@@ -161,10 +161,10 @@ export function Hero({
             <span>Candidatures ouvertes — rentrée 2026</span>
           </div>
 
-          {/* Titre en 2 lignes distinctes, chacune sur sa propre ligne */}
-          <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.05] uppercase text-white">
-            <span className="block">{slide.lineOne}</span>
-            <span className="block text-[#F5B800]">{slide.lineTwo}</span>
+          {/* Titre en 2 lignes : taille adaptative (clamp) pour que chaque ligne reste entière, jamais coupée */}
+          <h1 className="font-display font-black tracking-tight leading-[1.15] uppercase text-white text-[clamp(1.5rem,5.5vw,3.25rem)]">
+            <span className="block whitespace-nowrap">{slide.lineOne}</span>
+            <span className="block whitespace-nowrap text-[#F5B800]">{slide.lineTwo}</span>
           </h1>
 
           {/* Sous-titre unique, propre à chaque slide */}
@@ -189,22 +189,6 @@ export function Hero({
               <span>{slide.secondaryLabel}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
-          </div>
-
-          {/* Repères concrets d'admission (fixes, ne changent pas avec les slides) */}
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-white/75">
-            <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
-              <span>100% pratique en atelier</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Building2 className="w-4 h-4 text-[#F5B800]" />
-              <span>4 centres au Bénin</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
-              <span>Attestation & CQP d'État</span>
-            </div>
           </div>
 
           {/* Indicateurs de slide (points cliquables) */}
