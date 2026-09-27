@@ -1,5 +1,5 @@
 import { 
-  CheckCircle2,
+  CheckCircle2, 
   Target, 
   ShieldCheck,
   UserPlus,
@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { IMAGES } from '../assets/images';
 import { AnimatedCounter } from './AnimatedCounter';
+import { CENTERS_DATA } from '../data/centersData';
 
 interface AboutPageProps {
   onNavigateToCourses: () => void;
@@ -312,8 +313,41 @@ export function AboutPage({ onNavigateToCourses, onNavigateToRegister, onNavigat
         </div>
       </section>
 
-      {/* 5. Nos centres en un mot (courte transition + lien vers la page Centres) */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* 4bis. Frise des 4 centres avec année d'ouverture — liste à puce verte */}
+      <section className="pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div className="text-center space-y-2 mb-10">
+          <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-[#F1F7F2] border border-[#2E7D32]/20 px-3.5 py-1 rounded-full inline-block">
+            Notre Histoire
+          </span>
+          <h3 className="font-display font-black text-3xl sm:text-4xl text-[#1B4D2E] uppercase tracking-tight">
+            L'Ouverture de Nos {CENTERS_DATA.length} Centres
+          </h3>
+          <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-1.5 inline-block">
+            Années d'ouverture à confirmer par la direction avant mise en ligne définitive.
+          </p>
+        </div>
+
+        <ol className="relative border-l-2 border-[#2E7D32]/20 ml-3 space-y-8">
+          {CENTERS_DATA.map((center) => (
+            <li key={center.id} className="ml-6">
+              <span className="absolute -left-[9px] flex items-center justify-center w-4 h-4 rounded-full bg-[#2E7D32] ring-4 ring-white" />
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
+                <span className="font-display font-black text-lg text-[#1B4D2E]">{center.city}</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#F5B800] bg-[#1B4D2E] px-2.5 py-0.5 rounded-full w-fit">
+                  {center.openingYear}
+                </span>
+                {center.isMain && (
+                  <span className="text-[11px] text-slate-500 italic">Centre historique / Siège</span>
+                )}
+              </div>
+              <p className="text-xs text-slate-600 mt-1">{center.landmark}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* 5. Bandeau final — CTA vers la page Centres */}
+      <section className="pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-3 text-left max-w-3xl">
             <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-[#F1F7F2] border border-[#2E7D32]/20 px-3.5 py-1 rounded-full inline-block">
