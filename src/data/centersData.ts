@@ -16,6 +16,7 @@ export interface CenterInfo {
   sampleFilieres: string[];
   note: string;
   mapQuery: string;
+  openingYear: string;
 }
 
 export const CENTERS_DATA: CenterInfo[] = [
@@ -37,6 +38,7 @@ export const CENTERS_DATA: CenterInfo[] = [
     sampleFilieres: ['Haute couture', 'Électricité', 'Plomberie', 'Froid', 'Santé & Info'],
     note: 'Horaires Lun - Sam 08h00 - 18h30. Permanence d\'inscription ouverte.',
     mapQuery: 'Porto-Novo,Kandevie,Benin',
+    openingYear: 'À confirmer',
   },
   {
     id: 'cotonou',
@@ -56,6 +58,7 @@ export const CENTERS_DATA: CenterInfo[] = [
     sampleFilieres: ['Marketing digital', 'Génie informatique', 'Auxiliaire pharmacie', 'Délégation médicale', 'Hôtellerie'],
     note: 'Horaires Lun - Sam 08h00 - 18h00. Ateliers climatisés.',
     mapQuery: 'Cotonou,Benin',
+    openingYear: 'À confirmer',
   },
   {
     id: 'calavi',
@@ -75,6 +78,7 @@ export const CENTERS_DATA: CenterInfo[] = [
     sampleFilieres: ['Tresse-coiffure-perruque', 'Esthétique & massage', 'Graphisme designer', 'Sérigraphie'],
     note: 'Horaires Lun - Sam 08h00 - 18h00. Centre récent, places limitées.',
     mapQuery: 'Abomey-Calavi,Godomey,Benin',
+    openingYear: 'À confirmer',
   },
   {
     id: 'parakou',
@@ -94,6 +98,7 @@ export const CENTERS_DATA: CenterInfo[] = [
     sampleFilieres: ['Électricité bâtiment', 'Froid-Climatisation', 'Couture', 'Plomberie', 'Informatique'],
     note: 'Horaires Lun - Ven 08h00 - 18h00. Ateliers pratiques supervisés.',
     mapQuery: 'Parakou,Benin',
+    openingYear: 'À confirmer',
   }
 ];
 
