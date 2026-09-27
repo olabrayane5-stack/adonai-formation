@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, UserPlus, Clock, Gift } from 'lucide-react';
+import { ArrowRight, UserPlus, Clock, Target } from 'lucide-react';
 import { IMAGES } from '../assets/images';
 
 interface HeroProps {
@@ -14,7 +14,6 @@ const SLIDE_DURATION_MS = 6000; // durée d'affichage de chaque message avant ro
 export function Hero({
   onRegisterClick,
   onExploreCoursesClick,
-  onScholarshipClick,
   onCentersClick,
 }: HeroProps) {
   // Countdown to October 5, 2026
@@ -65,10 +64,10 @@ export function Hero({
       secondaryClick: onExploreCoursesClick,
     },
     {
-      lineOne: '4 Centres.',
-      lineTwo: 'Une même excellence.',
+      lineOne: 'Former. Accompagner.',
+      lineTwo: 'Insérer. Entreprendre.',
       subtitle: (
-        <>Où que tu sois au Bénin, retrouve nos ateliers pratiques et nos formateurs qualifiés à <strong>Porto-Novo, Cotonou, Calavi et Parakou</strong>.</>
+        <>Notre vision : une jeunesse <strong>compétente, autonome et entreprenante</strong> — prête à réussir dans le monde professionnel, jusqu'à zéro chômage.</>
       ),
       primaryLabel: "S'inscrire maintenant",
       primaryIcon: UserPlus,
@@ -77,16 +76,16 @@ export function Hero({
       secondaryClick: onCentersClick ?? onExploreCoursesClick,
     },
     {
-      lineOne: '1500 Bourses.',
-      lineTwo: '150 000 FCFA seulement.',
+      lineOne: 'Ta Passion.',
+      lineTwo: 'Ton Métier de Demain.',
       subtitle: (
-        <>Profite du programme de bourses <strong>ADONAI-FORMATION</strong> et démarre ta formation professionnelle à moindre coût dès le 05 octobre 2026.</>
+        <>20 filières techniques d'avenir pour devenir l'expert que ton secteur recherche, avec un accompagnement jusqu'à <strong>l'insertion professionnelle</strong>.</>
       ),
-      primaryLabel: 'Profiter de la bourse',
-      primaryIcon: Gift,
-      primaryClick: onScholarshipClick ?? onRegisterClick,
-      secondaryLabel: 'Voir les conditions',
-      secondaryClick: onScholarshipClick ?? onRegisterClick,
+      primaryLabel: "S'inscrire maintenant",
+      primaryIcon: Target,
+      primaryClick: onRegisterClick,
+      secondaryLabel: 'Voir les 20 filières',
+      secondaryClick: onExploreCoursesClick,
     },
   ];
 
