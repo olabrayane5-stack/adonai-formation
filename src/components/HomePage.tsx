@@ -1,4 +1,4 @@
-import { ArrowRight, UserPlus, Sparkles, ShieldCheck, Gift, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, UserPlus, ShieldCheck, Gift, MapPin, CheckCircle2, Quote, AlertCircle } from 'lucide-react';
 import { Hero } from './Hero';
 import { AnimatedCounter } from './AnimatedCounter';
 import { FILIERES_DATA, Filiere } from '../data/coursesData';
@@ -191,7 +191,7 @@ export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
                   <strong>ADONAI-FORMATION</strong> est né de la volonté de révolutionner l’apprentissage professionnel en plaçant la pratique concrète et le matériel réel au centre de chaque journée de formation.
                 </p>
                 <p>
-                  Implanté à <strong>Porto-Novo</strong>, <strong>Cotonou</strong> et <strong>Parakou</strong>, notre centre transmet des compétences immédiatement monétisables grâce à des formateurs qualifiés et un accompagnement vers l'emploi ou la création d'atelier.
+                  Implanté à <strong>Porto-Novo</strong>, <strong>Cotonou</strong>, <strong>Calavi</strong> et <strong>Parakou</strong>, notre centre transmet des compétences immédiatement monétisables grâce à des formateurs qualifiés et un accompagnement vers l'emploi ou la création d'atelier.
                 </p>
               </div>
 
@@ -271,6 +271,65 @@ export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
         </div>
       </section>
 
+      {/* 5bis. Témoignages — 3 cartes (photo, nom, filière, citation). Contenu d'exemple à remplacer par de vrais témoignages */}
+      <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center space-y-3 mb-12">
+            <span className="text-xs uppercase tracking-widest font-extrabold text-[#2E7D32] bg-[#F1F7F2] border border-[#2E7D32]/20 px-3.5 py-1 rounded-full inline-block">
+              Ils Ont Suivi Nos Formations
+            </span>
+            <h2 className="font-display font-black text-3xl sm:text-5xl text-[#2E7D32] uppercase tracking-tight">
+              Ce Que Nos Apprenants <span className="text-[#2E7D32]">En Disent</span>
+            </h2>
+            <p className="inline-flex items-center gap-1.5 text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-lg px-3 py-1.5">
+              <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+              Témoignages d'exemple — à remplacer par de vrais avis d'anciens élèves (avec leur autorisation).
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                photo: IMAGES.heroBrightStudents,
+                role: 'Diplômé — Haute Couture',
+                promo: 'Promotion 2025',
+                quote: "Grâce à ADONAI-FORMATION, j'ai appris un vrai métier de mes mains. Aujourd'hui je gère mon propre atelier de couture à Porto-Novo.",
+              },
+              {
+                photo: IMAGES.trainerMentor,
+                role: 'Diplômé — Génie Informatique',
+                promo: 'Promotion 2024',
+                quote: "La formation 100% pratique m'a permis de trouver un emploi comme technicien dès la fin de mes études. Les formateurs sont vraiment présents.",
+              },
+              {
+                photo: IMAGES.heroSunnyStudents,
+                role: 'Diplômée — Électricité Bâtiment',
+                promo: 'Promotion 2024',
+                quote: "Les ateliers sont exigeants mais on repart avec de vraies compétences. Je travaille aujourd'hui sur des chantiers à Cotonou.",
+              },
+            ].map((t, idx) => (
+              <div key={idx} className="adonai-card rounded-2xl bg-[#F1F7F2] border border-slate-200 p-6 space-y-4 relative">
+                <Quote className="w-7 h-7 text-[#2E7D32]/25" />
+                <p className="text-sm text-slate-700 leading-relaxed italic">
+                  « {t.quote} »
+                </p>
+                <div className="pt-3 border-t border-slate-200 flex items-center gap-3">
+                  <img
+                    src={t.photo}
+                    alt={t.role}
+                    className="w-11 h-11 rounded-full object-cover border-2 border-white shadow-sm"
+                  />
+                  <div>
+                    <p className="text-xs font-bold text-[#1B4D2E]">{t.role}</p>
+                    <p className="text-[11px] text-slate-500">{t.promo}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 6. Bandeau CTA final : fond lavande très pâle #F1F7F2 avec bouton corail */}
       <section className="py-14 sm:py-18 bg-[#F1F7F2] border-b border-slate-200 text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
@@ -281,7 +340,7 @@ export function HomePage({ onNavigate, onSelectCourseModal }: HomePageProps) {
             Rentrée du 05 Octobre 2026 · <span className="text-[#2E7D32]">Inscriptions Ouvertes</span>
           </h2>
           <p className="text-xs sm:text-sm text-slate-700 max-w-xl mx-auto font-normal leading-relaxed">
-            Ne laissez pas passer votre chance de maîtriser un métier porteur. Réservez votre place dès aujourd'hui en atelier à Porto-Novo, Cotonou ou Parakou.
+            Ne laissez pas passer votre chance de maîtriser un métier porteur. Réservez votre place dès aujourd'hui en atelier à Porto-Novo, Cotonou, Calavi ou Parakou.
           </p>
           <div className="pt-2">
             <button
