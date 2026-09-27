@@ -96,114 +96,63 @@ export function Hero({
           </div>
         </div>
 
-        {/* Contenu principal : Texte aligné à gauche (pas centré), sur 60-70% de la largeur */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center my-auto">
-          
-          <div className="lg:col-span-8 max-w-3xl space-y-6 text-left">
-            
-            {/* Badge calendrier/date : jaune doux #F5B800 */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm text-xs font-semibold text-[#F5B800] uppercase tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#F5B800] animate-pulse"></span>
-              <span>Candidatures ouvertes — rentrée 2026</span>
-            </div>
+        {/* Contenu principal : colonne unique centrée, un seul point focal */}
+        <div className="max-w-3xl mx-auto text-center space-y-6 my-auto">
 
-            {/* Titre en 2 lignes : « Apprends un métier. » / « Construis ton avenir. » (mot-clé en corail) */}
-            <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.05] uppercase text-white">
-              Apprends un métier. <br />
-              <span className="text-[#F5B800]">Construis ton avenir.</span>
-            </h1>
-
-            {/* Sous-titre */}
-            <p className="text-base sm:text-xl font-medium text-white/90 leading-relaxed max-w-2xl">
-              <strong>ADONAI-FORMATION</strong> : Centre de Formation Professionnelle et d'Apprentissage des Métiers à Porto-Novo, Cotonou, Calavi et Parakou.
-            </p>
-
-            {/* Citation courte avec accent corail */}
-            <p className="text-sm sm:text-base font-semibold text-[#F5B800] italic border-l-2 border-[#F5B800] pl-3">
-              « Devenez expert dans le domaine qui vous passionne »
-            </p>
-
-            {/* Phrase complémentaire */}
-            <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-2xl">
-              20 filières techniques d'avenir, 100% pratique en atelier, encadrement par des professionnels qualifiés.
-            </p>
-
-            {/* Deux boutons côte à côte : CTA principal en corail plein, secondaire en contour */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
-              <button
-                onClick={onRegisterClick}
-                className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-extrabold text-sm uppercase tracking-wider shadow-lg hover:shadow-xl transition-all cursor-pointer"
-              >
-                <UserPlus className="w-5 h-5" />
-                <span>S'inscrire maintenant</span>
-              </button>
-
-              <button
-                onClick={onExploreCoursesClick}
-                className="flex items-center justify-center gap-2 px-7 py-4 rounded-xl border-2 border-white/80 hover:bg-white/15 text-white font-bold text-sm transition-all cursor-pointer backdrop-blur-xs"
-              >
-                <span>Voir les 20 filières</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-
-            {/* Repères concrets d'admission */}
-            <div className="pt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-white/75">
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
-                <span>100% pratique en atelier</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
-                <span>1500 bourses à 150 000 FCFA</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
-                <span>Attestation & CQP d'État</span>
-              </div>
-            </div>
-
+          {/* Badge calendrier/date : jaune doux #F5B800 */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm text-xs font-semibold text-[#F5B800] uppercase tracking-wider">
+            <span className="w-2 h-2 rounded-full bg-[#F5B800] animate-pulse"></span>
+            <span>Candidatures ouvertes — rentrée 2026</span>
           </div>
 
-          {/* Colonne de droite (desktop) : Encadré sombre arrondi */}
-          <div className="lg:col-span-4 hidden lg:block">
-            <div className="bg-[#20573A]/80 backdrop-blur-md rounded-2xl border border-white/15 p-6 space-y-4 text-white shadow-2xl">
-              <div className="flex items-center justify-between border-b border-white/15 pb-3">
-                <span className="text-xs uppercase tracking-wider font-bold text-[#F5B800]">
-                  Rentrée 2026
-                </span>
-                <span className="text-xs bg-[#F5B800] text-[#1B4D2E] px-2.5 py-0.5 rounded font-extrabold">
-                  05 Octobre 2026
-                </span>
-              </div>
+          {/* Titre en 2 lignes : « Apprends un métier. » / « Construis ton avenir. » (mot-clé en corail) */}
+          <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.05] uppercase text-white">
+            Apprends un métier. <br />
+            <span className="text-[#F5B800]">Construis ton avenir.</span>
+          </h1>
 
-              <div className="space-y-3 text-xs">
-                <div className="flex justify-between py-1 border-b border-white/10">
-                  <span className="text-white/70">Nombre de filières :</span>
-                  <strong className="text-white font-bold">12 métiers techniques</strong>
-                </div>
-                <div className="flex justify-between py-1 border-b border-white/10">
-                  <span className="text-white/70">Durées proposées :</span>
-                  <strong className="text-white font-bold">12 ou 24 mois</strong>
-                </div>
-                <div className="flex justify-between py-1 border-b border-white/10">
-                  <span className="text-white/70">Campus d'accueil :</span>
-                  <strong className="text-white font-bold">Porto-Novo · Cotonou · Calavi · Parakou</strong>
-                </div>
-                <div className="flex justify-between py-1 border-b border-white/10">
-                  <span className="text-white/70">Programme d'aide :</span>
-                  <strong className="text-[#F5B800] font-bold">1500 bourses d'études</strong>
-                </div>
-              </div>
+          {/* Slogan officiel, en une ligne légère sous le titre */}
+          <p className="text-sm sm:text-base font-semibold text-[#F5B800] italic">
+            « Devenez expert dans le domaine qui vous passionne »
+          </p>
 
-              <div className="pt-2">
-                <button
-                  onClick={onRegisterClick}
-                  className="w-full py-2.5 rounded-lg bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer shadow-sm"
-                >
-                  Réserver ma place dès maintenant
-                </button>
-              </div>
+          {/* Sous-titre unique : institution + filières + villes + approche, en un seul paragraphe */}
+          <p className="text-base sm:text-lg font-medium text-white/90 leading-relaxed max-w-2xl mx-auto">
+            <strong>ADONAI-FORMATION</strong> forme aux 20 filières techniques d'avenir, 100% pratique en atelier, à Porto-Novo, Cotonou, Calavi et Parakou.
+          </p>
+
+          {/* Deux boutons côte à côte, bien espacés : CTA principal en gold plein, secondaire en contour */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-6 pt-2">
+            <button
+              onClick={onRegisterClick}
+              className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-extrabold text-sm uppercase tracking-wider shadow-lg hover:shadow-xl transition-all cursor-pointer"
+            >
+              <UserPlus className="w-5 h-5" />
+              <span>S'inscrire maintenant</span>
+            </button>
+
+            <button
+              onClick={onExploreCoursesClick}
+              className="flex items-center justify-center gap-2 px-7 py-4 rounded-xl border-2 border-white/80 hover:bg-white/15 text-white font-bold text-sm transition-all cursor-pointer backdrop-blur-xs"
+            >
+              <span>Voir les 20 filières</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+
+          {/* Repères concrets d'admission */}
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-white/75">
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
+              <span>100% pratique en atelier</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
+              <span>1500 bourses à 150 000 FCFA</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
+              <span>Attestation & CQP d'État</span>
             </div>
           </div>
 
