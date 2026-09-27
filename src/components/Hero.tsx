@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, UserPlus, Clock, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, UserPlus, Clock, CheckCircle2, Building2, Gift } from 'lucide-react';
 import { IMAGES } from '../assets/images';
 
 interface HeroProps {
@@ -9,9 +9,13 @@ interface HeroProps {
   onCentersClick?: () => void;
 }
 
+const SLIDE_DURATION_MS = 6000; // durée d'affichage de chaque message avant rotation
+
 export function Hero({
   onRegisterClick,
   onExploreCoursesClick,
+  onScholarshipClick,
+  onCentersClick,
 }: HeroProps) {
   // Countdown to October 5, 2026
   const [timeLeft, setTimeLeft] = useState({
@@ -46,6 +50,58 @@ export function Hero({
 
   const pad = (n: number) => String(n).padStart(2, '0');
 
+  // Les 3 messages du hero rotatif : titre (2 lignes), sous-titre, icône, boutons
+  const slides = [
+    {
+      lineOne: 'Apprends un métier.',
+      lineTwo: 'Construis ton avenir.',
+      subtitle: (
+        <><strong>ADONAI-FORMATION</strong> forme aux 20 filières techniques d'avenir, 100% pratique en atelier, à Porto-Novo, Cotonou, Calavi et Parakou.</>
+      ),
+      primaryLabel: "S'inscrire maintenant",
+      primaryIcon: UserPlus,
+      primaryClick: onRegisterClick,
+      secondaryLabel: 'Voir les 20 filières',
+      secondaryClick: onExploreCoursesClick,
+    },
+    {
+      lineOne: '4 Centres.',
+      lineTwo: 'Une même excellence.',
+      subtitle: (
+        <>Où que tu sois au Bénin, retrouve nos ateliers pratiques et nos formateurs qualifiés à <strong>Porto-Novo, Cotonou, Calavi et Parakou</strong>.</>
+      ),
+      primaryLabel: "S'inscrire maintenant",
+      primaryIcon: UserPlus,
+      primaryClick: onRegisterClick,
+      secondaryLabel: 'Découvrir nos centres',
+      secondaryClick: onCentersClick ?? onExploreCoursesClick,
+    },
+    {
+      lineOne: '1500 Bourses.',
+      lineTwo: '150 000 FCFA seulement.',
+      subtitle: (
+        <>Profite du programme de bourses <strong>ADONAI-FORMATION</strong> et démarre ta formation professionnelle à moindre coût dès le 05 octobre 2026.</>
+      ),
+      primaryLabel: 'Profiter de la bourse',
+      primaryIcon: Gift,
+      primaryClick: onScholarshipClick ?? onRegisterClick,
+      secondaryLabel: 'Voir les conditions',
+      secondaryClick: onScholarshipClick ?? onRegisterClick,
+    },
+  ];
+
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const rotation = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % slides.length);
+    }, SLIDE_DURATION_MS);
+    return () => clearInterval(rotation);
+  }, [slides.length]);
+
+  const slide = slides[activeSlide];
+  const PrimaryIcon = slide.primaryIcon;
+
   return (
     <section className="relative overflow-hidden text-white min-h-[620px] lg:min-h-[700px] flex flex-col justify-between bg-[#1B4D2E]">
       {/* Photo réelle en arrière-plan plein écran avec faible opacité */}
@@ -67,7 +123,7 @@ export function Hero({
       </svg>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-8 pb-16 sm:pb-24 flex flex-col justify-between flex-1">
-        
+
         {/* Bandeau compte à rebours dans un encadré arrondi sombre (comme PitchLab) */}
         <div className="flex justify-center mb-10">
           <div className="bg-[#20573A]/90 backdrop-blur-md text-white border border-white/10 shadow-lg py-2 px-5 sm:px-7 rounded-full flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-xs sm:text-sm font-semibold">
@@ -75,7 +131,7 @@ export function Hero({
               <Clock className="w-4 h-4 text-[#F5B800]" />
               <span>Clôture des inscriptions Rentrée 2026 :</span>
             </div>
-            
+
             <div className="flex items-center gap-1.5 font-mono text-white tabular-nums font-bold">
               <span className="bg-[#2E7D32]/50 border border-white/10 px-2 py-0.5 rounded text-xs">
                 {pad(timeLeft.days)} <span className="text-[10px] font-sans font-normal text-white/60">j</span>
@@ -96,8 +152,8 @@ export function Hero({
           </div>
         </div>
 
-        {/* Contenu principal : colonne unique centrée, un seul point focal */}
-        <div className="max-w-3xl mx-auto text-center space-y-6 my-auto">
+        {/* Contenu principal rotatif : colonne unique centrée, un seul point focal */}
+        <div key={activeSlide} className="hero-slide-enter max-w-3xl mx-auto text-center space-y-6 my-auto">
 
           {/* Badge calendrier/date : jaune doux #F5B800 */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-sm text-xs font-semibold text-[#F5B800] uppercase tracking-wider">
@@ -105,55 +161,64 @@ export function Hero({
             <span>Candidatures ouvertes — rentrée 2026</span>
           </div>
 
-          {/* Titre en 2 lignes : « Apprends un métier. » / « Construis ton avenir. » (mot-clé en corail) */}
+          {/* Titre en 2 lignes distinctes, chacune sur sa propre ligne */}
           <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.05] uppercase text-white">
-            Apprends un métier. <br />
-            <span className="text-[#F5B800]">Construis ton avenir.</span>
+            <span className="block">{slide.lineOne}</span>
+            <span className="block text-[#F5B800]">{slide.lineTwo}</span>
           </h1>
 
-          {/* Slogan officiel, en une ligne légère sous le titre */}
-          <p className="text-sm sm:text-base font-semibold text-[#F5B800] italic">
-            « Devenez expert dans le domaine qui vous passionne »
-          </p>
-
-          {/* Sous-titre unique : institution + filières + villes + approche, en un seul paragraphe */}
+          {/* Sous-titre unique, propre à chaque slide */}
           <p className="text-base sm:text-lg font-medium text-white/90 leading-relaxed max-w-2xl mx-auto">
-            <strong>ADONAI-FORMATION</strong> forme aux 20 filières techniques d'avenir, 100% pratique en atelier, à Porto-Novo, Cotonou, Calavi et Parakou.
+            {slide.subtitle}
           </p>
 
-          {/* Deux boutons côte à côte, bien espacés : CTA principal en gold plein, secondaire en contour */}
+          {/* Deux boutons côte à côte, bien espacés */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-6 pt-2">
             <button
-              onClick={onRegisterClick}
+              onClick={slide.primaryClick}
               className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-extrabold text-sm uppercase tracking-wider shadow-lg hover:shadow-xl transition-all cursor-pointer"
             >
-              <UserPlus className="w-5 h-5" />
-              <span>S'inscrire maintenant</span>
+              <PrimaryIcon className="w-5 h-5" />
+              <span>{slide.primaryLabel}</span>
             </button>
 
             <button
-              onClick={onExploreCoursesClick}
+              onClick={slide.secondaryClick}
               className="flex items-center justify-center gap-2 px-7 py-4 rounded-xl border-2 border-white/80 hover:bg-white/15 text-white font-bold text-sm transition-all cursor-pointer backdrop-blur-xs"
             >
-              <span>Voir les 20 filières</span>
+              <span>{slide.secondaryLabel}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
 
-          {/* Repères concrets d'admission */}
+          {/* Repères concrets d'admission (fixes, ne changent pas avec les slides) */}
           <div className="pt-2 flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-white/75">
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
               <span>100% pratique en atelier</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
-              <span>1500 bourses à 150 000 FCFA</span>
+              <Building2 className="w-4 h-4 text-[#F5B800]" />
+              <span>4 centres au Bénin</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-[#F5B800]" />
               <span>Attestation & CQP d'État</span>
             </div>
+          </div>
+
+          {/* Indicateurs de slide (points cliquables) */}
+          <div className="flex items-center justify-center gap-2 pt-2">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveSlide(i)}
+                aria-label={`Voir le message ${i + 1}`}
+                className={`h-1.5 rounded-full transition-all cursor-pointer ${
+                  i === activeSlide ? 'w-6 bg-[#F5B800]' : 'w-1.5 bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
           </div>
 
         </div>
