@@ -9,28 +9,28 @@ interface FaqItem {
 
 const FAQ_DATA: FaqItem[] = [
   {
-    question: "Quelles sont les conditions d'accès et le niveau d'études requis ?",
-    answer: "Les formations d'ADONAI-FORMATION sont ouvertes à tous les profils : jeunes déscolarisés, titulaires du CEP, BEPC, BAC ou diplômés universitaires en reconversion. Aucun diplôme préalable n'est obligatoire. Notre enseignement individualisé en atelier s'adapte à votre rythme d'apprentissage."
+    question: "Quels sont les frais d'inscription et de formation ?",
+    answer: `Les frais d'inscription sont de ${GENERAL_CONTACT.registrationFee}. La formation coûte ${GENERAL_CONTACT.duration12Price} pour 12 mois ou ${GENERAL_CONTACT.duration24Price} pour 24 mois.`
   },
   {
-    question: "Comment bénéficier de l'une des 1500 bourses d'études à 150 000 FCFA ?",
-    answer: "Il vous suffit de cocher l'option 'Je sollicite la bourse' sur le formulaire d'inscription en ligne ou au secrétariat. Les bourses sont octroyées par ordre de validation des dossiers dans nos 4 campus (Porto-Novo, Cotonou, Calavi et Parakou). La participation financière est fixée à 150 000 FCFA au lieu du plein tarif."
+    question: "Comment bénéficier d'une bourse ?",
+    answer: `${GENERAL_CONTACT.scholarshipQuota} sont disponibles : avec la bourse, la participation est de ${GENERAL_CONTACT.scholarshipPrice}. Pour connaître la marche à suivre, renseignez-vous auprès du secrétariat de votre centre.`
   },
   {
-    question: "Quelle est la date officielle de la rentrée des classes ?",
-    answer: "La rentrée solennelle en atelier se déroulera le lundi 05 octobre 2026 dans tous nos campus. Les inscriptions sont d'ores et déjà ouvertes pour réserver votre matériel et votre poste de travail."
+    question: "Où se trouvent vos centres ?",
+    answer: "ADONAI-FORMATION est présent dans 4 villes du Bénin : Porto-Novo (siège, Kandévié – carrefour Yaya Gendarme), Cotonou, Calavi et Parakou. Retrouvez le détail de chaque centre dans la page Centres."
   },
   {
-    question: "Quels sont les documents à fournir pour valider son inscription ?",
-    answer: "Le dossier d'admission comprend : la fiche de pré-inscription (générée en ligne ou sur place), une copie simple d'acte de naissance, 2 photos d'identité récentes sur fond blanc, et les frais de dossier d'inscription uniques de 15 000 FCFA."
+    question: "Quelle est la date de la prochaine rentrée ?",
+    answer: `La prochaine rentrée a lieu le ${GENERAL_CONTACT.academicStart}. Les inscriptions sont ouvertes : cliquez sur « S'inscrire » pour remplir le formulaire officiel.`
   },
   {
-    question: "Quelle reconnaissance et quel diplôme obtient-on à la fin du cursus ?",
-    answer: "À l'issue de votre formation de 12 ou 24 mois et après validation de vos épreuves pratiques et de votre stage professionnel, une attestation officielle de fin de formation professionnelle reconnue vous est remise. Pour les cursus de 24 mois, une préparation au Certificat de Qualification Professionnelle (CQP) de l'État béninois est assurée."
+    question: "Que se passe-t-il après mon inscription ?",
+    answer: "Une fois le formulaire rempli, l'équipe du centre vous recontacte par téléphone ou WhatsApp sous 48 h pour la suite de votre dossier."
   },
   {
-    question: "Quelles facilités de paiement proposez-vous pour les frais de formation ?",
-    answer: "Pour les candidats inscrits hors programme de bourse, la scolarité (200 000 FCFA pour 12 mois ou 350 000 FCFA pour 24 mois) peut être échelonnée en 3 ou 4 tranches mensuelles réparties tout au long de l'année scolaire."
+    question: "Obtient-on une attestation à la fin de la formation ?",
+    answer: "Oui, une attestation de formation est délivrée à l'issue du parcours. Pour connaître les conditions précises, rapprochez-vous du secrétariat de votre centre."
   }
 ];
 
@@ -65,7 +65,7 @@ export function FaqSection() {
             return (
               <div
                 key={idx}
-                className="lux-card rounded-2xl overflow-hidden transition-all"
+                className="adonai-card rounded-2xl overflow-hidden transition-all"
               >
                 <button
                   type="button"
