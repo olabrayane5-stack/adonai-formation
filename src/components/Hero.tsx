@@ -125,7 +125,7 @@ export function Hero({
 
         {/* Bandeau compte à rebours dans un encadré arrondi sombre (comme PitchLab) */}
         <div className="flex justify-center mb-10">
-          <div className="bg-[#20573A]/90 backdrop-blur-md text-white border border-white/10 shadow-lg py-2 px-5 sm:px-7 rounded-full flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-xs sm:text-sm font-semibold">
+          <div className="bg-[#20573A]/90 backdrop-blur-md text-white border border-white/10 shadow-lg py-2.5 px-4 sm:py-2 sm:px-7 rounded-2xl sm:rounded-full flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-xs sm:text-sm font-semibold">
             <div className="flex items-center gap-2 text-white/90">
               <Clock className="w-4 h-4 text-[#F5B800]" />
               <span>Clôture des inscriptions Rentrée 2026 :</span>
@@ -161,9 +161,9 @@ export function Hero({
           </div>
 
           {/* Titre en 2 lignes : taille adaptative (clamp) pour que chaque ligne reste entière, jamais coupée */}
-          <h1 className="font-display font-black tracking-tight leading-[1.15] uppercase text-white text-[clamp(1.5rem,5.5vw,3.25rem)]">
-            <span className="block whitespace-nowrap">{slide.lineOne}</span>
-            <span className="block whitespace-nowrap text-[#F5B800]">{slide.lineTwo}</span>
+          <h1 className="font-display font-black tracking-tight leading-[1.15] uppercase text-white text-[clamp(1.75rem,6vw,3.25rem)] text-balance">
+            <span className="block">{slide.lineOne}</span>
+            <span className="block text-[#F5B800]">{slide.lineTwo}</span>
           </h1>
 
           {/* Sous-titre unique, propre à chaque slide */}
