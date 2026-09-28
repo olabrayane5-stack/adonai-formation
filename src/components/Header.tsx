@@ -38,9 +38,9 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
           {/* Gauche : Logo (conservé) + Nom avec accent corail */}
           <button
             onClick={() => handleNav('accueil')}
-            className="flex items-center gap-3 text-left focus:outline-none group cursor-pointer shrink-0"
+            className="flex items-center gap-2 sm:gap-3 text-left focus:outline-none group cursor-pointer shrink-0"
           >
-            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#2E7D32]/30 shadow-sm shrink-0 bg-white p-0.5 group-hover:border-[#2E7D32] transition-colors">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-[#2E7D32]/30 shadow-sm shrink-0 bg-white p-0.5 group-hover:border-[#2E7D32] transition-colors">
               <img
                 src={IMAGES.schoolLogo}
                 alt="Logo ADONAI-FORMATION"
@@ -48,17 +48,17 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
               />
             </div>
             <div>
-              <div className="font-display font-black text-2xl sm:text-3xl tracking-tight text-[#1B4D2E] group-hover:text-[#2E7D32] transition-colors leading-none uppercase">
-                ADONAI<span className="text-[#2E7D32] ml-1">FORMATION</span>
+              <div className="font-display font-black text-lg sm:text-2xl xl:text-3xl tracking-tight text-[#1B4D2E] group-hover:text-[#2E7D32] transition-colors leading-none uppercase">
+                ADONAI<span className="block sm:inline text-[#2E7D32] sm:ml-1">FORMATION</span>
               </div>
-              <p className="text-[10px] tracking-wider uppercase text-slate-500 font-semibold mt-0.5">
+              <p className="hidden sm:block text-[10px] tracking-wider uppercase text-slate-500 font-semibold mt-0.5">
                 Centre de Formation & Métiers
               </p>
             </div>
           </button>
 
           {/* Centre : Liens de navigation (Desktop) */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-[#1B4D2E]">
+          <nav className="hidden xl:flex items-center gap-7 text-sm font-semibold text-[#1B4D2E]">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -86,7 +86,7 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
                 handleNav('inscription');
                 onOpenRegister();
               }}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-bold text-xs sm:text-sm tracking-wide shadow-sm hover:shadow-md transition-all cursor-pointer"
+              className="hidden sm:flex items-center gap-2 px-4 xl:px-5 py-2.5 rounded-lg bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-bold text-xs sm:text-sm tracking-wide shadow-sm hover:shadow-md transition-all cursor-pointer"
             >
               <UserPlus className="w-4 h-4" />
               <span>S'inscrire</span>
@@ -96,7 +96,7 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-800 hover:bg-slate-100 lg:hidden focus:outline-none"
+              className="p-2 rounded-lg text-slate-800 hover:bg-slate-100 xl:hidden focus:outline-none"
               aria-label="Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -108,7 +108,7 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
 
       {/* Menu mobile déroulant */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white px-6 py-5 space-y-4 shadow-xl">
+        <div className="xl:hidden border-t border-slate-200 bg-white px-4 sm:px-6 py-5 space-y-4 shadow-xl max-h-[calc(100dvh-5rem)] overflow-y-auto">
           <div className="flex flex-col space-y-1">
             {navLinks.map((link) => (
               <button
