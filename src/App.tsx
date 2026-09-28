@@ -11,21 +11,15 @@ import { CoursesSection } from './components/CoursesSection';
 import { CourseModal } from './components/CourseModal';
 import { PricingSection } from './components/PricingSection';
 import { CentersSection } from './components/CentersSection';
-import { RegistrationForm } from './components/RegistrationForm';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { Filiere } from './data/coursesData';
+import { GENERAL_CONTACT } from './data/centersData';
 import { IMAGES } from './assets/images';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<AppPage>('accueil');
   const [selectedCourseModal, setSelectedCourseModal] = useState<Filiere | null>(null);
-  
-  // Registration form auto-fill states
-  const [formFiliere, setFormFiliere] = useState<string>('Haute couture');
-  const [formCenter, setFormCenter] = useState<string>('Porto-Novo');
-  const [formDuration, setFormDuration] = useState<'12 mois' | '24 mois'>('12 mois');
-  const [formScholarship, setFormScholarship] = useState<boolean>(true);
 
   // Sync hash routing
   useEffect(() => {
@@ -35,7 +29,6 @@ export default function App() {
       else if (hash === 'formations' || hash === 'filieres') setCurrentPage('filieres');
       else if (hash === 'tarifs') setCurrentPage('tarifs');
       else if (hash === 'centres') setCurrentPage('centres');
-      else if (hash === 'contact' || hash === 'inscription') setCurrentPage('inscription');
       else setCurrentPage('accueil');
     };
 
@@ -48,31 +41,16 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  // Toute demande d'inscription ouvre directement le Google Form officiel du client
+  // (le directeur reçoit les réponses dans son compte Google — pas de formulaire interne, pas de backend)
   const navigateTo = (page: AppPage) => {
+    if (page === 'inscription') {
+      window.open(GENERAL_CONTACT.googleFormUrl, '_blank', 'noopener,noreferrer');
+      return;
+    }
     setCurrentPage(page);
-    const hashTarget = page === 'filieres' ? 'formations' : page === 'inscription' ? 'contact' : page;
-    window.location.hash = `/${hashTarget}`;
+    window.location.hash = `/${page === 'filieres' ? 'formations' : page}`;
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleSelectCourse = (filiere: Filiere) => {
-    setFormFiliere(filiere.name);
-    navigateTo('inscription');
-  };
-
-  const handleApplyForScholarship = () => {
-    setFormScholarship(true);
-    navigateTo('inscription');
-  };
-
-  const handleSelectDuration = (duration: '12 mois' | '24 mois') => {
-    setFormDuration(duration);
-    navigateTo('inscription');
-  };
-
-  const handleSelectCenter = (centerCity: string) => {
-    setFormCenter(centerCity);
-    navigateTo('inscription');
   };
 
   return (
@@ -127,7 +105,7 @@ export default function App() {
                   Catalogue Officiel Rentrée 2026
                 </span>
                 <h1 className="text-4xl sm:text-6xl font-black font-display text-white uppercase tracking-tight leading-tight">
-                  Nos 12 Filières <span className="text-[#F5B800]">d'Atelier</span>
+                  Nos 20 Filières <span className="text-[#F5B800]">d'Atelier</span>
                 </h1>
                 <p className="mt-3 text-white/85 max-w-2xl mx-auto text-sm sm:text-base font-normal leading-relaxed">
                   Découvrez nos formations pratiques en conditions réelles d'atelier. Choisissez votre métier d'avenir et devenez un expert reconnu.
@@ -137,7 +115,7 @@ export default function App() {
 
             {/* Contenu complet avec filtres interactifs et grille de cartes */}
             <CoursesSection
-              onSelectCourse={handleSelectCourse}
+              onSelectCourse={() => navigateTo('inscription')}
               onOpenModal={(course) => setSelectedCourseModal(course)}
             />
           </div>
@@ -175,8 +153,8 @@ export default function App() {
             </div>
 
             <PricingSection
-              onApplyForScholarship={handleApplyForScholarship}
-              onSelectDuration={handleSelectDuration}
+              onApplyForScholarship={() => navigateTo('inscription')}
+              onSelectDuration={() => navigateTo('inscription')}
             />
           </div>
         )}
@@ -204,63 +182,25 @@ export default function App() {
                   Infrastructures Pédagogiques
                 </span>
                 <h1 className="text-4xl sm:text-6xl font-black font-display text-white uppercase tracking-tight leading-tight">
-                  Nos 3 Campus au <span className="text-[#F5B800]">Bénin</span>
+                  Nos 4 Campus au <span className="text-[#F5B800]">Bénin</span>
                 </h1>
                 <p className="mt-3 text-white/85 max-w-2xl mx-auto text-sm sm:text-base font-normal leading-relaxed">
-                  Des ateliers spacieux et modernes à <strong>Porto-Novo</strong> (siège historique), <strong>Cotonou</strong> et <strong>Parakou</strong>.
+                  Des ateliers spacieux et modernes à <strong>Porto-Novo</strong> (siège historique), <strong>Cotonou</strong>, <strong>Calavi</strong> et <strong>Parakou</strong>.
                 </p>
               </div>
             </div>
 
-            <CentersSection onSelectCenter={handleSelectCenter} />
+            <CentersSection onSelectCenter={() => navigateTo('inscription')} />
           </div>
         )}
 
-        {/* 4.6 PAGE CONTACT / INSCRIPTION : Explication 4 étapes & formulaire complet */}
-        {currentPage === 'inscription' && (
-          <div>
-            <div className="relative bg-[#1B4D2E] text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-white/10">
-              <div className="absolute inset-0 opacity-40 pointer-events-none">
-                <img
-                  src={IMAGES.trainerMentor}
-                  alt="Apprenants et encadrement ADONAI-FORMATION"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Motif géométrique corail discret dans un coin (triangles) */}
-              <svg className="absolute -top-6 -right-6 w-36 h-36 opacity-25 pointer-events-none text-[#F5B800]" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-                <polygon points="100,0 60,0 100,40" />
-                <polygon points="100,50 40,0 20,0 100,80" />
-                <polygon points="100,90 10,0 0,0 100,100" />
-              </svg>
-              <div className="max-w-5xl mx-auto relative z-10 text-center space-y-3">
-                <span className="text-xs uppercase tracking-widest font-extrabold text-[#F5B800] bg-white/10 px-4 py-1.5 rounded-full inline-block border border-white/15 backdrop-blur-sm">
-                  Session Officielle 2026-2027
-                </span>
-                <h1 className="text-4xl sm:text-6xl font-black font-display text-white uppercase tracking-tight leading-tight">
-                  Candidature & <span className="text-[#F5B800]">Pré-Inscription</span>
-                </h1>
-                <p className="mt-3 text-white/85 max-w-2xl mx-auto text-sm sm:text-base font-normal leading-relaxed">
-                  Remplissez votre dossier en ligne pour réserver votre poste en atelier dès la rentrée du 05 octobre 2026.
-                </p>
-              </div>
-            </div>
-
-            <RegistrationForm
-              initialFiliere={formFiliere}
-              initialCenter={formCenter}
-              initialDuration={formDuration}
-              initialScholarship={formScholarship}
-            />
-          </div>
-        )}
       </main>
 
       {/* Modal Détails Filière avec programme & compétences */}
       <CourseModal
         course={selectedCourseModal}
         onClose={() => setSelectedCourseModal(null)}
-        onSelectCourse={handleSelectCourse}
+        onSelectCourse={() => navigateTo('inscription')}
       />
 
       {/* Pied de page riche en 3 colonnes */}
