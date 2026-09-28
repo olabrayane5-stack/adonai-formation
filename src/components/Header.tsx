@@ -3,7 +3,7 @@ import { Menu, X, UserPlus } from 'lucide-react';
 import { GENERAL_CONTACT } from '../data/centersData';
 import { IMAGES } from '../assets/images';
 
-export type AppPage = 'accueil' | 'a-propos' | 'filieres' | 'tarifs' | 'centres' | 'inscription';
+export type AppPage = 'accueil' | 'a-propos' | 'filieres' | 'tarifs' | 'centres' | 'contact' | 'inscription';
 
 interface HeaderProps {
   currentPage: AppPage;
@@ -26,19 +26,19 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
     { id: 'filieres', label: 'Formations' },
     { id: 'tarifs', label: 'Tarifs' },
     { id: 'centres', label: 'Centres' },
-    { id: 'inscription', label: 'Contact' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-xs border-b border-slate-200">
       {/* Ligne principale du header : logo + nom à gauche, téléphone + bouton "S'inscrire" + menu hamburger à droite */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 gap-4">
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4">
           
           {/* Gauche : Logo (conservé) + Nom avec accent corail */}
           <button
             onClick={() => handleNav('accueil')}
-            className="flex items-center gap-2 sm:gap-3 text-left focus:outline-none group cursor-pointer shrink-0"
+            className="flex items-center gap-2 sm:gap-3 text-left focus:outline-none group cursor-pointer min-w-0"
           >
             <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-[#2E7D32]/30 shadow-sm shrink-0 bg-white p-0.5 group-hover:border-[#2E7D32] transition-colors">
               <img
@@ -48,8 +48,8 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
               />
             </div>
             <div>
-              <div className="font-display font-black text-lg sm:text-2xl xl:text-3xl tracking-tight text-[#1B4D2E] group-hover:text-[#2E7D32] transition-colors leading-none uppercase">
-                ADONAI<span className="block sm:inline text-[#2E7D32] sm:ml-1">FORMATION</span>
+              <div className="font-display font-black text-base sm:text-3xl tracking-tight text-[#1B4D2E] group-hover:text-[#2E7D32] transition-colors leading-[1.05] uppercase flex flex-col sm:block">
+                ADONAI<span className="text-[#2E7D32] sm:ml-1">FORMATION</span>
               </div>
               <p className="hidden sm:block text-[10px] tracking-wider uppercase text-slate-500 font-semibold mt-0.5">
                 Centre de Formation & Métiers
@@ -58,7 +58,7 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
           </button>
 
           {/* Centre : Liens de navigation (Desktop) */}
-          <nav className="hidden xl:flex items-center gap-7 text-sm font-semibold text-[#1B4D2E]">
+          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-[#1B4D2E]">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -78,17 +78,14 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
           </nav>
 
           {/* Droite : Téléphone + Bouton "S'inscrire" (corail PitchLab) + Menu hamburger */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-1 sm:gap-4 shrink-0">
 
             {/* Bouton S'inscrire en corail plein PitchLab */}
             <button
-              onClick={() => {
-                handleNav('inscription');
-                onOpenRegister();
-              }}
-              className="hidden sm:flex items-center gap-2 px-4 xl:px-5 py-2.5 rounded-lg bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-bold text-xs sm:text-sm tracking-wide shadow-sm hover:shadow-md transition-all cursor-pointer"
+              onClick={onOpenRegister}
+              className="flex items-center gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-bold text-xs sm:text-sm whitespace-nowrap tracking-wide shadow-sm hover:shadow-md transition-all cursor-pointer"
             >
-              <UserPlus className="w-4 h-4" />
+              <UserPlus className="w-4 h-4 hidden min-[400px]:block" />
               <span>S'inscrire</span>
             </button>
 
@@ -96,7 +93,7 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-slate-800 hover:bg-slate-100 xl:hidden focus:outline-none"
+              className="p-2 rounded-lg text-slate-800 hover:bg-slate-100 lg:hidden focus:outline-none"
               aria-label="Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -108,7 +105,7 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
 
       {/* Menu mobile déroulant */}
       {mobileMenuOpen && (
-        <div className="xl:hidden border-t border-slate-200 bg-white px-4 sm:px-6 py-5 space-y-4 shadow-xl max-h-[calc(100dvh-5rem)] overflow-y-auto">
+        <div className="lg:hidden border-t border-slate-200 bg-white px-6 py-5 space-y-4 shadow-xl">
           <div className="flex flex-col space-y-1">
             {navLinks.map((link) => (
               <button
@@ -126,7 +123,7 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
             
             <button
               onClick={() => {
-                handleNav('inscription');
+                setMobileMenuOpen(false);
                 onOpenRegister();
               }}
               className="w-full text-center py-3 rounded-lg bg-[#F5B800] hover:bg-[#E0A600] text-[#1B4D2E] font-bold text-xs uppercase tracking-wider shadow-sm mt-3"
@@ -136,7 +133,7 @@ export function Header({ currentPage, onNavigate, onOpenRegister }: HeaderProps)
           </div>
 
           <div className="pt-3 border-t border-slate-200 text-xs text-slate-500 space-y-1">
-            <p className="font-semibold text-[#1B4D2E]">Porto-Novo · Cotonou · Parakou</p>
+            <p className="font-semibold text-[#1B4D2E]">Porto-Novo · Cotonou · Calavi · Parakou</p>
             <p>Hotline : {GENERAL_CONTACT.primaryPhone}</p>
           </div>
         </div>
