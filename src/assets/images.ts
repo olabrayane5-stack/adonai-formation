@@ -22,6 +22,10 @@ import secretariatMed from './images/secretariat_med_1790288906793.jpg';
 import marketingDigital from './images/marketing_digital_1790288894884.jpg';
 import directorJonasChankouin from './images/director_jonas_chankouin.jpg';
 
+// Photos réelles envoyées par le personnel (rentrée 2026)
+import realApprentisAteliers from './images/real_apprentis_ateliers_2026.jpg';
+import realAtelierCoutureInterieur from './images/real_atelier_couture_interieur_2026.jpg';
+
 export const IMAGES = {
   heroSunnyStudents,
   heroBrightStudents,
@@ -50,4 +54,8 @@ export const IMAGES = {
   secretariatMedical: secretariatMed,
   marketingDigital,
   directorJonasChankouin,
+
+  // Photos réelles (rentrée 2026)
+  realApprentisAteliers,
+  realAtelierCoutureInterieur,
 };
