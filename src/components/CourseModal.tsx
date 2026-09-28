@@ -47,11 +47,11 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
   const IconComponent = ICONS[course.iconName] || Wrench;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-start sm:items-center justify-center p-3 sm:p-4">
       <div className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-[#1B4D2E]/10 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         
         {/* Banner with Course Atelier Photography */}
-        <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-stone-100">
+        <div className="relative h-44 sm:h-64 w-full overflow-hidden bg-stone-100">
           <img
             src={course.imageUrl}
             alt={course.name}
@@ -85,7 +85,7 @@ export function CourseModal({ course, onClose, onSelectCourse }: CourseModalProp
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 sm:p-8 space-y-6 text-[#1B4D2E] max-h-[60vh] overflow-y-auto">
+        <div className="p-6 sm:p-8 space-y-6 text-[#1B4D2E] sm:max-h-[60vh] sm:overflow-y-auto">
           {/* Quick specs */}
           <div className="flex flex-wrap items-center gap-3 text-xs">
             <span className="flex items-center gap-1.5 px-3 py-1 bg-[#F1F7F2] text-[#1B4D2E] rounded-full font-semibold border border-[#1B4D2E]/10">
