@@ -13,12 +13,12 @@ export function FloatingWhatsApp() {
     <div className="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-2.5 no-print">
       {/* Tooltip d'aide discrète */}
       {showTooltip && (
-        <div className="hidden sm:flex items-center gap-2 bg-white text-slate-800 text-xs font-medium py-2 px-3.5 rounded-2xl shadow-xl border border-slate-200 animate-bounce">
-          <span className="w-2 h-2 rounded-full bg-[#25D366] animate-ping" />
-          <span>Une question ? Discutez avec le centre sur WhatsApp</span>
+        <div className="hidden sm:flex items-start gap-2 bg-white text-slate-800 text-xs font-medium py-2.5 px-3.5 rounded-2xl shadow-xl border border-slate-200 max-w-[220px]">
+          <span className="w-2 h-2 rounded-full bg-[#25D366] animate-ping shrink-0 mt-1" />
+          <span className="leading-snug">Une question ? Discutez avec le centre sur WhatsApp</span>
           <button
             onClick={() => setShowTooltip(false)}
-            className="text-slate-400 hover:text-slate-600 ml-1 p-0.5"
+            className="text-slate-400 hover:text-slate-600 shrink-0 p-0.5"
             aria-label="Fermer l'aide"
           >
             <X className="w-3.5 h-3.5" />
