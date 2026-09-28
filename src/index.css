@@ -12,7 +12,12 @@
   --color-adonai-text: #1B4D2E;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
+  overflow-x: clip; /* empêche tout défilement horizontal sur mobile */
   font-family: var(--font-sans);
   background-color: #F1F7F2;
   color: #1B4D2E;
