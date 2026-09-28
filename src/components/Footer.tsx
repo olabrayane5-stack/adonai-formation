@@ -20,11 +20,11 @@ export function Footer({ onNavigate }: FooterProps) {
   };
 
   return (
-    <footer className="bg-[#1B4D2E] text-white pt-16 pb-10 border-t border-white/10">
+    <footer className="bg-[#1B4D2E] text-white pt-10 pb-6 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* 3.8 Grille : 3 colonnes côte à côte (à propos / liens / contact), alignées en haut, séparées par un espacement régulier */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-white/10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-white/10 items-start">
           
           {/* Colonne 1 : Nom + accroche */}
           <div className="space-y-4">
@@ -141,9 +141,10 @@ export function Footer({ onNavigate }: FooterProps) {
               <div className="flex items-start gap-2">
                 <Phone className="w-4 h-4 text-[#F5B800] shrink-0 mt-0.5" />
                 <div className="space-y-0.5">
-                  <a href="tel:0166730667" className="block hover:text-[#F5B800]">01 66 73 06 67</a>
-                  <a href="tel:0166485867" className="block hover:text-[#F5B800]">01 66 48 58 67</a>
-                  <a href="tel:0153519543" className="block hover:text-[#F5B800]">01 53 51 95 43</a>
+                  <a href={`tel:${GENERAL_CONTACT.primaryPhone.replace(/\s/g, '')}`} className="block hover:text-[#F5B800]">{GENERAL_CONTACT.primaryPhone}</a>
+                  {GENERAL_CONTACT.secondaryPhones.map((tel) => (
+                    <a key={tel} href={`tel:${tel.replace(/\s/g, '')}`} className="block hover:text-[#F5B800]">{tel}</a>
+                  ))}
                 </div>
               </div>
 
