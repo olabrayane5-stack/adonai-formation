@@ -149,7 +149,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
               <div className="flex items-start gap-2 pt-1 text-xs text-white/70">
                 <MapPin className="w-4 h-4 text-[#F5B800] shrink-0 mt-0.5" />
-                <span>Porto-Novo (Kandévié, carrefour Yaya gendarme - siège) · Cotonou · Parakou</span>
+                <span>Porto-Novo (Kandévié, carrefour Yaya gendarme - siège) · Cotonou · Parakou · Calavi </span>
               </div>
             </div>
           </div>
