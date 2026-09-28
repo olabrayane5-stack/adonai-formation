@@ -107,10 +107,18 @@ export function Footer({ onNavigate }: FooterProps) {
               </li>
               <li>
                 <button
+                  onClick={() => handleLink('contact')}
+                  className="hover:text-[#F5B800] transition-colors cursor-pointer text-left"
+                >
+                  Contact
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => handleLink('inscription')}
                   className="text-[#F5B800] font-bold hover:underline transition-colors cursor-pointer text-left"
                 >
-                  Contact / Inscription
+                  S'inscrire
                 </button>
               </li>
             </ul>
