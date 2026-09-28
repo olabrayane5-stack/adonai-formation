@@ -116,4 +116,5 @@ export const GENERAL_CONTACT = {
   registrationFee: '15 000 FCFA',
   duration12Price: '200 000 FCFA',
   duration24Price: '350 000 FCFA',
+  googleFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScJPHScPInknlE3gPK11N9djsW1MG3EmmoW7T09OJoEbdc0SA/viewform',
 };
