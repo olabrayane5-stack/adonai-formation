@@ -51,7 +51,7 @@ export function Footer({ onNavigate }: FooterProps) {
             </p>
 
             <p className="text-xs text-white/70 leading-relaxed">
-              Implanté au cœur de 3 métropoles majeures — <strong>Porto-Novo</strong> (siège historique), <strong>Cotonou</strong> et <strong>Parakou</strong> — ADONAI-FORMATION forme les artisans et techniciens d'excellence de demain.
+              Implanté au cœur de 4 métropoles majeures — <strong>Porto-Novo</strong> (siège historique), <strong>Cotonou</strong>, <strong>Calavi</strong> et <strong>Parakou</strong> — ADONAI-FORMATION forme les artisans et techniciens d'excellence de demain.
             </p>
 
             <p className="text-xs text-[#F5B800] font-semibold italic border-l-2 border-[#F5B800] pl-2.5">
@@ -149,7 +149,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
               <div className="flex items-start gap-2 pt-1 text-xs text-white/70">
                 <MapPin className="w-4 h-4 text-[#F5B800] shrink-0 mt-0.5" />
-                <span>Porto-Novo (Kandévié, carrefour Yaya gendarme - siège) · Cotonou · Parakou · Calavi </span>
+                <span>Porto-Novo (Kandévié, carrefour Yaya gendarme - siège) · Cotonou · Parakou</span>
               </div>
             </div>
           </div>
