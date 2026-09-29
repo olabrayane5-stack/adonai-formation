@@ -32,7 +32,7 @@ export const FILIERES_DATA: Filiere[] = [
     category: 'mode-artisanat',
     categoryLabel: 'Mode & Artisanat créatif',
     duration: '12 ou 24 mois',
-    imageUrl: IMAGES.hauteCouture,
+    imageUrl: IMAGES.realFiliereHauteCouture,
     description: 'Conception et confection de vêtements sur mesure, de la prise de mesure à la finition, avec les techniques de couture professionnelle.',
     longDescription: 'La formation en Haute Couture forme des créateurs et artisans capables de concevoir, couper et monter des vêtements haut de gamme. Dès les premières semaines, les apprenants travaillent sur machines industrielles, maîtrisent le wax, la dentelle, les soies et les finitions de prestige.',
     skills: [
@@ -307,7 +307,7 @@ export const FILIERES_DATA: Filiere[] = [
     category: 'beaute-image',
     categoryLabel: 'Beauté & Image',
     duration: '12 ou 24 mois',
-    imageUrl: IMAGES.heroSunnyStudents,
+    imageUrl: IMAGES.realFiliereTresseCoiffure,
     description: 'Techniques de tressage, coiffure afro et pose de perruques pour salon ou activité à domicile.',
     longDescription: 'Formation pratique sur mannequins puis sur clientèle réelle, couvrant les techniques traditionnelles et modernes de coiffure afro. Les apprenants maîtrisent le tressage, le tissage, la pose et l\'entretien de perruques ainsi que le conseil capillaire.',
     skills: [
@@ -405,7 +405,7 @@ export const FILIERES_DATA: Filiere[] = [
     category: 'hotellerie-restauration',
     categoryLabel: 'Hôtellerie & Restauration',
     duration: '12 ou 24 mois',
-    imageUrl: IMAGES.trainerMentor,
+    imageUrl: IMAGES.realFilierePatisserieCuisine,
     description: 'Techniques de pâtisserie, boulangerie et cuisine d\'application pour se lancer dans la restauration.',
     longDescription: 'Une formation gourmande et exigeante, du fournil à la vitrine. Les apprenants réalisent gâteaux, viennoiseries et desserts de cérémonie, tout en se perfectionnant sur les bases de la cuisine chaude et froide.',
     skills: [
@@ -456,7 +456,7 @@ export const FILIERES_DATA: Filiere[] = [
     category: 'digital-bureautique',
     categoryLabel: 'Digital & Bureautique',
     duration: '12 ou 24 mois',
-    imageUrl: IMAGES.itDigital,
+    imageUrl: IMAGES.realFiliereSecretariatInformatique,
     description: 'Bureautique professionnelle, gestion administrative et outils numériques pour le secrétariat d\'entreprise.',
     longDescription: 'Formation complète aux outils bureautiques (Word, Excel, PowerPoint) et à la gestion administrative moderne. Les apprenants maîtrisent la rédaction professionnelle, la gestion d\'agendas partagés, le classement numérique et l\'accueil en entreprise.',
     skills: [
