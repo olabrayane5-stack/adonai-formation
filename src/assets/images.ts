@@ -25,6 +25,10 @@ import directorJonasChankouin from './images/director_jonas_chankouin.jpg';
 // Photos réelles envoyées par le personnel (rentrée 2026)
 import realApprentisAteliers from './images/real_apprentis_ateliers_2026.jpg';
 import realAtelierCoutureInterieur from './images/real_atelier_couture_interieur_2026.jpg';
+import realFiliereHauteCouture from './images/real_filiere_haute_couture.jpg';
+import realFiliereSecretariatInformatique from './images/real_filiere_secretariat_informatique.jpg';
+import realFilierePatisserieCuisine from './images/real_filiere_patisserie_cuisine.jpg';
+import realFiliereTresseCoiffure from './images/real_filiere_tresse_coiffure.jpg';
 
 export const IMAGES = {
   heroSunnyStudents,
@@ -58,4 +62,10 @@ export const IMAGES = {
   // Photos réelles (rentrée 2026)
   realApprentisAteliers,
   realAtelierCoutureInterieur,
+
+  // Photos réelles par filière (personnel, sept. 2026)
+  realFiliereHauteCouture,
+  realFiliereSecretariatInformatique,
+  realFilierePatisserieCuisine,
+  realFiliereTresseCoiffure,
 };
